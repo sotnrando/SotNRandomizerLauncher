@@ -408,7 +408,8 @@ namespace SotNRandomizerLauncher
                 TurkeyMode = cbTurkeyMode.CheckState,
                 ItemNameRando = cbItemNames.Checked,
                 CustomGoal = customGoal,
-                ReverseLibraryCard = cbReverseLibraryCard.Checked
+                ReverseLibraryCard = cbReverseLibraryCard.Checked,
+                GuaranteedDrops = cbGuaranteedDrops.Checked
             };
         }
 

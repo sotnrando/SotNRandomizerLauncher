@@ -208,7 +208,7 @@ namespace SotNRandomizerLauncher
                 {
                     offset = editor.WriteShort(offset, wolfLinerWrites[i]);
                 }
-                offset += 0x20;
+                offset += 0x16;
                 for (i = 5; i < 10; i++)
                 {
                     offset = editor.WriteShort(offset, wolfLinerWrites[i]);
