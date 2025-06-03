@@ -325,6 +325,7 @@
             // btnPlay
             // 
             this.btnPlay.BackColor = System.Drawing.SystemColors.Control;
+            this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPlay.Enabled = false;
             this.btnPlay.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold);
             this.btnPlay.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;

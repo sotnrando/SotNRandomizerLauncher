@@ -18,7 +18,7 @@ namespace SotNRandomizerLauncher
     {
         string ppfFile;
         string seedUrl;
-        string launcherVersion = "v0.5.4.2";
+        string launcherVersion = "v0.5.4.3";
         bool isOfflineMode = false;
         Process liveSplitProcess = null;
         List<string> replayFiles;
@@ -64,7 +64,23 @@ namespace SotNRandomizerLauncher
                     return;
                 }                
             }
+            LoadSeasonalVisuals();
             LoadEvents();
+        }
+
+        void LoadSeasonalVisuals()
+        {
+            if(DateTime.Now.Month == 6)
+            {
+                Random random = new Random();
+                int prideImageNumber = random.Next(10) + 1;
+                object resource = Properties.Resources.ResourceManager.GetObject($"pride-flag-{prideImageNumber.ToString()}");
+                if(resource is Image image)
+                {
+                    btnPlay.BackgroundImage = image;
+                    btnPlay.BackgroundImageLayout = ImageLayout.Stretch;
+                }
+            }
         }
 
         void LoadLastVisuals()
@@ -495,11 +511,18 @@ namespace SotNRandomizerLauncher
         {
             try
             {
+                bool major210Update = !LauncherClient.GetConfigValue("BizHawkVersion").Contains("2.10");
+                if (major210Update)
+                {
+                    DialogResult result = MessageBox.Show("Updating from 2.9 to a newer version will update your configuration file for the emulator. This might cause some unexpected behavior, such as missing configs or the game not running. If you have any issues, we recommend reinstalling the Launcher or changing the configuration manually. If you had any valuable configuration set up, the old config file will be stored inside the Launcher's folder. A Rando Tools update will also be forced. Proceed?", "Major BizHawk Update Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Cancel) return;
+                }
                 await LauncherClient.UpdateBizHawk();
                 pbBizhawk.Image = Properties.Resources.v_update;
                 btnUpdateBizhawk.Enabled = false;
                 btnUpdateBizhawk.Text = "Up to Date";
                 lblBizhawk.Text = $"Bizhawk v{LauncherClient.GetConfigValue("BizHawkVersion")}";
+                if (major210Update) btnUpdateRandoTools.PerformClick();
             }
             catch(Exception ex)
             {

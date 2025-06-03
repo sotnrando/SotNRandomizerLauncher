@@ -266,6 +266,12 @@
     <None Include="apply_ppf.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="baseFiles\2.10.classic-core.zst">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="baseFiles\2.10.fast-core.zst">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="baseFiles\AreaRando.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -351,6 +357,19 @@
     </Content>
     <Content Include="favicon.ico" />
     <None Include="Resources\Area Rando Guide.png" />
+    <None Include="Resources\pride-1.png" />
+    <None Include="Resources\pride-2.png" />
+    <None Include="Resources\pride-test.jpg" />
+    <None Include="Resources\pride-flag-10.png" />
+    <None Include="Resources\pride-flag-9.png" />
+    <None Include="Resources\pride-flag-8.jpg" />
+    <None Include="Resources\pride-flag-7.jpg" />
+    <None Include="Resources\pride-flag-6.jpg" />
+    <None Include="Resources\pride-flag-5.jpg" />
+    <None Include="Resources\pride-flag-4.jpg" />
+    <None Include="Resources\pride-flag-3.jpg" />
+    <None Include="Resources\pride-flag-2.jpg" />
+    <None Include="Resources\pride-flag-1.jpg" />
     <Content Include="Resources\question.png" />
   </ItemGroup>
   <ItemGroup>

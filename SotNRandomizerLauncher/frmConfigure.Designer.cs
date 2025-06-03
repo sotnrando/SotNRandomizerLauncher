@@ -48,7 +48,6 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.cbImport = new System.Windows.Forms.CheckBox();
             this.grpEmulation = new System.Windows.Forms.GroupBox();
-            this.cbCompatibilityFastCore = new System.Windows.Forms.CheckBox();
             this.lblCurrentCore = new System.Windows.Forms.Label();
             this.btnChangeCore = new System.Windows.Forms.Button();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
@@ -245,7 +244,6 @@
             // grpEmulation
             // 
             this.grpEmulation.BackColor = System.Drawing.Color.Transparent;
-            this.grpEmulation.Controls.Add(this.cbCompatibilityFastCore);
             this.grpEmulation.Controls.Add(this.lblCurrentCore);
             this.grpEmulation.Controls.Add(this.btnChangeCore);
             this.grpEmulation.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -257,19 +255,6 @@
             this.grpEmulation.TabStop = false;
             this.grpEmulation.Text = "Emulation Settings";
             this.grpEmulation.Visible = false;
-            // 
-            // cbCompatibilityFastCore
-            // 
-            this.cbCompatibilityFastCore.AutoSize = true;
-            this.cbCompatibilityFastCore.Location = new System.Drawing.Point(14, 69);
-            this.cbCompatibilityFastCore.Name = "cbCompatibilityFastCore";
-            this.cbCompatibilityFastCore.Size = new System.Drawing.Size(169, 17);
-            this.cbCompatibilityFastCore.TabIndex = 22;
-            this.cbCompatibilityFastCore.Text = "Use Compatibility Fast Core";
-            this.toolTip.SetToolTip(this.cbCompatibilityFastCore, "Check if you\'re having issues running BizHawk with the latest Fast Core version.\r" +
-        "\nIn order for this setting to take effect, enable it, then change to Classic Cor" +
-        "e, then back to Fast Core.");
-            this.cbCompatibilityFastCore.UseVisualStyleBackColor = true;
             // 
             // lblCurrentCore
             // 
@@ -415,6 +400,9 @@
             this.btnReinstall.UseVisualStyleBackColor = true;
             this.btnReinstall.Click += new System.EventHandler(this.btnReinstall_Click);
             // 
+            // 
+            // 
+            // 
             // frmConfigure
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -481,7 +469,6 @@
         private System.Windows.Forms.CheckBox cbMapTracker;
         private System.Windows.Forms.CheckBox cbLiveSplit;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox cbCompatibilityFastCore;
         private System.Windows.Forms.Button btnDeleteCustomPresets;
         private System.Windows.Forms.Button btnCustomPreset;
         private System.Windows.Forms.Button btnDeleteUserData;
