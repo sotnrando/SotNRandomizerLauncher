@@ -69,6 +69,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbPalette = new System.Windows.Forms.ComboBox();
             this.cbLiner = new System.Windows.Forms.ComboBox();
+            this.pbSkinPreview = new System.Windows.Forms.PictureBox();
             this.grpNews.SuspendLayout();
             this.grpOptions.SuspendLayout();
             this.grpTools.SuspendLayout();
@@ -77,6 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbRandoTools)).BeginInit();
             this.grpSeed.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSkinPreview)).BeginInit();
             this.SuspendLayout();
             // 
             // grpNews
@@ -563,6 +565,7 @@
             this.cbPalette.Name = "cbPalette";
             this.cbPalette.Size = new System.Drawing.Size(135, 21);
             this.cbPalette.TabIndex = 16;
+            this.cbPalette.SelectedIndexChanged += new System.EventHandler(this.cbPalette_SelectedIndexChanged);
             // 
             // cbLiner
             // 
@@ -580,6 +583,19 @@
             this.cbLiner.Name = "cbLiner";
             this.cbLiner.Size = new System.Drawing.Size(135, 21);
             this.cbLiner.TabIndex = 14;
+            this.cbLiner.SelectedIndexChanged += new System.EventHandler(this.cbLiner_SelectedIndexChanged);
+            // 
+            // pbSkinPreview
+            // 
+            this.pbSkinPreview.BackColor = System.Drawing.Color.Transparent;
+            this.pbSkinPreview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbSkinPreview.Location = new System.Drawing.Point(460, 286);
+            this.pbSkinPreview.Name = "pbSkinPreview";
+            this.pbSkinPreview.Size = new System.Drawing.Size(144, 96);
+            this.pbSkinPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSkinPreview.TabIndex = 14;
+            this.pbSkinPreview.TabStop = false;
+            this.pbSkinPreview.Visible = false;
             // 
             // frmMain
             // 
@@ -602,6 +618,7 @@
             this.Controls.Add(this.btnTutorials);
             this.Controls.Add(this.grpNews);
             this.Controls.Add(this.lblCore);
+            this.Controls.Add(this.pbSkinPreview);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
@@ -623,6 +640,7 @@
             this.grpSeed.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSkinPreview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -669,6 +687,7 @@
         private System.Windows.Forms.Label lblPalette;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnReloadSkin;
+        private System.Windows.Forms.PictureBox pbSkinPreview;
     }
 }
 

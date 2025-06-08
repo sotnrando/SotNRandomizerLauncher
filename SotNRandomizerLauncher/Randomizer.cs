@@ -151,7 +151,7 @@ namespace SotNRandomizerLauncher
                 process.WaitForExit();
                 cts.Cancel();  // Cancel the progress update loop
                 progressBarUpdate(80);
-                if (options.BHSeed) RandomizeBHSeed(options);
+                // if (options.BHSeed) RandomizeBHSeed(options);
 
                 // Area randomization should always be the last step of randomization
                 if (options.AreaRando) RunAreaRandomization(options);
@@ -344,6 +344,7 @@ namespace SotNRandomizerLauncher
 
         static void RandomizeBHSeed(RandomizerOptions options)
         {
+            // DEPRECATED: The external BH Tool is no longer needed.
             string randoFolder = Path.Combine(LauncherClient.GetConfigValue("RandomizerPath"), "Randomizer");
             string psxOrg = Path.Combine(randoFolder, "SotN_PSX.org");
             string bhBinFile = Path.Combine(randoFolder, "bhseed.bin");  // See RandomizerOptions.GenerateArguments

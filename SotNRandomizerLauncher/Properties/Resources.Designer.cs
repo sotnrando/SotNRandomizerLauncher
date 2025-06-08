@@ -63,6 +63,16 @@ namespace SotNRandomizerLauncher.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap alucar10 {
+            get {
+                object obj = ResourceManager.GetObject("alucar10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Area_Rando_Guide {
             get {
                 object obj = ResourceManager.GetObject("Area Rando Guide", resourceCulture);
@@ -96,6 +106,16 @@ namespace SotNRandomizerLauncher.Properties {
         internal static System.Drawing.Bitmap info_icon {
             get {
                 object obj = ResourceManager.GetObject("info_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap map_pa10 {
+            get {
+                object obj = ResourceManager.GetObject("map_pa10", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

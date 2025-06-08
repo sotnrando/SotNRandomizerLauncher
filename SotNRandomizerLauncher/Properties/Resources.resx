@@ -118,8 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cfg_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cfg_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pride-flag-10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pride-flag-10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pride-flag-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pride-flag-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pride-flag-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pride-flag-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pride-flag-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pride-flag-5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="info_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\info_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -127,8 +136,17 @@
   <data name="Area Rando Guide" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Area Rando Guide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pride-flag-7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pride-flag-7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="gradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gradient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pride-flag-8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pride-flag-8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pride-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pride-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="min_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\min_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,8 +154,17 @@
   <data name="pride-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pride-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="map_pa10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\map_pa10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="x_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\x_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pride-flag-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pride-flag-4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pride-flag-6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pride-flag-6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="x_update" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\x_update.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,40 +178,19 @@
   <data name="upload_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\upload_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="v_update" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\v_update.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pride-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pride-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pride-flag-10" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pride-flag-10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cfg_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cfg_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pride-flag-9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pride-flag-9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pride-flag-8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pride-flag-8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pride-flag-7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pride-flag-7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pride-flag-6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pride-flag-6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pride-flag-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pride-flag-5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pride-flag-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pride-flag-4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="pride-flag-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pride-flag-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pride-flag-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pride-flag-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="v_update" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\v_update.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pride-flag-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pride-flag-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="alucar10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alucar10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

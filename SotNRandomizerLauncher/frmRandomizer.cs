@@ -409,7 +409,12 @@ namespace SotNRandomizerLauncher
                 ItemNameRando = cbItemNames.Checked,
                 CustomGoal = customGoal,
                 ReverseLibraryCard = cbReverseLibraryCard.Checked,
-                GuaranteedDrops = cbGuaranteedDrops.Checked
+                GuaranteedDrops = cbGuaranteedDrops.Checked,
+                DevStash = cbDevStash.Checked,
+                BossMusic = cbBossMusic.Checked,
+                GodspeedShoes = cbGodspeed.Checked,
+                ImmunityPotions = cbPotions.Checked,
+                LibraryShortcut = cbLibShortcut.Checked
             };
         }
 
@@ -598,6 +603,17 @@ namespace SotNRandomizerLauncher
         private void cbColor_SelectedIndexChanged(object sender, EventArgs e)
         {
             LauncherClient.SetAppConfig("MapColor", cbColor.SelectedIndex.ToString());
+            Bitmap originalImage = new Bitmap(Properties.Resources.map_pa10);
+            int mapColorIndex = cbColor.SelectedIndex + 1;
+            if (mapColorIndex >= cbColor.Items.Count)
+            {
+                pbMapColor.Hide();
+                return;
+            }
+            pbMapColor.Show();
+            Rectangle cropArea = new Rectangle(mapColorIndex * 48, 0, 48, 32);
+            Bitmap cropped = originalImage.Clone(cropArea, originalImage.PixelFormat);
+            pbMapColor.Image = cropped;
         }
 
         private void rtbBingoInformation_LinkClicked(object sender, LinkClickedEventArgs e)
@@ -698,6 +714,11 @@ namespace SotNRandomizerLauncher
         {
             cbGoalsList.SelectedIndex = -1;
             cbGoalsList.Enabled = cbCustomGoals.Checked;
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

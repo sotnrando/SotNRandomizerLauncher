@@ -28,7 +28,12 @@ namespace SotNRandomizerLauncher
         Default,
         AllBosses,
         AllRelics,
-        AllBossesRelics
+        AllBossesRelics,
+        AllBossesVladRelics,
+        BountyHunter,
+        TargetConfirmed,
+        Hitman,
+        AllBossesBounties
     }
     internal class RandomizerOptions
     {
@@ -63,6 +68,11 @@ namespace SotNRandomizerLauncher
         public bool GuaranteedDrops { get; set; }
         public bool AlucardPalette { get; set; }
         public bool ReverseLibraryCard { get; set; }
+        public bool ImmunityPotions { get; set; }
+        public bool GodspeedShoes { get; set; }
+        public bool LibraryShortcut { get; set; }
+        public bool DevStash { get; set; }
+        public bool BossMusic { get; set; }
         public Goal CustomGoal { get; set; }
         public CheckState ItemStats { get; set; }
         public CheckState ItemLocations { get; set; }
@@ -100,6 +110,11 @@ namespace SotNRandomizerLauncher
             if (this.ReverseLibraryCard) arguments += "--rl ";
             if (this.GuaranteedDrops) arguments += "--gd ";
             if (this.ItemNameRando) arguments += "--in ";
+            if (this.ImmunityPotions) arguments += "--ip ";
+            if (this.GodspeedShoes) arguments += "--gss ";
+            if (this.LibraryShortcut) arguments += "--ls ";
+            if (this.DevStash) arguments += "--dev ";
+            if (this.BossMusic) arguments += "--bm ";
             if (this.ExcludeSongs)
             {
                 string excludeSongList = LauncherClient.GetConfigValue("ExcludedSongs");
@@ -190,6 +205,11 @@ namespace SotNRandomizerLauncher
                 case Goal.AllRelics: return 'r';
                 case Goal.AllBosses: return 'b';
                 case Goal.AllBossesRelics: return 'a';
+                case Goal.AllBossesVladRelics: return 'v';
+                case Goal.BountyHunter: return 'h';
+                case Goal.TargetConfirmed: return 't';
+                case Goal.Hitman: return 'w';
+                case Goal.AllBossesBounties: return 'x';
             }
             return ' ';
         }

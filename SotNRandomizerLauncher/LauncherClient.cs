@@ -487,6 +487,9 @@ namespace SotNRandomizerLauncher
             // Install BIOS
             Configuration configs = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
             string biosPath = configs.AppSettings.Settings["BiosPath"].Value;
+            if(!Directory.Exists(Path.Combine(targetDirectory, "Firmware"))){
+                Directory.CreateDirectory(Path.Combine(targetDirectory, "Firmware"));
+            }
             File.Copy(biosPath, Path.Combine(targetDirectory, "Firmware", Path.GetFileName(biosPath)), true);
 
             return true;

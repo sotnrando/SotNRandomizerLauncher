@@ -18,7 +18,7 @@ namespace SotNRandomizerLauncher
     {
         string ppfFile;
         string seedUrl;
-        string launcherVersion = "v0.5.4.3";
+        string launcherVersion = "v0.5.4.5";
         bool isOfflineMode = false;
         Process liveSplitProcess = null;
         List<string> replayFiles;
@@ -97,6 +97,7 @@ namespace SotNRandomizerLauncher
                 cbPalette.SelectedIndex = 0;
                 cbLiner.SelectedIndex = 0;
             }
+            pbSkinPreview.Hide();
         }
 
         void CheckForLauncherUpdates()
@@ -700,6 +701,41 @@ namespace SotNRandomizerLauncher
             string ppfFileChosen = LauncherClient.GetConfigValue("LastPPFFilePath");
             if (ppfFileChosen == null) return;
             SetPPF(ppfFileChosen);
+        }
+
+        private void cbPalette_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Bitmap originalImage = new Bitmap(Properties.Resources.alucar10);
+            int mapColorIndex = cbPalette.SelectedIndex;
+            if (mapColorIndex >= cbPalette.Items.Count - 2)
+            {
+                pbSkinPreview.Hide();
+                return;
+            }
+            pbSkinPreview.Show();
+            Rectangle cropArea = new Rectangle(mapColorIndex * 96, 0, 96, 64);
+            Bitmap cropped = originalImage.Clone(cropArea, originalImage.PixelFormat);
+            pbSkinPreview.BackgroundImage = cropped;
+        }
+
+        private void cbLiner_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Bitmap originalImage = new Bitmap(Properties.Resources.alucar10);
+            int mapColorIndex = cbLiner.SelectedIndex;
+            // Invert Bronze & Silver
+            switch (mapColorIndex)
+            {
+                case 1:
+                    mapColorIndex = 2;
+                    break;
+                case 2:
+                    mapColorIndex = 1;
+                    break;        
+            }
+            pbSkinPreview.Show();
+            Rectangle cropArea = new Rectangle(mapColorIndex * 96, 64, 96, 64);
+            Bitmap cropped = originalImage.Clone(cropArea, originalImage.PixelFormat);
+            pbSkinPreview.Image = cropped;
         }
     }
 }
