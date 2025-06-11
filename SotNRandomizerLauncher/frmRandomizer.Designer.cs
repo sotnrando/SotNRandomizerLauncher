@@ -87,6 +87,7 @@
             this.cbLibShortcut = new System.Windows.Forms.CheckBox();
             this.cbDevStash = new System.Windows.Forms.CheckBox();
             this.cbBossMusic = new System.Windows.Forms.CheckBox();
+            this.cbSeasonalPhrases = new System.Windows.Forms.CheckBox();
             this.btnCopySeed = new System.Windows.Forms.Button();
             this.rtbBingoInformation = new System.Windows.Forms.RichTextBox();
             this.tabOptions = new System.Windows.Forms.TabControl();
@@ -887,6 +888,21 @@
         "anted Banquet for 10 minutes.");
             this.cbBossMusic.UseVisualStyleBackColor = true;
             // 
+            // cbSeasonalPhrases
+            // 
+            this.cbSeasonalPhrases.AutoSize = true;
+            this.cbSeasonalPhrases.Checked = true;
+            this.cbSeasonalPhrases.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbSeasonalPhrases.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSeasonalPhrases.Location = new System.Drawing.Point(200, 22);
+            this.cbSeasonalPhrases.Name = "cbSeasonalPhrases";
+            this.cbSeasonalPhrases.Size = new System.Drawing.Size(154, 21);
+            this.cbSeasonalPhrases.TabIndex = 30;
+            this.cbSeasonalPhrases.Text = "No Seasonal Phrases";
+            this.toolTip.SetToolTip(this.cbSeasonalPhrases, "If enabled, hides the seasonal phrases (i.e. Pride Month) from the Start Menu\r\nan" +
+        "d regular splash text will be shown instead.");
+            this.cbSeasonalPhrases.UseVisualStyleBackColor = true;
+            // 
             // btnCopySeed
             // 
             this.btnCopySeed.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1020,6 +1036,7 @@
             // Misc
             // 
             this.Misc.BackgroundImage = global::SotNRandomizerLauncher.Properties.Resources.gradient;
+            this.Misc.Controls.Add(this.cbSeasonalPhrases);
             this.Misc.Controls.Add(this.cbCustomGoals);
             this.Misc.Controls.Add(this.cbGoalsList);
             this.Misc.Controls.Add(this.numBatchSeeds);
@@ -1480,5 +1497,6 @@
         private System.Windows.Forms.TabPage QoL;
         private System.Windows.Forms.CheckBox cbDevStash;
         private System.Windows.Forms.CheckBox cbBossMusic;
+        private System.Windows.Forms.CheckBox cbSeasonalPhrases;
     }
 }

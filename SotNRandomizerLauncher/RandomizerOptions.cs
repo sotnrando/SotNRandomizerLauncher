@@ -25,6 +25,7 @@ namespace SotNRandomizerLauncher
 
     enum Goal
     {
+        Disabled,
         Default,
         AllBosses,
         AllRelics,
@@ -73,6 +74,7 @@ namespace SotNRandomizerLauncher
         public bool LibraryShortcut { get; set; }
         public bool DevStash { get; set; }
         public bool BossMusic { get; set; }
+        public bool SeasonalPhrases {  get; set; }
         public Goal CustomGoal { get; set; }
         public CheckState ItemStats { get; set; }
         public CheckState ItemLocations { get; set; }
@@ -115,6 +117,7 @@ namespace SotNRandomizerLauncher
             if (this.LibraryShortcut) arguments += "--ls ";
             if (this.DevStash) arguments += "--dev ";
             if (this.BossMusic) arguments += "--bm ";
+            if (!this.SeasonalPhrases) arguments += "--sp ";
             if (this.ExcludeSongs)
             {
                 string excludeSongList = LauncherClient.GetConfigValue("ExcludedSongs");
@@ -165,15 +168,7 @@ namespace SotNRandomizerLauncher
                     arguments += "~r";
                 }
             }
-            if (this.BHSeed)
-            {
-                string track1Path = LauncherClient.GetConfigValue("Track1Path");
-                arguments += $" --in-bin \"{track1Path}\" -o .\\bhseed.bin";
-            }
-            else
-            {
-                arguments += $" -o \"{this.PpfFilePath}\"";
-            }
+            arguments += $" -o \"{this.PpfFilePath}\"";            
             
             if (this.ShowEquipment) arguments += " -vv ";
             

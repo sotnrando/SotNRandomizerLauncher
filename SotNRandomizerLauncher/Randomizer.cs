@@ -239,7 +239,6 @@ namespace SotNRandomizerLauncher
                 return;
             }
             if (randomizerCancellation.IsCancellationRequested) return;
-            if (options.BHSeed) RandomizeBHSeed(options);
 
             // Area randomization should always be the last step of randomization
             if (randomizerCancellation.IsCancellationRequested) return;

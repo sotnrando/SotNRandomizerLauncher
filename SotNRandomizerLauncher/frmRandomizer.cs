@@ -359,7 +359,7 @@ namespace SotNRandomizerLauncher
             {
                 mapColor = (MapColor)Enum.Parse(typeof(MapColor), cbColor.Text);
             }
-            Goal customGoal = Goal.Default;            
+            Goal customGoal = Goal.Disabled;            
             if (cbCustomGoals.Checked)
             {
                 string cleanedGoal = cbGoalsList.Text.Replace(" ", "").Replace("&", "");
@@ -414,13 +414,14 @@ namespace SotNRandomizerLauncher
                 BossMusic = cbBossMusic.Checked,
                 GodspeedShoes = cbGodspeed.Checked,
                 ImmunityPotions = cbPotions.Checked,
-                LibraryShortcut = cbLibShortcut.Checked
+                LibraryShortcut = cbLibShortcut.Checked, 
+                SeasonalPhrases = cbSeasonalPhrases.Checked
             };
         }
 
         bool IsBHSeed(string preset)
         {
-            string[] bhSeeds = { "bountyhunter", "bountyhuntertc", "hitman", "chaos-lite"};
+            string[] bhSeeds = { "bounty-hunter", "target-confirmed", "hitman", "chaos-lite", "rampage"};
             return bhSeeds.Contains(preset);
         }
 
