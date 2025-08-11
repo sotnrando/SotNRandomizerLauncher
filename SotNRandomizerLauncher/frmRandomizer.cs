@@ -415,7 +415,9 @@ namespace SotNRandomizerLauncher
                 GodspeedShoes = cbGodspeed.Checked,
                 ImmunityPotions = cbPotions.Checked,
                 LibraryShortcut = cbLibShortcut.Checked, 
-                SeasonalPhrases = cbSeasonalPhrases.Checked
+                SeasonalPhrases = cbSeasonalPhrases.Checked,
+                SimplifiedInputs = cbSimplifiedInputs.Checked,
+                ElementalChaos = cbElementalChaos.Checked
             };
         }
 
@@ -720,6 +722,21 @@ namespace SotNRandomizerLauncher
         private void tabPage2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do you want to restore all Randomization settings to their default values?", "Reset Options", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.No) return;
+
+            foreach (TabPage tabPage in tabOptions.TabPages)
+            {
+                foreach (CheckBox checkbox in tabPage.Controls.OfType<CheckBox>())
+                {
+                    if (checkbox.ThreeState) continue;
+                    checkbox.Checked = false;
+                }
+            }
         }
     }
 }

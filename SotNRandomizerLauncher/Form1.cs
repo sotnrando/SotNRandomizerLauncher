@@ -18,7 +18,7 @@ namespace SotNRandomizerLauncher
     {
         string ppfFile;
         string seedUrl;
-        string launcherVersion = "v0.5.4.5";
+        string launcherVersion = "v0.5.4.6";
         bool isOfflineMode = false;
         Process liveSplitProcess = null;
         List<string> replayFiles;
@@ -391,6 +391,11 @@ namespace SotNRandomizerLauncher
                     if (result == DialogResult.Yes) OpenMapTrackerTool();
                 }
             }
+            bool importedUser = LauncherClient.GetConfigValue("ImportedUser") != null;
+            if (!importedUser)
+            {
+                LauncherClient.SetBizHawkLastRom();
+            }
             btnPlay.Enabled = false;
             LaunchBizhawk();         
             await LaunchLiveSplitWithWait();
@@ -705,7 +710,7 @@ namespace SotNRandomizerLauncher
 
         private void cbPalette_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Bitmap originalImage = new Bitmap(Properties.Resources.alucar10);
+            Bitmap originalImage = new Bitmap(Properties.Resources.alucar11);
             int mapColorIndex = cbPalette.SelectedIndex;
             if (mapColorIndex >= cbPalette.Items.Count - 2)
             {

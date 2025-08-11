@@ -554,6 +554,7 @@
             "Dark Cloth (Default)",
             "Bloody Tears",
             "Blue Danube",
+            "Refreshing Mint",
             "Swamp Thing",
             "White Knight",
             "Royal Purple",

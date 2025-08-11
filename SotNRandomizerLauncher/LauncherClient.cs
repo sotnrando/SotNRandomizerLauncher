@@ -371,6 +371,22 @@ namespace SotNRandomizerLauncher
             }            
         }
 
+        public static void SetBizHawkLastRom()
+        {
+            string currentAppDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string cuePath = GetConfigValue("CuePath");
+            string randomPath = Path.Combine(currentAppDirectory, "files", "randomized", Path.GetFileName(cuePath));
+            randomPath = randomPath.Replace(@"\", @"\\");
+
+            string bizHawkDirectory = GetConfigValue("BizHawkPath");
+            string configPath = Path.Combine(bizHawkDirectory, "config.ini");
+            string json = File.ReadAllText(configPath);
+            JObject jsonObj = JObject.Parse(json);
+            jsonObj["RecentRoms"]["recentlist"] = new JArray { randomPath };
+            jsonObj["AutoLoad"] = true;
+            File.WriteAllText(configPath, jsonObj.ToString(Formatting.Indented));
+        }
+
         private static void UpdateCores(string version)
         {
             string currentAppDirectory = AppDomain.CurrentDomain.BaseDirectory;

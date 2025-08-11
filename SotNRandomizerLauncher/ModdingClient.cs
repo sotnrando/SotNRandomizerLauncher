@@ -12,6 +12,7 @@ namespace SotNRandomizerLauncher
         Default,
         BloodyTears,
         BlueDanube,
+        RefreshingMint,
         SwampThing,
         WhiteKnight,
         RoyalPurple,

@@ -372,6 +372,8 @@
     <None Include="Resources\pride-flag-1.jpg" />
     <None Include="Resources\map_pa10.png" />
     <None Include="Resources\alucar10.png" />
+    <None Include="Resources\alucar11.bmp" />
+    <None Include="Resources\alucar11.png" />
     <Content Include="Resources\question.png" />
   </ItemGroup>
   <ItemGroup>

@@ -75,6 +75,8 @@ namespace SotNRandomizerLauncher
         public bool DevStash { get; set; }
         public bool BossMusic { get; set; }
         public bool SeasonalPhrases {  get; set; }
+        public bool SimplifiedInputs { get; set; }
+        public bool ElementalChaos { get; set; }
         public Goal CustomGoal { get; set; }
         public CheckState ItemStats { get; set; }
         public CheckState ItemLocations { get; set; }
@@ -117,6 +119,8 @@ namespace SotNRandomizerLauncher
             if (this.LibraryShortcut) arguments += "--ls ";
             if (this.DevStash) arguments += "--dev ";
             if (this.BossMusic) arguments += "--bm ";
+            if (this.SimplifiedInputs) arguments += "--si ";
+            if (this.ElementalChaos) arguments += "--ec ";
             if (!this.SeasonalPhrases) arguments += "--sp ";
             if (this.ExcludeSongs)
             {
