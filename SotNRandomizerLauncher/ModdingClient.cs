@@ -46,6 +46,9 @@ namespace SotNRandomizerLauncher
                 case AlucardPalettes.SwampThing:
                     writes = new List<ushort> { 0x8042, 0x8082, 0x80c6, 0x8d2f, 0xa9d1, 0xc6d5, 0xe39b };
                     break;
+                case AlucardPalettes.RefreshingMint:
+                    writes = new List<ushort> { 0x8841, 0x9482, 0x9502, 0x9964, 0x9e07, 0xcef5, 0xf7bd };
+                    break;
                 case AlucardPalettes.WhiteKnight:
                     writes = new List<ushort> { 0x9063, 0x94a5, 0xa12a, 0xb9f0, 0xd674, 0xeb5b, 0xf39c };
                     break;
@@ -81,6 +84,9 @@ namespace SotNRandomizerLauncher
                     break;
                 case AlucardPalettes.WhiteKnight:
                     writes = new List<ushort> { 0x8c64, 0xa0e8, 0xad6b, 0xde52, 0xb4e0, 0xfb9a, 0xe5e0, 0xfe27, 0xfea0, 0x8422, 0x8c64, 0x9484, 0xb129, 0xd1ef };
+                    break;
+                case AlucardPalettes.RefreshingMint:
+                    writes = new List<ushort> { 0x8c61, 0x9502, 0xa183, 0xae4a, 0xa427, 0xbed6, 0xc80a, 0xcc8c, 0xec16, 0x8841, 0x8841, 0x90a2, 0x98e4, 0x9d65 };
                     break;
                 case AlucardPalettes.RoyalPurple:
                     writes = new List<ushort> { 0xa465, 0xb447, 0xb88b, 0xd94f, 0x98c7, 0xd9d8, 0xad8e, 0xca75, 0xbe36, 0x9802, 0x9423, 0xa445, 0xa067, 0xb0cd };

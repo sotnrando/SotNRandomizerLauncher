@@ -224,6 +224,7 @@ namespace SotNRandomizerLauncher
         {
             cbLiveSplit.Checked = LauncherClient.GetConfigValue("OpenLiveSplit") == "Yes" || LauncherClient.GetConfigValue("OpenLiveSplit") == null;  // This is the default setting
             cbMapTracker.Checked = LauncherClient.GetConfigValue("MapTrackerEnabled") == "Yes";
+            cbOpenRandomizerTools.Checked = LauncherClient.GetConfigValue("OpenRandoToolsEnabled") == "Yes";
         }
 
         private void cbLiveSplit_CheckedChanged(object sender, EventArgs e)
@@ -336,6 +337,13 @@ namespace SotNRandomizerLauncher
 
             await NewUserProcess();
             await LauncherClient.InitialSetupDone();
+        }
+
+        private void cbOpenRandomizerTools_CheckedChanged(object sender, EventArgs e)
+        {
+            string randoToolsOnPlayEnabled = "Yes";
+            if (!cbOpenRandomizerTools.Checked) randoToolsOnPlayEnabled = "No";
+            LauncherClient.SetAppConfig("OpenRandoToolsEnabled", randoToolsOnPlayEnabled);
         }
     }
 }

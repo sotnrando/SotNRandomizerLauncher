@@ -53,12 +53,13 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.cbMapTracker = new System.Windows.Forms.CheckBox();
             this.btnDeleteUserData = new System.Windows.Forms.Button();
+            this.btnReinstall = new System.Windows.Forms.Button();
             this.grpLauncherSettings = new System.Windows.Forms.GroupBox();
             this.btnDeleteCustomPresets = new System.Windows.Forms.Button();
             this.btnCustomPreset = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.cbLiveSplit = new System.Windows.Forms.CheckBox();
-            this.btnReinstall = new System.Windows.Forms.Button();
+            this.cbOpenRandomizerTools = new System.Windows.Forms.CheckBox();
             this.grpEmulation.SuspendLayout();
             this.grpLauncherSettings.SuspendLayout();
             this.SuspendLayout();
@@ -250,7 +251,7 @@
             this.grpEmulation.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.grpEmulation.Location = new System.Drawing.Point(44, 40);
             this.grpEmulation.Name = "grpEmulation";
-            this.grpEmulation.Size = new System.Drawing.Size(189, 127);
+            this.grpEmulation.Size = new System.Drawing.Size(189, 145);
             this.grpEmulation.TabIndex = 18;
             this.grpEmulation.TabStop = false;
             this.grpEmulation.Text = "Emulation Settings";
@@ -317,9 +318,24 @@
             this.btnDeleteUserData.UseVisualStyleBackColor = true;
             this.btnDeleteUserData.Click += new System.EventHandler(this.button2_Click);
             // 
+            // btnReinstall
+            // 
+            this.btnReinstall.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReinstall.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnReinstall.Location = new System.Drawing.Point(8, 72);
+            this.btnReinstall.Name = "btnReinstall";
+            this.btnReinstall.Size = new System.Drawing.Size(145, 22);
+            this.btnReinstall.TabIndex = 25;
+            this.btnReinstall.Text = "Reinstall all Tools";
+            this.toolTip.SetToolTip(this.btnReinstall, "Reinstalls all the tools: LiveSplit, RandoTools and BizHawk.\r\nWARNING: All custom" +
+        " configs and settings will be overridden.");
+            this.btnReinstall.UseVisualStyleBackColor = true;
+            this.btnReinstall.Click += new System.EventHandler(this.btnReinstall_Click);
+            // 
             // grpLauncherSettings
             // 
             this.grpLauncherSettings.BackColor = System.Drawing.Color.Transparent;
+            this.grpLauncherSettings.Controls.Add(this.cbOpenRandomizerTools);
             this.grpLauncherSettings.Controls.Add(this.btnReinstall);
             this.grpLauncherSettings.Controls.Add(this.btnDeleteUserData);
             this.grpLauncherSettings.Controls.Add(this.btnDeleteCustomPresets);
@@ -331,7 +347,7 @@
             this.grpLauncherSettings.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.grpLauncherSettings.Location = new System.Drawing.Point(239, 40);
             this.grpLauncherSettings.Name = "grpLauncherSettings";
-            this.grpLauncherSettings.Size = new System.Drawing.Size(318, 127);
+            this.grpLauncherSettings.Size = new System.Drawing.Size(318, 145);
             this.grpLauncherSettings.TabIndex = 20;
             this.grpLauncherSettings.TabStop = false;
             this.grpLauncherSettings.Text = "Launcher Settings";
@@ -386,22 +402,17 @@
             this.cbLiveSplit.UseVisualStyleBackColor = true;
             this.cbLiveSplit.CheckedChanged += new System.EventHandler(this.cbLiveSplit_CheckedChanged);
             // 
-            // btnReinstall
+            // cbOpenRandomizerTools
             // 
-            this.btnReinstall.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReinstall.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnReinstall.Location = new System.Drawing.Point(8, 72);
-            this.btnReinstall.Name = "btnReinstall";
-            this.btnReinstall.Size = new System.Drawing.Size(145, 22);
-            this.btnReinstall.TabIndex = 25;
-            this.btnReinstall.Text = "Reinstall all Tools";
-            this.toolTip.SetToolTip(this.btnReinstall, "Reinstalls all the tools: LiveSplit, RandoTools and BizHawk.\r\nWARNING: All custom" +
-        " configs and settings will be overridden.");
-            this.btnReinstall.UseVisualStyleBackColor = true;
-            this.btnReinstall.Click += new System.EventHandler(this.btnReinstall_Click);
-            // 
-            // 
-            // 
+            this.cbOpenRandomizerTools.AutoSize = true;
+            this.cbOpenRandomizerTools.Location = new System.Drawing.Point(8, 119);
+            this.cbOpenRandomizerTools.Name = "cbOpenRandomizerTools";
+            this.cbOpenRandomizerTools.Size = new System.Drawing.Size(191, 17);
+            this.cbOpenRandomizerTools.TabIndex = 26;
+            this.cbOpenRandomizerTools.Text = "Open Randomizer Tools on Play";
+            this.toolTip.SetToolTip(this.cbOpenRandomizerTools, "Enables the Map Tracker used in Area Randomizer Seeds");
+            this.cbOpenRandomizerTools.UseVisualStyleBackColor = true;
+            this.cbOpenRandomizerTools.CheckedChanged += new System.EventHandler(this.cbOpenRandomizerTools_CheckedChanged);
             // 
             // frmConfigure
             // 
@@ -473,5 +484,6 @@
         private System.Windows.Forms.Button btnCustomPreset;
         private System.Windows.Forms.Button btnDeleteUserData;
         private System.Windows.Forms.Button btnReinstall;
+        private System.Windows.Forms.CheckBox cbOpenRandomizerTools;
     }
 }

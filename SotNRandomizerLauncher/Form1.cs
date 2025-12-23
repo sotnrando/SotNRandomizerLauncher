@@ -18,7 +18,7 @@ namespace SotNRandomizerLauncher
     {
         string ppfFile;
         string seedUrl;
-        string launcherVersion = "v0.5.4.6";
+        string launcherVersion = "v0.5.4.8";
         bool isOfflineMode = false;
         Process liveSplitProcess = null;
         List<string> replayFiles;
@@ -66,6 +66,13 @@ namespace SotNRandomizerLauncher
             }
             LoadSeasonalVisuals();
             LoadEvents();
+            LoadDefaultVariables();
+        }
+
+        void LoadDefaultVariables()
+        {
+            string randoToolsEnabled = LauncherClient.GetConfigValue("OpenRandoToolsEnabled");
+            if (randoToolsEnabled == null) LauncherClient.SetAppConfig("OpenRandoToolsEnabled", "Yes");
         }
 
         void LoadSeasonalVisuals()
@@ -158,7 +165,7 @@ namespace SotNRandomizerLauncher
                 btnUpdateLiveSplit.Enabled = true;
                 btnUpdateLiveSplit.Text = "Update";
             }            
-            if (LauncherClient.GetLatestVersion("TalicZealot/SotnRandoTools") != LauncherClient.GetConfigValue("RandoToolsVersion"))
+            if (LauncherClient.GetLatestVersion("crazy4blades/SotnRandoTools") != LauncherClient.GetConfigValue("RandoToolsVersion"))
             {
                 pbRandoTools.Image = Properties.Resources.x_update;
                 btnUpdateRandoTools.Enabled = true;
@@ -310,9 +317,10 @@ namespace SotNRandomizerLauncher
             Process process = new Process();
             process.StartInfo.FileName = Path.Combine(appPath, "EmuHawk.exe");
             process.StartInfo.CreateNoWindow = true;
-            process.StartInfo.WorkingDirectory = appPath;            
+            process.StartInfo.WorkingDirectory = appPath;   
             process.Exited += new EventHandler(BizHawk_Exited);
             process.EnableRaisingEvents = true;
+            if (LauncherClient.GetConfigValue("OpenRandoToolsEnabled") == "Yes") process.StartInfo.Arguments = "--open-ext-tool-dll=SotnRandoTools";
             process.Start(); // Start the BizHawk process
         }
 

@@ -745,13 +745,13 @@ namespace SotNRandomizerLauncher
         private static void DownloadRandoToolsApp(object obj)
         {
             frmDownload downloadForm = (frmDownload)obj;
-            BaseDownloadApp(downloadForm, "RandoTools", "TalicZealot/SotnRandoTools", "SotnRandoTools", ApplyRandoToolsSettings);
+            BaseDownloadApp(downloadForm, "RandoTools", "crazy4blades/SotnRandoTools", "SotnRandoTools", ApplyRandoToolsSettings);
         }
 
         private static void UpdateRandoToolsApp(object obj)
         {
             frmDownload downloadForm = (frmDownload)obj;
-            BaseDownloadApp(downloadForm, "RandoTools", "TalicZealot/SotnRandoTools", "Update", ApplyRandoToolsSettings);
+            BaseDownloadApp(downloadForm, "RandoTools", "crazy4blades/SotnRandoTools", "Update", ApplyRandoToolsSettings);
         }
 
         private static void DownloadRandomizer(object obj)
