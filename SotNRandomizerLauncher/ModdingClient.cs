@@ -152,11 +152,41 @@ namespace SotNRandomizerLauncher
             return writes;
         }
 
-        public static void InstallCustomSkin(AlucardPalettes palette, AlucardLiner liner)
+        static AlucardPalettes GetSelectedPalette(bool isAlucard)
         {
-            if(palette == AlucardPalettes.Disabled && liner == AlucardLiner.Disabled) return;
-            List<ushort> paletteWrites = WritesFromPalette(palette);
-            List<ushort> linerWrites = WritesFromLiner(liner);
+            string configName = (isAlucard) ? "LastAlucardPalette" : "LastWolfPalette";
+            string configValue = LauncherClient.GetConfigValue(configName);
+            if (configValue == null) return AlucardPalettes.Disabled;
+            int localIdx = int.Parse(configValue);
+            if (localIdx == -1)
+            {
+                Random rand = new Random();
+                Array values = Enum.GetValues(typeof(AlucardPalettes));
+                return (AlucardPalettes)values.GetValue(rand.Next(values.Length));
+            }
+            return (AlucardPalettes)localIdx;
+        }
+
+        static AlucardLiner GetSelectedLiner(bool isAlucard)
+        {
+            string configName = (isAlucard) ? "LastAlucardLiner" : "LastWolfLiner";
+            string configValue = LauncherClient.GetConfigValue(configName);
+            if (configValue == null) return AlucardLiner.Disabled;
+            int localIdx = int.Parse(configValue);
+            if (localIdx == -1)
+            {
+                Random rand = new Random();
+                Array values = Enum.GetValues(typeof(AlucardLiner));
+                return (AlucardLiner)values.GetValue(rand.Next(values.Length));
+            }
+            return (AlucardLiner)localIdx;
+        }
+
+        public static void InstallCustomSkin()
+        {
+            // if(palette == AlucardPalettes.Disabled && liner == AlucardLiner.Disabled) return;
+            List<ushort> paletteWrites = WritesFromPalette(GetSelectedPalette(true));
+            List<ushort> linerWrites = WritesFromLiner(GetSelectedLiner(true));
             long offset = 0x0;
             // Retrieve the file, setup the offsets, and do the writes using BinaryEditor.cs
             string track1Path = LauncherClient.GetConfigValue("Track1Path");
@@ -170,7 +200,7 @@ namespace SotNRandomizerLauncher
             // Apply Palette Colors
             if (paletteWrites != null)
             {
-                List<ushort> wolfPaletteWrites = WolfWritesFromPalette(palette);
+                List<ushort> wolfPaletteWrites = WolfWritesFromPalette(GetSelectedPalette(false));
                 // Cloth Colors
                 offset = 0xEF952;
                 for (i = 0; i < 5; i++) {
@@ -204,7 +234,7 @@ namespace SotNRandomizerLauncher
             // Apply Liner Colors
             if (linerWrites != null)
             {
-                List<ushort> wolfLinerWrites = WolfWritesFromLiner(liner);
+                List<ushort> wolfLinerWrites = WolfWritesFromLiner(GetSelectedLiner(false));
                 offset = 0xEF940;
                 for (i = 0; i < 4; i++)
                 {

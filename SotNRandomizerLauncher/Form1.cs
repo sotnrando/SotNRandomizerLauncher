@@ -18,7 +18,7 @@ namespace SotNRandomizerLauncher
     {
         string ppfFile;
         string seedUrl;
-        string launcherVersion = "v0.5.4.8";
+        string launcherVersion = "v0.6.1.1";
         bool isOfflineMode = false;
         Process liveSplitProcess = null;
         List<string> replayFiles;
@@ -47,7 +47,6 @@ namespace SotNRandomizerLauncher
             {
                 NormalVisuals();                           
             }
-            LoadLastVisuals();
             if (!LauncherClient.IsInitialSetup())
             {
                 isOfflineMode = !LauncherClient.HasInternetConnection();
@@ -88,23 +87,6 @@ namespace SotNRandomizerLauncher
                     btnPlay.BackgroundImageLayout = ImageLayout.Stretch;
                 }
             }
-        }
-
-        void LoadLastVisuals()
-        {
-            string alucardPalette = LauncherClient.GetConfigValue("LastAlucardPalette");
-            string alucardLiner = LauncherClient.GetConfigValue("LastAlucardLiner");
-            if (alucardPalette != null && alucardLiner != null)
-            {
-                cbPalette.SelectedIndex = int.Parse(alucardPalette);
-                cbLiner.SelectedIndex = int.Parse(alucardLiner);
-            }
-            else
-            {
-                cbPalette.SelectedIndex = 0;
-                cbLiner.SelectedIndex = 0;
-            }
-            pbSkinPreview.Hide();
         }
 
         void CheckForLauncherUpdates()
@@ -248,7 +230,7 @@ namespace SotNRandomizerLauncher
                 btnPlay.Enabled = false;
                 lblPlayLastSeed.Hide();
                 lblStatus.Text = "Randomizing Game...";
-                await LauncherClient.AsyncRandomizeGame(ppfFile, this, GetSelectedPalette(), GetSelectedLiner());
+                await LauncherClient.AsyncRandomizeGame(ppfFile, this);
                 string ppfFileName = Path.GetFileName(ppfFile).Split('.')[0];
                 LauncherClient.SetAppConfig("LastSeed", ppfFileName);                
                 btnPlay.Enabled = true;
@@ -264,30 +246,6 @@ namespace SotNRandomizerLauncher
                 MessageBox.Show($"Error randomizing: {ex.Message}", "Error during Randomization", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-        }
-
-        AlucardPalettes GetSelectedPalette()
-        {
-            LauncherClient.SetAppConfig("LastAlucardPalette", cbPalette.SelectedIndex.ToString());
-            if(cbPalette.Text == "Random")
-            {
-                Random rand = new Random();
-                Array values = Enum.GetValues(typeof(AlucardPalettes));
-                return (AlucardPalettes)values.GetValue(rand.Next(values.Length));
-            }
-            return (AlucardPalettes)Enum.GetValues(typeof(AlucardPalettes)).GetValue(cbPalette.SelectedIndex);
-        }
-
-        AlucardLiner GetSelectedLiner()
-        {
-            LauncherClient.SetAppConfig("LastAlucardLiner", cbLiner.SelectedIndex.ToString());
-            if (cbLiner.Text == "Random")
-            {
-                Random rand = new Random();
-                Array values = Enum.GetValues(typeof(AlucardLiner));
-                return (AlucardLiner)values.GetValue(rand.Next(values.Length));
-            }
-            return (AlucardLiner)Enum.GetValues(typeof(AlucardLiner)).GetValue(cbLiner.SelectedIndex);
         }
 
         void OpenAreaRandoTool()
@@ -716,39 +674,10 @@ namespace SotNRandomizerLauncher
             SetPPF(ppfFileChosen);
         }
 
-        private void cbPalette_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Bitmap originalImage = new Bitmap(Properties.Resources.alucar11);
-            int mapColorIndex = cbPalette.SelectedIndex;
-            if (mapColorIndex >= cbPalette.Items.Count - 2)
-            {
-                pbSkinPreview.Hide();
-                return;
-            }
-            pbSkinPreview.Show();
-            Rectangle cropArea = new Rectangle(mapColorIndex * 96, 0, 96, 64);
-            Bitmap cropped = originalImage.Clone(cropArea, originalImage.PixelFormat);
-            pbSkinPreview.BackgroundImage = cropped;
-        }
-
-        private void cbLiner_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Bitmap originalImage = new Bitmap(Properties.Resources.alucar10);
-            int mapColorIndex = cbLiner.SelectedIndex;
-            // Invert Bronze & Silver
-            switch (mapColorIndex)
-            {
-                case 1:
-                    mapColorIndex = 2;
-                    break;
-                case 2:
-                    mapColorIndex = 1;
-                    break;        
-            }
-            pbSkinPreview.Show();
-            Rectangle cropArea = new Rectangle(mapColorIndex * 96, 64, 96, 64);
-            Bitmap cropped = originalImage.Clone(cropArea, originalImage.PixelFormat);
-            pbSkinPreview.Image = cropped;
+        private void button2_Click(object sender, EventArgs e)
+        {            
+            frmSkinSelection frmSkinSelection = new frmSkinSelection();
+            frmSkinSelection.Show();
         }
     }
 }

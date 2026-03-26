@@ -417,7 +417,9 @@ namespace SotNRandomizerLauncher
                 LibraryShortcut = cbLibShortcut.Checked, 
                 SeasonalPhrases = cbSeasonalPhrases.Checked,
                 SimplifiedInputs = cbSimplifiedInputs.Checked,
-                ElementalChaos = cbElementalChaos.Checked
+                ElementalChaos = cbElementalChaos.Checked,
+                RandomStartingStats = cbRandomStats.Checked,
+                StartingStatsAmount = Decimal.ToInt32(numRandomStats.Value)
             };
         }
 
@@ -737,6 +739,11 @@ namespace SotNRandomizerLauncher
                     checkbox.Checked = false;
                 }
             }
+        }
+
+        private void cbSimplifiedInputs_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

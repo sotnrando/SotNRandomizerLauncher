@@ -77,6 +77,9 @@ namespace SotNRandomizerLauncher
         public bool SeasonalPhrases {  get; set; }
         public bool SimplifiedInputs { get; set; }
         public bool ElementalChaos { get; set; }
+        public bool SingleHitGears { get; set; }
+        public bool RandomStartingStats { get; set; }
+        public int StartingStatsAmount { get; set; }
         public Goal CustomGoal { get; set; }
         public CheckState ItemStats { get; set; }
         public CheckState ItemLocations { get; set; }
@@ -119,9 +122,12 @@ namespace SotNRandomizerLauncher
             if (this.LibraryShortcut) arguments += "--ls ";
             if (this.DevStash) arguments += "--dev ";
             if (this.BossMusic) arguments += "--bm ";
-            if (this.SimplifiedInputs) arguments += "--si ";
+            if (this.SimplifiedInputs) arguments += "--ez ";
             if (this.ElementalChaos) arguments += "--ec ";
+            if (this.SingleHitGears) arguments += "--gp ";
+            if (this.RandomStartingStats) arguments += $"--ss {this.StartingStatsAmount} ";
             if (!this.SeasonalPhrases) arguments += "--sp ";
+            
             if (this.ExcludeSongs)
             {
                 string excludeSongList = LauncherClient.GetConfigValue("ExcludedSongs");

@@ -65,6 +65,9 @@ namespace SotNRandomizerLauncher
                 case 9:
                     Version9();
                     break;
+                case 10:
+                    Version10();
+                    break;
             }
         }
 
@@ -99,6 +102,23 @@ namespace SotNRandomizerLauncher
         static void Version9()
         {
             LauncherClient.InstallMapTracker();
+        }
+
+        static void Version10()
+        {
+            string bizPath = LauncherClient.GetConfigValue("BizHawkPath");
+            string filePath = Path.Combine(bizPath, "ExternalTools", "SotnRandoTools", "Presets", "april-fools.json");
+            try
+            {
+                if (File.Exists(filePath))
+                {
+                    File.Delete(filePath);
+                }
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }
