@@ -418,6 +418,7 @@ namespace SotNRandomizerLauncher
                 SeasonalPhrases = cbSeasonalPhrases.Checked,
                 SimplifiedInputs = cbSimplifiedInputs.Checked,
                 ElementalChaos = cbElementalChaos.Checked,
+                SingleHitGears = cbSingleHitGears.Checked,
                 RandomStartingStats = cbRandomStats.Checked,
                 StartingStatsAmount = Decimal.ToInt32(numRandomStats.Value)
             };
