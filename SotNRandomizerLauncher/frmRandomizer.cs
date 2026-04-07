@@ -293,7 +293,23 @@ namespace SotNRandomizerLauncher
                     cbNoPrologue.Checked,
                     cbUnlockedMode.Checked,
                     cbMisteryMode.Checked,
-                    cbEnemyStatRando.Checked
+                    cbEnemyStatRando.Checked,
+                    cbExtension.Text,
+                    cbRandoShop.Checked,
+                    cbStartingZoneRando.Checked,
+                    cbStartingZoneRando2.Checked,
+                    cbGuaranteedDrops.Checked,
+                    cbReverseLibraryCard.Checked,
+                    cbPotions.Checked,
+                    cbGodspeed.Checked,
+                    cbLibShortcut.Checked,
+                    cbElementalChaos.Checked,
+                    cbSingleHitGears.Checked,
+                    numRandomStats.Value,
+                    cbSimplifiedInputs.Checked,
+                    cbDevStash.Checked,
+                    cbSeasonalPhrases.Checked,
+                    cbGoalsList.Text
                 )
             );
             isRandomizing = false;
@@ -301,7 +317,7 @@ namespace SotNRandomizerLauncher
             btnGeneratePPF.Enabled = true;
         }     
         
-        async Task<bool> SendPresetGenerationData(bool offlineMode, string presetId, int generationTime, bool tournament, bool colorRando, bool magicMax, bool antiFreeze, bool purseMode, bool iws, bool fastWarp, bool noPrologue, bool unlocked, bool surprise, bool enemyStat)
+        async Task<bool> SendPresetGenerationData(bool offlineMode, string presetId, int generationTime, bool tournament, bool colorRando, bool magicMax, bool antiFreeze, bool purseMode, bool iws, bool fastWarp, bool noPrologue, bool unlocked, bool surprise, bool enemyStat, string relicExtension, bool shopPrice, bool startRoom1, bool startRoom2, bool domino, bool rlbc, bool immunePotions, bool godspeed, bool libraryShortcut, bool elemChaos, bool singleHitGear, string startingStats, bool easy, bool devStash, bool seasonalPhrases, string newGoals)
         {
             if (!offlineMode)
             {                
@@ -318,7 +334,22 @@ namespace SotNRandomizerLauncher
                     { "unlocked", unlocked },
                     { "surprise", surprise },
                     { "enemy_stat", enemyStat },
-                    { "relic_extension", "" }             
+                    { "relic_extension", relicExtension },
+                    { "shop_price", shopPrice },
+                    { "start_room_1", startRoom1 },
+                    { "start_room_2", startRoom2 },
+                    { "domino", domino },
+                    { "rlbc", rlbc },
+                    { "immunity_potions", immunePotions },
+                    { "godspeed_shoes", godspeed },
+                    { "library_shortcut", libraryShortcut },
+                    { "elemental_chaos", elemChaos },
+                    { "single_hit_gear", singleHitGear },
+                    { "start_stat", startingStats },
+                    { "easy", easy },
+                    { "devs_stash", devStash },
+                    { "seasonal_phrases", seasonalPhrases },
+                    { "new_goals", newGoals },
                 };
                 var postDict = new Dictionary<string, object>
                 {
