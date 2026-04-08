@@ -13,7 +13,7 @@ namespace SotNRandomizerLauncher
     {
         public static int GetCurrentVersion()
         {
-            return 9; // Must be updated with every release
+            return 10; // Must be updated with every release
         }
 
         private static int GetInstalledVersion()

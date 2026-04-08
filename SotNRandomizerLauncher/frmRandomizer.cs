@@ -305,7 +305,7 @@ namespace SotNRandomizerLauncher
                     cbLibShortcut.Checked,
                     cbElementalChaos.Checked,
                     cbSingleHitGears.Checked,
-                    numRandomStats.Value,
+                    numRandomStats.Value.ToString(),
                     cbSimplifiedInputs.Checked,
                     cbDevStash.Checked,
                     cbSeasonalPhrases.Checked,
@@ -465,6 +465,11 @@ namespace SotNRandomizerLauncher
         {
             btnGeneratePPF.Enabled = true;
             PresetInfo presetInfo = cbPreset.SelectedItem as PresetInfo;
+            if(presetInfo is null)
+            {
+                cbPreset.SelectedIndex = cbPreset.FindStringExact("Guarded O.G.");
+                return;
+            }
             SpecialPresetLocks(presetInfo.Id);
             try
             {

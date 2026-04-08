@@ -198,20 +198,33 @@ namespace SotNRandomizerLauncher
             BinaryEditor editor = new BinaryEditor(fs);
             int i = 0;
             // Apply Palette Colors
+            // Apply Alucard Palettes & Liner
             if (paletteWrites != null)
             {
-                List<ushort> wolfPaletteWrites = WolfWritesFromPalette(GetSelectedPalette(false));
                 // Cloth Colors
                 offset = 0xEF952;
-                for (i = 0; i < 5; i++) {
+                for (i = 0; i < 5; i++)
+                {
                     int idx = i + 2;
                     offset = editor.WriteShort(offset, paletteWrites[idx]);
                 }
                 // Darkest Color
                 offset = 0xEF93E;
                 offset = editor.WriteShort(offset, paletteWrites[1]);
+            }
+            if (linerWrites != null)
+            {
+                offset = 0xEF940;
+                for (i = 0; i < 4; i++)
+                {
+                    offset = editor.WriteShort(offset, linerWrites[i]);
+                }
+            }
 
-                // Wolf Colors
+            // Apply Wolf Palette & Liner
+            List<ushort> wolfPaletteWrites = WolfWritesFromPalette(GetSelectedPalette(false));
+            if (wolfPaletteWrites != null)
+            {
                 offset = 0xEF9C0;
                 for (i = 0; i < 4; i++)
                 {
@@ -230,16 +243,9 @@ namespace SotNRandomizerLauncher
                 offset += 0x0c;
                 offset = editor.WriteShort(offset, wolfPaletteWrites[13]);
             }
-
-            // Apply Liner Colors
-            if (linerWrites != null)
+            List<ushort> wolfLinerWrites = WolfWritesFromLiner(GetSelectedLiner(false));
+            if (wolfLinerWrites != null)
             {
-                List<ushort> wolfLinerWrites = WolfWritesFromLiner(GetSelectedLiner(false));
-                offset = 0xEF940;
-                for (i = 0; i < 4; i++)
-                {
-                    offset = editor.WriteShort(offset, linerWrites[i]);
-                }
                 offset = 0xEF9C8;
                 for (i = 0; i < 5; i++)
                 {

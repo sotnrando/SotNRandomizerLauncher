@@ -161,7 +161,14 @@ namespace SotNRandomizerLauncher
                 }
                 else
                 {
-                    if (this.VanillaMusic) arguments += "~m";                  
+                    if (this.VanillaMusic)
+                    {
+                        arguments += "~m";
+                    }
+                    else
+                    {
+                        arguments += "m";
+                    }
                 }
                 arguments += GetArgument(this.EnemyDrops, "d");
                 arguments += GetArgument(this.ItemLocations, "i");
