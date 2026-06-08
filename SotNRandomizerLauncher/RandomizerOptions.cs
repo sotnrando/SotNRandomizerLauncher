@@ -79,6 +79,11 @@ namespace SotNRandomizerLauncher
         public bool ElementalChaos { get; set; }
         public bool SingleHitGears { get; set; }
         public bool RandomStartingStats { get; set; }
+        public bool SpikeRoomRando { get; set; }
+        public bool OpenClockStatue { get; set; }
+        public bool ReverseTeleporter { get; set; }
+        public bool ZeroDollarRelic { get; set; }
+        public bool LycanthropeMode { get; set; }
         public int StartingStatsAmount { get; set; }
         public Goal CustomGoal { get; set; }
         public CheckState ItemStats { get; set; }
@@ -125,6 +130,11 @@ namespace SotNRandomizerLauncher
             if (this.SimplifiedInputs) arguments += "--ez ";
             if (this.ElementalChaos) arguments += "--ec ";
             if (this.SingleHitGears) arguments += "--gp ";
+            if (this.ReverseTeleporter) arguments += "--c2r ";
+            if (this.ZeroDollarRelic) arguments += "--zr ";
+            if (this.OpenClockStatue) arguments += "--os ";
+            if (this.SpikeRoomRando) arguments += "--srr ";
+            if (this.LycanthropeMode) arguments += "--lyc ";
             if (this.RandomStartingStats) arguments += $"--ss {this.StartingStatsAmount} ";
             if (!this.SeasonalPhrases) arguments += "--sp ";
             

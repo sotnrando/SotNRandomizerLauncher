@@ -13,7 +13,7 @@ namespace SotNRandomizerLauncher
     {
         public static int GetCurrentVersion()
         {
-            return 10; // Must be updated with every release
+            return 11; // Must be updated with every release
         }
 
         private static int GetInstalledVersion()
@@ -68,6 +68,9 @@ namespace SotNRandomizerLauncher
                 case 10:
                     Version10();
                     break;
+                case 11:
+                    Version11();
+                    break;
             }
         }
 
@@ -119,6 +122,15 @@ namespace SotNRandomizerLauncher
             {
 
             }
+        }
+
+        static void Version11()
+        {
+            LauncherClient.SetAppConfig("LastAlucardPalette", "0");
+            LauncherClient.SetAppConfig("LastAlucardLiner", "0");
+            LauncherClient.SetAppConfig("LastWolfPalette", "0");
+            LauncherClient.SetAppConfig("LastWolfLiner", "0");
+            MessageBox.Show("New skins have been released! Your skins have been reset back to Default. Choose your skin in the Skin Selector!", "Skin Reset", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

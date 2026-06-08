@@ -65,7 +65,7 @@ namespace SotNRandomizerLauncher
             int localIdx = alPaletteIdx;
             AlucardPalettes alucardPalette = (AlucardPalettes)alPaletteIdx;
             if (alucardPalette == AlucardPalettes.Disabled) localIdx = 0;
-            Bitmap originalImage = new Bitmap(Properties.Resources.alucar11);
+            Bitmap originalImage = new Bitmap(Properties.Resources.alucar12);
             Rectangle cropArea = new Rectangle(localIdx * 96, 0, 32, 64);
             Bitmap cropped = originalImage.Clone(cropArea, originalImage.PixelFormat);
             pbSkinPreview.BackgroundImage = cropped;            
@@ -77,17 +77,7 @@ namespace SotNRandomizerLauncher
             int localIdx = alLinerIdx;
             AlucardLiner alucardLiner = (AlucardLiner)alLinerIdx;
             if (alucardLiner == AlucardLiner.Disabled) localIdx = 0;
-            Bitmap originalImage = new Bitmap(Properties.Resources.alucar10);
-            // Invert Bronze & Silver
-            switch (localIdx)
-            {
-                case 1:
-                    localIdx = 2;
-                    break;
-                case 2:
-                    localIdx = 1;
-                    break;
-            }
+            Bitmap originalImage = new Bitmap(Properties.Resources.alucar12);
             Rectangle cropArea = new Rectangle(localIdx * 96, 64, 32, 64);
             Bitmap cropped = originalImage.Clone(cropArea, originalImage.PixelFormat);
             pbSkinPreview.Image = cropped;
@@ -99,7 +89,7 @@ namespace SotNRandomizerLauncher
             int localIdx = wlfPaletteIdx;
             AlucardPalettes alucardPalette = (AlucardPalettes)wlfPaletteIdx;
             if (alucardPalette == AlucardPalettes.Disabled) localIdx = 0;
-            Bitmap originalImage = new Bitmap(Properties.Resources.alucar11);
+            Bitmap originalImage = new Bitmap(Properties.Resources.alucar12);
             Rectangle cropArea = new Rectangle(localIdx * 96 + 32, 0, 64, 64);
             Bitmap cropped = originalImage.Clone(cropArea, originalImage.PixelFormat);
             pbWolfPreview.BackgroundImage = cropped;
@@ -111,17 +101,7 @@ namespace SotNRandomizerLauncher
             int localIdx = wlfLinerIdx;
             AlucardLiner alucardLiner = (AlucardLiner)wlfLinerIdx;
             if (alucardLiner == AlucardLiner.Disabled) localIdx = 0;
-            Bitmap originalImage = new Bitmap(Properties.Resources.alucar10);
-            // Invert Bronze & Silver
-            switch (localIdx)
-            {
-                case 1:
-                    localIdx = 2;
-                    break;
-                case 2:
-                    localIdx = 1;
-                    break;
-            }
+            Bitmap originalImage = new Bitmap(Properties.Resources.alucar12);
             Rectangle cropArea = new Rectangle(localIdx * 96 + 32, 64, 64, 64);
             Bitmap cropped = originalImage.Clone(cropArea, originalImage.PixelFormat);
             pbWolfPreview.Image = cropped;

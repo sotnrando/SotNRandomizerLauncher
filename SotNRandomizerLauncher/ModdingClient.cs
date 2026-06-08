@@ -11,12 +11,14 @@ namespace SotNRandomizerLauncher
     {
         Default,
         BloodyTears,
-        BlueDanube,
-        RefreshingMint,
+        VolcanicFire,
         SwampThing,
-        WhiteKnight,
+        RefreshingMint,
+        IceCold,
+        BlueDanube,
         RoyalPurple,
         PinkPassion,
+        WhiteKnight,    
         ShadowPrince,
         Disabled
     }
@@ -24,10 +26,12 @@ namespace SotNRandomizerLauncher
     public enum AlucardLiner
     {
         GoldTrim,
-        SilverTrim,
         BronzeTrim,
+        SilverTrim,        
         OnyxTrim,
         CoralTrim,
+        SlateTrim,
+        JadeTrim,
         Disabled
     }
     public static class ModdingClient
@@ -60,6 +64,12 @@ namespace SotNRandomizerLauncher
                     break;
                 case AlucardPalettes.ShadowPrince:
                     writes = new List<ushort> { 0x8000, 0x8c42, 0x98a5, 0xa0e9, 0xa96d, 0xb9f1, 0xc655 };
+                    break;
+                case AlucardPalettes.VolcanicFire:
+                    writes = new List<ushort> { 0x8024, 0x8488, 0x84ad, 0xa5d3, 0xb634, 0xcb38, 0xf7bd };
+                    break;
+                case AlucardPalettes.IceCold:
+                    writes = new List<ushort> { 0x9061, 0xa082, 0xb925, 0xc5e8, 0xce6c, 0xced7, 0xf7bd };
                     break;
                 case AlucardPalettes.Default:
                     writes = new List<ushort> { 0x8000, 0x8421, 0x98a5, 0xa94a, 0xbe2e, 0xc2f7, 0xf39c };
@@ -97,6 +107,12 @@ namespace SotNRandomizerLauncher
                 case AlucardPalettes.ShadowPrince:
                     writes = new List<ushort> { 0x8822, 0x8c43, 0x98a5, 0xa0e9, 0x808d, 0xa96d, 0x80f9, 0x8d9e, 0x813f, 0x8421, 0x8822, 0x8822, 0x9063, 0x9484 };
                     break;
+                case AlucardPalettes.VolcanicFire:
+                    writes = new List<ushort> { 0x8046, 0x80ab, 0x88cf, 0x99b6, 0xb231, 0xba79, 0xd2d7, 0xf397, 0xffff, 0x8003, 0x8023, 0x8447, 0x90eb, 0xa192};
+                    break;
+                case AlucardPalettes.IceCold:
+                    writes = new List<ushort> { 0xace5, 0xc525, 0xd168, 0xe68b, 0xb401, 0xff35, 0xe402, 0xe125, 0xf509, 0xa082, 0x9c83, 0xb0e4, 0xc1a9, 0xc5e8};
+                    break;
                 case AlucardPalettes.Default:
                     writes = new List<ushort> { 0xa465, 0xbc88, 0xc8ec, 0xe5cf, 0x800d, 0xff35, 0x8019, 0xa17f, 0x801f, 0x9802, 0x9423, 0xa866, 0xb908, 0xd1a9 };
                     break;
@@ -121,6 +137,12 @@ namespace SotNRandomizerLauncher
                 case AlucardLiner.OnyxTrim:
                     writes = new List<ushort> { 0x8c43, 0x98a5, 0x9cc8, 0xa54c };
                     break;
+                case AlucardLiner.SlateTrim:
+                    writes = new List<ushort> { 0xa8e6, 0xb927, 0xc9eb, 0xd22d };
+                    break;
+                case AlucardLiner.JadeTrim:
+                    writes = new List<ushort> { 0x9905, 0xa94a, 0xb60b, 0xc28f};
+                    break;
                 case AlucardLiner.CoralTrim:
                     writes = new List<ushort> { 0xa8ac, 0xad0f, 0xadb3, 0xbe16 };
                     break;
@@ -144,6 +166,12 @@ namespace SotNRandomizerLauncher
                     break;
                 case AlucardLiner.OnyxTrim:
                     writes = new List<ushort> { 0xa52c, 0xa98a, 0x9cc7, 0x8c44, 0x98a8, 0x9486, 0x9ce7, 0xa509, 0x8001, 0x8c44 };
+                    break;
+                case AlucardLiner.SlateTrim:
+                    writes = new List<ushort> { 0xc5ca, 0xe6d2, 0xef9d, 0x9863, 0xb528, 0xa905, 0xb96b, 0xce0c, 0x8820, 0x9863};
+                    break;
+                case AlucardLiner.JadeTrim:
+                    writes = new List<ushort> { 0xae0a, 0xcf12, 0xef9d, 0x90a3, 0xa588, 0x9906, 0xadaa, 0xb62c, 0x8820, 0x90a3};
                     break;
                 case AlucardLiner.CoralTrim:
                     writes = new List<ushort> { 0xbdf9, 0xce7d, 0xdf7c, 0x948a, 0xb553, 0xa10f, 0xbdd3, 0xbdf8, 0x8403, 0x904b };

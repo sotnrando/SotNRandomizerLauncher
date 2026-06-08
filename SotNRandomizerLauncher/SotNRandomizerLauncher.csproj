@@ -13,6 +13,8 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -28,8 +30,6 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -124,6 +124,12 @@
     </Compile>
     <Compile Include="frmAreaRandoOptions.Designer.cs">
       <DependentUpon>frmAreaRandoOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChaosMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChaosMode.Designer.cs">
+      <DependentUpon>frmChaosMode.cs</DependentUpon>
     </Compile>
     <Compile Include="frmConfigure.cs">
       <SubType>Form</SubType>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAreaRandoOptions.resx">
       <DependentUpon>frmAreaRandoOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChaosMode.resx">
+      <DependentUpon>frmChaosMode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConfigure.resx">
       <DependentUpon>frmConfigure.cs</DependentUpon>
@@ -380,9 +389,10 @@
     <None Include="Resources\pride-flag-2.jpg" />
     <None Include="Resources\pride-flag-1.jpg" />
     <None Include="Resources\map_pa10.png" />
-    <None Include="Resources\alucar10.png" />
     <None Include="Resources\alucar11.bmp" />
     <None Include="Resources\alucar11.png" />
+    <None Include="Resources\alucar10.png" />
+    <None Include="Resources\alucar12.png" />
     <Content Include="Resources\question.png" />
   </ItemGroup>
   <ItemGroup>

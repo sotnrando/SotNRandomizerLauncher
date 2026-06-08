@@ -64,7 +64,21 @@ namespace SotNRandomizerLauncher
             else
             {
                 cbPreset.SelectedIndex = cbPreset.FindStringExact(LauncherClient.GetConfigValue("LastPreset"));
+                TournamentModeChangeWarning();
+            }            
+        }
+
+        void TournamentModeChangeWarning()
+        {
+            bool tournamentModeQoL = LauncherClient.GetConfigValue("TournamentModeQoLWarning") == null;
+            if(!tournamentModeQoL) return;
+            DialogResult result = MessageBox.Show("Tournament Mode QoL features have been split into the Open Clock Statue and Zero-Dollar Relic options. Do you want to enable these settings?", "Tournament Mode Changes", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(result == DialogResult.Yes)
+            {
+                cbZeroDollarRelic.Checked = true;
+                cbOpenClockStatue.Checked = true;
             }
+            LauncherClient.SetAppConfig("TournamentModeQoLWarning", "Shown");
         }
 
         void GetPresets()
@@ -451,7 +465,12 @@ namespace SotNRandomizerLauncher
                 ElementalChaos = cbElementalChaos.Checked,
                 SingleHitGears = cbSingleHitGears.Checked,
                 RandomStartingStats = cbRandomStats.Checked,
-                StartingStatsAmount = Decimal.ToInt32(numRandomStats.Value)
+                StartingStatsAmount = Decimal.ToInt32(numRandomStats.Value),
+                SpikeRoomRando = cbSpikeRoomRando.Checked,
+                ZeroDollarRelic = cbZeroDollarRelic.Checked,
+                ReverseTeleporter = cbReverseTeleporter.Checked,
+                OpenClockStatue = cbOpenClockStatue.Checked,
+                LycanthropeMode = cbLycanMode.Checked,
             };
         }
 
@@ -781,6 +800,12 @@ namespace SotNRandomizerLauncher
         private void cbSimplifiedInputs_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnChaosMode_Click(object sender, EventArgs e)
+        {
+            frmChaosMode frmChaosMode = new frmChaosMode();
+            frmChaosMode.ShowDialog();
         }
     }
 }
