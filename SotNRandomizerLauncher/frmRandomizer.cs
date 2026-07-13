@@ -40,7 +40,7 @@ namespace SotNRandomizerLauncher
             Configuration configs = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
             foreach (TabPage tabPage in tabOptions.TabPages)
             {
-                foreach (CheckBox checkbox in tabPage.Controls.OfType<CheckBox>())
+                foreach (CheckBox checkbox in tabPage.Controls.OfType<TableLayoutPanel>().First().Controls.OfType<CheckBox>())
                 {
                     if ((checkbox.Tag != null && checkbox.Tag.ToString() == "NoInclude") || checkbox.ThreeState) continue;
                     string isChecked = LauncherClient.GetConfigValue(configs, checkbox.Name);
@@ -293,6 +293,8 @@ namespace SotNRandomizerLauncher
                 lblStartingEquipment.Hide();
                 BingoSpecialSetup();
             }
+            string extension = cbExtension.Text;
+            string goals = cbGoalsList.Text;
             await Task.Run(() => SendPresetGenerationData(
                     isOfflineMode,
                     presetId,
@@ -308,7 +310,7 @@ namespace SotNRandomizerLauncher
                     cbUnlockedMode.Checked,
                     cbMisteryMode.Checked,
                     cbEnemyStatRando.Checked,
-                    cbExtension.Text,
+                    extension,
                     cbRandoShop.Checked,
                     cbStartingZoneRando.Checked,
                     cbStartingZoneRando2.Checked,
@@ -321,9 +323,8 @@ namespace SotNRandomizerLauncher
                     cbSingleHitGears.Checked,
                     numRandomStats.Value.ToString(),
                     cbSimplifiedInputs.Checked,
-                    cbDevStash.Checked,
                     cbSeasonalPhrases.Checked,
-                    cbGoalsList.Text
+                    goals
                 )
             );
             isRandomizing = false;
@@ -331,7 +332,7 @@ namespace SotNRandomizerLauncher
             btnGeneratePPF.Enabled = true;
         }     
         
-        async Task<bool> SendPresetGenerationData(bool offlineMode, string presetId, int generationTime, bool tournament, bool colorRando, bool magicMax, bool antiFreeze, bool purseMode, bool iws, bool fastWarp, bool noPrologue, bool unlocked, bool surprise, bool enemyStat, string relicExtension, bool shopPrice, bool startRoom1, bool startRoom2, bool domino, bool rlbc, bool immunePotions, bool godspeed, bool libraryShortcut, bool elemChaos, bool singleHitGear, string startingStats, bool easy, bool devStash, bool seasonalPhrases, string newGoals)
+        async Task<bool> SendPresetGenerationData(bool offlineMode, string presetId, int generationTime, bool tournament, bool colorRando, bool magicMax, bool antiFreeze, bool purseMode, bool iws, bool fastWarp, bool noPrologue, bool unlocked, bool surprise, bool enemyStat, string relicExtension, bool shopPrice, bool startRoom1, bool startRoom2, bool domino, bool rlbc, bool immunePotions, bool godspeed, bool libraryShortcut, bool elemChaos, bool singleHitGear, string startingStats, bool easy, bool seasonalPhrases, string newGoals)
         {
             if (!offlineMode)
             {                
@@ -361,7 +362,7 @@ namespace SotNRandomizerLauncher
                     { "single_hit_gear", singleHitGear },
                     { "start_stat", startingStats },
                     { "easy", easy },
-                    { "devs_stash", devStash },
+                    { "devs_stash", false },
                     { "seasonal_phrases", seasonalPhrases },
                     { "new_goals", newGoals },
                 };
@@ -387,7 +388,7 @@ namespace SotNRandomizerLauncher
             Dictionary<string, string> cbValues = new Dictionary<string, string>();
             foreach (TabPage tabPage in tabOptions.TabPages)
             {
-                foreach (CheckBox control in tabPage.Controls.OfType<CheckBox>())
+                foreach (CheckBox control in tabPage.Controls.OfType<TableLayoutPanel>().First().Controls.OfType<CheckBox>())
                 {
                     if ((control.Tag != null && control.Tag.ToString() == "NoInclude") || control.ThreeState) continue;
                     cbValues[control.Name] = control.Checked.ToString();
@@ -407,7 +408,7 @@ namespace SotNRandomizerLauncher
             Goal customGoal = Goal.Disabled;            
             if (cbCustomGoals.Checked)
             {
-                string cleanedGoal = cbGoalsList.Text.Replace(" ", "").Replace("&", "");
+                string cleanedGoal = cbGoalsList.Text.Replace(" ", "").Replace("&", "").Replace(",", "");
                 customGoal = (Goal)Enum.Parse(typeof(Goal), cleanedGoal);
             }
             if (cbAreaRandomizer.Checked && randoOptions == null)
@@ -455,7 +456,6 @@ namespace SotNRandomizerLauncher
                 CustomGoal = customGoal,
                 ReverseLibraryCard = cbReverseLibraryCard.Checked,
                 GuaranteedDrops = cbGuaranteedDrops.Checked,
-                DevStash = cbDevStash.Checked,
                 BossMusic = cbBossMusic.Checked,
                 GodspeedShoes = cbGodspeed.Checked,
                 ImmunityPotions = cbPotions.Checked,
@@ -471,6 +471,19 @@ namespace SotNRandomizerLauncher
                 ReverseTeleporter = cbReverseTeleporter.Checked,
                 OpenClockStatue = cbOpenClockStatue.Checked,
                 LycanthropeMode = cbLycanMode.Checked,
+                OverrideSettings = cbOptionOverride.Checked,
+                AListOfNames = cbListOfNames.Checked,
+                WarlockMode = cbWarlockMode.Checked,
+                ChaosDrops = cbChaosDrops.Checked,
+                LevelOneMode = cbLevelOne.Checked,
+                InstantDeath = cbInstantDeath.Checked,
+                FourBeasts = cbFourBeasts.Checked,
+                EntranceTrap = cbEntranceTrap.Checked,
+                ForbiddenShortcut = cbForbiddenShortcut.Checked,
+                EnhancedCross = cbEnhancedCross.Checked,
+                MaximumMuramasa = cbMaxMuramasa.Checked,
+                EnhancedDarkShield = cbEnhancedDark.Checked,
+                SwordOfBrawn = cbSwordBrawn.Checked
             };
         }
 

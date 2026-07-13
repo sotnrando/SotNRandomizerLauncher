@@ -85,7 +85,6 @@
             this.cbPotions = new System.Windows.Forms.CheckBox();
             this.cbGodspeed = new System.Windows.Forms.CheckBox();
             this.cbLibShortcut = new System.Windows.Forms.CheckBox();
-            this.cbDevStash = new System.Windows.Forms.CheckBox();
             this.cbBossMusic = new System.Windows.Forms.CheckBox();
             this.cbSeasonalPhrases = new System.Windows.Forms.CheckBox();
             this.cbElementalChaos = new System.Windows.Forms.CheckBox();
@@ -132,6 +131,27 @@
             this.lblCastleType = new System.Windows.Forms.Label();
             this.lblBatchSeeds = new System.Windows.Forms.Label();
             this.btnChaosMode = new System.Windows.Forms.Button();
+            this.cbChaosDrops = new System.Windows.Forms.CheckBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbLevelOne = new System.Windows.Forms.CheckBox();
+            this.cbInstantDeath = new System.Windows.Forms.CheckBox();
+            this.cbFourBeasts = new System.Windows.Forms.CheckBox();
+            this.cbForbiddenShortcut = new System.Windows.Forms.CheckBox();
+            this.cbMaxMuramasa = new System.Windows.Forms.CheckBox();
+            this.cbSwordBrawn = new System.Windows.Forms.CheckBox();
+            this.cbEntranceTrap = new System.Windows.Forms.CheckBox();
+            this.cbEnhancedCross = new System.Windows.Forms.CheckBox();
+            this.cbEnhancedDark = new System.Windows.Forms.CheckBox();
+            this.cbListOfNames = new System.Windows.Forms.CheckBox();
+            this.cbWarlockMode = new System.Windows.Forms.CheckBox();
+            this.cbOptionOverride = new System.Windows.Forms.CheckBox();
             this.grpRandomizations.SuspendLayout();
             this.tabOptions.SuspendLayout();
             this.Randomizations.SuspendLayout();
@@ -147,6 +167,14 @@
             this.BasicInfo.SuspendLayout();
             this.RandomizationDetails.SuspendLayout();
             this.AdditionalRules.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpRandomizations
@@ -161,7 +189,7 @@
             this.grpRandomizations.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.grpRandomizations.Location = new System.Drawing.Point(12, 12);
             this.grpRandomizations.Name = "grpRandomizations";
-            this.grpRandomizations.Size = new System.Drawing.Size(394, 80);
+            this.grpRandomizations.Size = new System.Drawing.Size(584, 80);
             this.grpRandomizations.TabIndex = 4;
             this.grpRandomizations.TabStop = false;
             this.grpRandomizations.Text = "Randomizations";
@@ -170,7 +198,7 @@
             // 
             this.btnPresetList.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPresetList.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnPresetList.Location = new System.Drawing.Point(306, 18);
+            this.btnPresetList.Location = new System.Drawing.Point(500, 18);
             this.btnPresetList.Name = "btnPresetList";
             this.btnPresetList.Size = new System.Drawing.Size(78, 22);
             this.btnPresetList.TabIndex = 26;
@@ -184,7 +212,7 @@
             this.txtSeed.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtSeed.Location = new System.Drawing.Point(83, 46);
             this.txtSeed.Name = "txtSeed";
-            this.txtSeed.Size = new System.Drawing.Size(305, 22);
+            this.txtSeed.Size = new System.Drawing.Size(495, 22);
             this.txtSeed.TabIndex = 7;
             this.txtSeed.Text = "(Optional)";
             this.txtSeed.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSeed_MouseClick);
@@ -214,7 +242,7 @@
             "Magicmirror"});
             this.cbPreset.Location = new System.Drawing.Point(83, 19);
             this.cbPreset.Name = "cbPreset";
-            this.cbPreset.Size = new System.Drawing.Size(217, 21);
+            this.cbPreset.Size = new System.Drawing.Size(411, 21);
             this.cbPreset.TabIndex = 5;
             this.cbPreset.SelectedIndexChanged += new System.EventHandler(this.cbPreset_SelectedIndexChanged);
             this.cbPreset.SelectedValueChanged += new System.EventHandler(this.cbPreset_SelectedValueChanged);
@@ -234,9 +262,9 @@
             // 
             this.cbMisteryMode.AutoSize = true;
             this.cbMisteryMode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMisteryMode.Location = new System.Drawing.Point(182, 12);
+            this.cbMisteryMode.Location = new System.Drawing.Point(188, 28);
             this.cbMisteryMode.Name = "cbMisteryMode";
-            this.cbMisteryMode.Size = new System.Drawing.Size(114, 21);
+            this.cbMisteryMode.Size = new System.Drawing.Size(114, 19);
             this.cbMisteryMode.TabIndex = 27;
             this.cbMisteryMode.Text = "Relic Surprise!";
             this.toolTip.SetToolTip(this.cbMisteryMode, "All relics are now secret scrolls. The player can\'t tell which relic it is until " +
@@ -247,7 +275,7 @@
             // 
             this.cbEnemyStatRando.AutoSize = true;
             this.cbEnemyStatRando.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEnemyStatRando.Location = new System.Drawing.Point(10, 12);
+            this.cbEnemyStatRando.Location = new System.Drawing.Point(3, 3);
             this.cbEnemyStatRando.Name = "cbEnemyStatRando";
             this.cbEnemyStatRando.Size = new System.Drawing.Size(102, 21);
             this.cbEnemyStatRando.TabIndex = 26;
@@ -260,7 +288,7 @@
             this.button1.Enabled = false;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(188, 123);
+            this.button1.Location = new System.Drawing.Point(188, 65);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(162, 23);
             this.button1.TabIndex = 25;
@@ -272,7 +300,7 @@
             // 
             this.cbExcludeSongs.AutoSize = true;
             this.cbExcludeSongs.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbExcludeSongs.Location = new System.Drawing.Point(10, 124);
+            this.cbExcludeSongs.Location = new System.Drawing.Point(3, 65);
             this.cbExcludeSongs.Name = "cbExcludeSongs";
             this.cbExcludeSongs.Size = new System.Drawing.Size(119, 21);
             this.cbExcludeSongs.TabIndex = 24;
@@ -285,9 +313,9 @@
             // 
             this.cbUnlockedMode.AutoSize = true;
             this.cbUnlockedMode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbUnlockedMode.Location = new System.Drawing.Point(10, 12);
+            this.cbUnlockedMode.Location = new System.Drawing.Point(3, 28);
             this.cbUnlockedMode.Name = "cbUnlockedMode";
-            this.cbUnlockedMode.Size = new System.Drawing.Size(123, 21);
+            this.cbUnlockedMode.Size = new System.Drawing.Size(123, 19);
             this.cbUnlockedMode.TabIndex = 23;
             this.cbUnlockedMode.Text = "Unlocked Mode";
             this.toolTip.SetToolTip(this.cbUnlockedMode, "Opens all shortcuts in both castles. (WARNING: This may break logic)");
@@ -297,9 +325,9 @@
             // 
             this.cbWingSmashMode.AutoSize = true;
             this.cbWingSmashMode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbWingSmashMode.Location = new System.Drawing.Point(10, 39);
+            this.cbWingSmashMode.Location = new System.Drawing.Point(3, 78);
             this.cbWingSmashMode.Name = "cbWingSmashMode";
-            this.cbWingSmashMode.Size = new System.Drawing.Size(153, 21);
+            this.cbWingSmashMode.Size = new System.Drawing.Size(153, 19);
             this.cbWingSmashMode.TabIndex = 22;
             this.cbWingSmashMode.Text = "Infinite Wing Smash";
             this.toolTip.SetToolTip(this.cbWingSmashMode, "Wing Smash does not end until you drop transformation or bonk against a wall.");
@@ -309,9 +337,9 @@
             // 
             this.cbFastWarp.AutoSize = true;
             this.cbFastWarp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbFastWarp.Location = new System.Drawing.Point(162, 39);
+            this.cbFastWarp.Location = new System.Drawing.Point(373, 28);
             this.cbFastWarp.Name = "cbFastWarp";
-            this.cbFastWarp.Size = new System.Drawing.Size(94, 21);
+            this.cbFastWarp.Size = new System.Drawing.Size(94, 19);
             this.cbFastWarp.TabIndex = 21;
             this.cbFastWarp.Text = "Fast Warps";
             this.toolTip.SetToolTip(this.cbFastWarp, "Quickens warp animation when using teleporters.");
@@ -323,7 +351,7 @@
             this.btnAROptions.Enabled = false;
             this.btnAROptions.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAROptions.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAROptions.Location = new System.Drawing.Point(187, 113);
+            this.btnAROptions.Location = new System.Drawing.Point(188, 127);
             this.btnAROptions.Name = "btnAROptions";
             this.btnAROptions.Size = new System.Drawing.Size(162, 23);
             this.btnAROptions.TabIndex = 20;
@@ -335,7 +363,7 @@
             // 
             this.cbAreaRandomizer.AutoSize = true;
             this.cbAreaRandomizer.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAreaRandomizer.Location = new System.Drawing.Point(10, 114);
+            this.cbAreaRandomizer.Location = new System.Drawing.Point(3, 127);
             this.cbAreaRandomizer.Name = "cbAreaRandomizer";
             this.cbAreaRandomizer.Size = new System.Drawing.Size(163, 21);
             this.cbAreaRandomizer.TabIndex = 19;
@@ -363,7 +391,7 @@
             "Pink",
             "Black",
             "Invisible"});
-            this.cbColor.Location = new System.Drawing.Point(188, 74);
+            this.cbColor.Location = new System.Drawing.Point(188, 3);
             this.cbColor.Name = "cbColor";
             this.cbColor.Size = new System.Drawing.Size(160, 23);
             this.cbColor.TabIndex = 16;
@@ -374,9 +402,9 @@
             // 
             this.cbMyPurse.AutoSize = true;
             this.cbMyPurse.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMyPurse.Location = new System.Drawing.Point(182, 39);
+            this.cbMyPurse.Location = new System.Drawing.Point(373, 28);
             this.cbMyPurse.Name = "cbMyPurse";
-            this.cbMyPurse.Size = new System.Drawing.Size(129, 21);
+            this.cbMyPurse.Size = new System.Drawing.Size(129, 19);
             this.cbMyPurse.TabIndex = 15;
             this.cbMyPurse.Text = "That\'s My Purse!";
             this.toolTip.SetToolTip(this.cbMyPurse, "Prevents Death from stealing your gear.");
@@ -386,7 +414,7 @@
             // 
             this.cbMapColor.AutoSize = true;
             this.cbMapColor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMapColor.Location = new System.Drawing.Point(10, 74);
+            this.cbMapColor.Location = new System.Drawing.Point(3, 3);
             this.cbMapColor.Name = "cbMapColor";
             this.cbMapColor.Size = new System.Drawing.Size(147, 21);
             this.cbMapColor.TabIndex = 14;
@@ -399,7 +427,7 @@
             // 
             this.cbColorRando.AutoSize = true;
             this.cbColorRando.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbColorRando.Location = new System.Drawing.Point(10, 99);
+            this.cbColorRando.Location = new System.Drawing.Point(3, 34);
             this.cbColorRando.Name = "cbColorRando";
             this.cbColorRando.Size = new System.Drawing.Size(137, 21);
             this.cbColorRando.TabIndex = 13;
@@ -420,7 +448,7 @@
             "Equipment",
             "Scenic",
             "Extended"});
-            this.cbExtension.Location = new System.Drawing.Point(188, 76);
+            this.cbExtension.Location = new System.Drawing.Point(194, 63);
             this.cbExtension.Name = "cbExtension";
             this.cbExtension.Size = new System.Drawing.Size(160, 23);
             this.cbExtension.TabIndex = 8;
@@ -430,7 +458,7 @@
             // 
             this.cbRelicExtension.AutoSize = true;
             this.cbRelicExtension.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbRelicExtension.Location = new System.Drawing.Point(10, 76);
+            this.cbRelicExtension.Location = new System.Drawing.Point(3, 63);
             this.cbRelicExtension.Name = "cbRelicExtension";
             this.cbRelicExtension.Size = new System.Drawing.Size(175, 21);
             this.cbRelicExtension.TabIndex = 12;
@@ -444,9 +472,9 @@
             // 
             this.cbAntiFreeze.AutoSize = true;
             this.cbAntiFreeze.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAntiFreeze.Location = new System.Drawing.Point(10, 40);
+            this.cbAntiFreeze.Location = new System.Drawing.Point(3, 53);
             this.cbAntiFreeze.Name = "cbAntiFreeze";
-            this.cbAntiFreeze.Size = new System.Drawing.Size(96, 21);
+            this.cbAntiFreeze.Size = new System.Drawing.Size(96, 19);
             this.cbAntiFreeze.TabIndex = 11;
             this.cbAntiFreeze.Text = "Anti Freeze";
             this.toolTip.SetToolTip(this.cbAntiFreeze, "Removes screen freezes from Level Ups");
@@ -456,9 +484,9 @@
             // 
             this.cbMagicMax.AutoSize = true;
             this.cbMagicMax.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMagicMax.Location = new System.Drawing.Point(10, 12);
+            this.cbMagicMax.Location = new System.Drawing.Point(3, 28);
             this.cbMagicMax.Name = "cbMagicMax";
-            this.cbMagicMax.Size = new System.Drawing.Size(112, 21);
+            this.cbMagicMax.Size = new System.Drawing.Size(112, 19);
             this.cbMagicMax.TabIndex = 10;
             this.cbMagicMax.Text = "Magic Vessels";
             this.toolTip.SetToolTip(this.cbMagicMax, "Replaces \"Heart Max Ups\" with \"Magic Max Ups\".");
@@ -468,7 +496,7 @@
             // 
             this.cbShowEquipment.AutoSize = true;
             this.cbShowEquipment.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbShowEquipment.Location = new System.Drawing.Point(10, 22);
+            this.cbShowEquipment.Location = new System.Drawing.Point(3, 3);
             this.cbShowEquipment.Name = "cbShowEquipment";
             this.cbShowEquipment.Size = new System.Drawing.Size(184, 21);
             this.cbShowEquipment.TabIndex = 9;
@@ -479,7 +507,7 @@
             // 
             this.cbVanillaMusic.AutoSize = true;
             this.cbVanillaMusic.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbVanillaMusic.Location = new System.Drawing.Point(10, 38);
+            this.cbVanillaMusic.Location = new System.Drawing.Point(3, 127);
             this.cbVanillaMusic.Name = "cbVanillaMusic";
             this.cbVanillaMusic.Size = new System.Drawing.Size(109, 21);
             this.cbVanillaMusic.TabIndex = 8;
@@ -490,12 +518,12 @@
             // 
             this.cbTournamentMode.AutoSize = true;
             this.cbTournamentMode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTournamentMode.Location = new System.Drawing.Point(162, 12);
+            this.cbTournamentMode.Location = new System.Drawing.Point(188, 28);
             this.cbTournamentMode.Name = "cbTournamentMode";
-            this.cbTournamentMode.Size = new System.Drawing.Size(141, 21);
+            this.cbTournamentMode.Size = new System.Drawing.Size(141, 19);
             this.cbTournamentMode.TabIndex = 7;
             this.cbTournamentMode.Text = "Tournament Mode";
-            this.toolTip.SetToolTip(this.cbTournamentMode, "Sets library shop relic cost to 0. Clock room is always open.");
+            this.toolTip.SetToolTip(this.cbTournamentMode, "Changes seed generation and prevents displaying spoilers.\r\nFor use when racing.");
             this.cbTournamentMode.UseVisualStyleBackColor = true;
             // 
             // btnGeneratePPF
@@ -551,7 +579,7 @@
             // 
             this.pgbRandomizingProgress.Location = new System.Drawing.Point(124, 643);
             this.pgbRandomizingProgress.Name = "pgbRandomizingProgress";
-            this.pgbRandomizingProgress.Size = new System.Drawing.Size(275, 29);
+            this.pgbRandomizingProgress.Size = new System.Drawing.Size(478, 29);
             this.pgbRandomizingProgress.TabIndex = 13;
             // 
             // lblTimeGenerating
@@ -564,7 +592,7 @@
             this.lblTimeGenerating.Size = new System.Drawing.Size(275, 21);
             this.lblTimeGenerating.TabIndex = 14;
             this.lblTimeGenerating.Text = "Time Generating: {time}";
-            this.lblTimeGenerating.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTimeGenerating.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblTimeGenerating.Visible = false;
             // 
             // randomizerTimer
@@ -585,7 +613,7 @@
             this.cbCloseOnGeneration.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cbCloseOnGeneration.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCloseOnGeneration.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cbCloseOnGeneration.Location = new System.Drawing.Point(261, 603);
+            this.cbCloseOnGeneration.Location = new System.Drawing.Point(464, 598);
             this.cbCloseOnGeneration.Name = "cbCloseOnGeneration";
             this.cbCloseOnGeneration.Size = new System.Drawing.Size(138, 19);
             this.cbCloseOnGeneration.TabIndex = 21;
@@ -598,7 +626,7 @@
             // 
             this.cbRandoShop.AutoSize = true;
             this.cbRandoShop.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbRandoShop.Location = new System.Drawing.Point(187, 12);
+            this.cbRandoShop.Location = new System.Drawing.Point(3, 65);
             this.cbRandoShop.Name = "cbRandoShop";
             this.cbRandoShop.Size = new System.Drawing.Size(98, 21);
             this.cbRandoShop.TabIndex = 27;
@@ -611,7 +639,7 @@
             // 
             this.cbStartingZoneRando.AutoSize = true;
             this.cbStartingZoneRando.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbStartingZoneRando.Location = new System.Drawing.Point(187, 38);
+            this.cbStartingZoneRando.Location = new System.Drawing.Point(188, 3);
             this.cbStartingZoneRando.Name = "cbStartingZoneRando";
             this.cbStartingZoneRando.Size = new System.Drawing.Size(174, 21);
             this.cbStartingZoneRando.TabIndex = 28;
@@ -624,9 +652,9 @@
             // 
             this.cbNoPrologue.AutoSize = true;
             this.cbNoPrologue.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbNoPrologue.Location = new System.Drawing.Point(10, 66);
+            this.cbNoPrologue.Location = new System.Drawing.Point(3, 78);
             this.cbNoPrologue.Name = "cbNoPrologue";
-            this.cbNoPrologue.Size = new System.Drawing.Size(136, 21);
+            this.cbNoPrologue.Size = new System.Drawing.Size(136, 19);
             this.cbNoPrologue.TabIndex = 28;
             this.cbNoPrologue.Text = "Remove Prologue";
             this.toolTip.SetToolTip(this.cbNoPrologue, "Removes the Prologue from the Game (Also removes any potential rewards from it).");
@@ -638,7 +666,7 @@
             this.cbStartingEquipment.Checked = true;
             this.cbStartingEquipment.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.cbStartingEquipment.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbStartingEquipment.Location = new System.Drawing.Point(187, 78);
+            this.cbStartingEquipment.Location = new System.Drawing.Point(170, 36);
             this.cbStartingEquipment.Name = "cbStartingEquipment";
             this.cbStartingEquipment.Size = new System.Drawing.Size(147, 21);
             this.cbStartingEquipment.TabIndex = 32;
@@ -654,7 +682,7 @@
             this.cbItemLocations.Checked = true;
             this.cbItemLocations.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.cbItemLocations.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbItemLocations.Location = new System.Drawing.Point(187, 52);
+            this.cbItemLocations.Location = new System.Drawing.Point(170, 3);
             this.cbItemLocations.Name = "cbItemLocations";
             this.cbItemLocations.Size = new System.Drawing.Size(118, 21);
             this.cbItemLocations.TabIndex = 31;
@@ -669,7 +697,7 @@
             this.cbTurkeyMode.Checked = true;
             this.cbTurkeyMode.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.cbTurkeyMode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTurkeyMode.Location = new System.Drawing.Point(187, 105);
+            this.cbTurkeyMode.Location = new System.Drawing.Point(3, 69);
             this.cbTurkeyMode.Name = "cbTurkeyMode";
             this.cbTurkeyMode.Size = new System.Drawing.Size(107, 21);
             this.cbTurkeyMode.TabIndex = 29;
@@ -685,7 +713,7 @@
             this.cbEnemyDrops.Checked = true;
             this.cbEnemyDrops.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.cbEnemyDrops.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEnemyDrops.Location = new System.Drawing.Point(10, 78);
+            this.cbEnemyDrops.Location = new System.Drawing.Point(3, 36);
             this.cbEnemyDrops.Name = "cbEnemyDrops";
             this.cbEnemyDrops.Size = new System.Drawing.Size(109, 21);
             this.cbEnemyDrops.TabIndex = 30;
@@ -700,7 +728,7 @@
             this.cbPrologueRewards.Checked = true;
             this.cbPrologueRewards.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.cbPrologueRewards.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbPrologueRewards.Location = new System.Drawing.Point(10, 105);
+            this.cbPrologueRewards.Location = new System.Drawing.Point(337, 3);
             this.cbPrologueRewards.Name = "cbPrologueRewards";
             this.cbPrologueRewards.Size = new System.Drawing.Size(138, 21);
             this.cbPrologueRewards.TabIndex = 33;
@@ -715,7 +743,7 @@
             this.cbItemStats.Checked = true;
             this.cbItemStats.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.cbItemStats.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbItemStats.Location = new System.Drawing.Point(10, 52);
+            this.cbItemStats.Location = new System.Drawing.Point(3, 3);
             this.cbItemStats.Name = "cbItemStats";
             this.cbItemStats.Size = new System.Drawing.Size(89, 21);
             this.cbItemStats.TabIndex = 34;
@@ -730,7 +758,7 @@
             // 
             this.cbCustomComplexity.AutoSize = true;
             this.cbCustomComplexity.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCustomComplexity.Location = new System.Drawing.Point(10, 49);
+            this.cbCustomComplexity.Location = new System.Drawing.Point(3, 33);
             this.cbCustomComplexity.Name = "cbCustomComplexity";
             this.cbCustomComplexity.Size = new System.Drawing.Size(152, 21);
             this.cbCustomComplexity.TabIndex = 17;
@@ -746,7 +774,7 @@
             this.cbRelicLocations.Checked = true;
             this.cbRelicLocations.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.cbRelicLocations.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbRelicLocations.Location = new System.Drawing.Point(10, 131);
+            this.cbRelicLocations.Location = new System.Drawing.Point(337, 36);
             this.cbRelicLocations.Name = "cbRelicLocations";
             this.cbRelicLocations.Size = new System.Drawing.Size(119, 21);
             this.cbRelicLocations.TabIndex = 35;
@@ -760,7 +788,7 @@
             // 
             this.cbStartingZoneRando2.AutoSize = true;
             this.cbStartingZoneRando2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbStartingZoneRando2.Location = new System.Drawing.Point(187, 62);
+            this.cbStartingZoneRando2.Location = new System.Drawing.Point(188, 34);
             this.cbStartingZoneRando2.Name = "cbStartingZoneRando2";
             this.cbStartingZoneRando2.Size = new System.Drawing.Size(179, 21);
             this.cbStartingZoneRando2.TabIndex = 29;
@@ -774,7 +802,7 @@
             // 
             this.cbBatchGenerate.AutoSize = true;
             this.cbBatchGenerate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbBatchGenerate.Location = new System.Drawing.Point(10, 103);
+            this.cbBatchGenerate.Location = new System.Drawing.Point(3, 93);
             this.cbBatchGenerate.Name = "cbBatchGenerate";
             this.cbBatchGenerate.Size = new System.Drawing.Size(120, 21);
             this.cbBatchGenerate.TabIndex = 26;
@@ -788,7 +816,7 @@
             // 
             this.cbItemNames.AutoSize = true;
             this.cbItemNames.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbItemNames.Location = new System.Drawing.Point(10, 62);
+            this.cbItemNames.Location = new System.Drawing.Point(3, 34);
             this.cbItemNames.Name = "cbItemNames";
             this.cbItemNames.Size = new System.Drawing.Size(101, 21);
             this.cbItemNames.TabIndex = 30;
@@ -801,9 +829,9 @@
             // 
             this.cbGuaranteedDrops.AutoSize = true;
             this.cbGuaranteedDrops.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbGuaranteedDrops.Location = new System.Drawing.Point(162, 66);
+            this.cbGuaranteedDrops.Location = new System.Drawing.Point(373, 53);
             this.cbGuaranteedDrops.Name = "cbGuaranteedDrops";
-            this.cbGuaranteedDrops.Size = new System.Drawing.Size(139, 21);
+            this.cbGuaranteedDrops.Size = new System.Drawing.Size(139, 19);
             this.cbGuaranteedDrops.TabIndex = 29;
             this.cbGuaranteedDrops.Text = "Guaranteed Drops";
             this.toolTip.SetToolTip(this.cbGuaranteedDrops, "Guarantees drops from every enemy that has one. Ring of Arcana makes them drop th" +
@@ -814,9 +842,9 @@
             // 
             this.cbReverseLibraryCard.AutoSize = true;
             this.cbReverseLibraryCard.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbReverseLibraryCard.Location = new System.Drawing.Point(182, 66);
+            this.cbReverseLibraryCard.Location = new System.Drawing.Point(188, 53);
             this.cbReverseLibraryCard.Name = "cbReverseLibraryCard";
-            this.cbReverseLibraryCard.Size = new System.Drawing.Size(154, 21);
+            this.cbReverseLibraryCard.Size = new System.Drawing.Size(154, 19);
             this.cbReverseLibraryCard.TabIndex = 30;
             this.cbReverseLibraryCard.Text = "Reverse Library Card";
             this.toolTip.SetToolTip(this.cbReverseLibraryCard, "Allows Library Cards to teleport to the 2nd Castle version of the library.\r\nHold " +
@@ -828,7 +856,7 @@
             // 
             this.cbCustomGoals.AutoSize = true;
             this.cbCustomGoals.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCustomGoals.Location = new System.Drawing.Point(10, 130);
+            this.cbCustomGoals.Location = new System.Drawing.Point(3, 123);
             this.cbCustomGoals.Name = "cbCustomGoals";
             this.cbCustomGoals.Size = new System.Drawing.Size(116, 21);
             this.cbCustomGoals.TabIndex = 28;
@@ -842,9 +870,9 @@
             // 
             this.cbPotions.AutoSize = true;
             this.cbPotions.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbPotions.Location = new System.Drawing.Point(10, 66);
+            this.cbPotions.Location = new System.Drawing.Point(3, 53);
             this.cbPotions.Name = "cbPotions";
-            this.cbPotions.Size = new System.Drawing.Size(138, 21);
+            this.cbPotions.Size = new System.Drawing.Size(138, 19);
             this.cbPotions.TabIndex = 31;
             this.cbPotions.Text = "Immunity Potions";
             this.toolTip.SetToolTip(this.cbPotions, "Converts Resist Fire, Resist Ice, etc. potions to grant\r\nImmunity to the element " +
@@ -856,9 +884,9 @@
             // 
             this.cbGodspeed.AutoSize = true;
             this.cbGodspeed.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbGodspeed.Location = new System.Drawing.Point(10, 93);
+            this.cbGodspeed.Location = new System.Drawing.Point(373, 53);
             this.cbGodspeed.Name = "cbGodspeed";
-            this.cbGodspeed.Size = new System.Drawing.Size(128, 21);
+            this.cbGodspeed.Size = new System.Drawing.Size(128, 19);
             this.cbGodspeed.TabIndex = 32;
             this.cbGodspeed.Text = "Godspeed Shoes";
             this.toolTip.SetToolTip(this.cbGodspeed, "Allows Alucard to run by double-pressing in the direction you intend to move in.");
@@ -868,31 +896,19 @@
             // 
             this.cbLibShortcut.AutoSize = true;
             this.cbLibShortcut.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLibShortcut.Location = new System.Drawing.Point(183, 93);
+            this.cbLibShortcut.Location = new System.Drawing.Point(188, 78);
             this.cbLibShortcut.Name = "cbLibShortcut";
-            this.cbLibShortcut.Size = new System.Drawing.Size(127, 21);
+            this.cbLibShortcut.Size = new System.Drawing.Size(127, 19);
             this.cbLibShortcut.TabIndex = 33;
             this.cbLibShortcut.Text = "Library Shortcut";
             this.toolTip.SetToolTip(this.cbLibShortcut, "Opens a shortcut to allow players to swiftly exit the Long Library.");
             this.cbLibShortcut.UseVisualStyleBackColor = true;
             // 
-            // cbDevStash
-            // 
-            this.cbDevStash.AutoSize = true;
-            this.cbDevStash.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbDevStash.Location = new System.Drawing.Point(10, 120);
-            this.cbDevStash.Name = "cbDevStash";
-            this.cbDevStash.Size = new System.Drawing.Size(97, 21);
-            this.cbDevStash.TabIndex = 34;
-            this.cbDevStash.Text = "Dev\'s Stash";
-            this.toolTip.SetToolTip(this.cbDevStash, "Adds a selection of QoL or fun upgrades chosen by the development team.");
-            this.cbDevStash.UseVisualStyleBackColor = true;
-            // 
             // cbBossMusic
             // 
             this.cbBossMusic.AutoSize = true;
             this.cbBossMusic.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbBossMusic.Location = new System.Drawing.Point(10, 147);
+            this.cbBossMusic.Location = new System.Drawing.Point(3, 96);
             this.cbBossMusic.Name = "cbBossMusic";
             this.cbBossMusic.Size = new System.Drawing.Size(152, 21);
             this.cbBossMusic.TabIndex = 26;
@@ -907,7 +923,7 @@
             this.cbSeasonalPhrases.Checked = true;
             this.cbSeasonalPhrases.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbSeasonalPhrases.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSeasonalPhrases.Location = new System.Drawing.Point(200, 22);
+            this.cbSeasonalPhrases.Location = new System.Drawing.Point(194, 3);
             this.cbSeasonalPhrases.Name = "cbSeasonalPhrases";
             this.cbSeasonalPhrases.Size = new System.Drawing.Size(154, 21);
             this.cbSeasonalPhrases.TabIndex = 30;
@@ -920,7 +936,7 @@
             // 
             this.cbElementalChaos.AutoSize = true;
             this.cbElementalChaos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbElementalChaos.Location = new System.Drawing.Point(10, 87);
+            this.cbElementalChaos.Location = new System.Drawing.Point(373, 3);
             this.cbElementalChaos.Name = "cbElementalChaos";
             this.cbElementalChaos.Size = new System.Drawing.Size(129, 21);
             this.cbElementalChaos.TabIndex = 31;
@@ -932,9 +948,9 @@
             // 
             this.cbSimplifiedInputs.AutoSize = true;
             this.cbSimplifiedInputs.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSimplifiedInputs.Location = new System.Drawing.Point(10, 93);
+            this.cbSimplifiedInputs.Location = new System.Drawing.Point(188, 78);
             this.cbSimplifiedInputs.Name = "cbSimplifiedInputs";
-            this.cbSimplifiedInputs.Size = new System.Drawing.Size(93, 21);
+            this.cbSimplifiedInputs.Size = new System.Drawing.Size(93, 19);
             this.cbSimplifiedInputs.TabIndex = 32;
             this.cbSimplifiedInputs.Text = "Easy Mode";
             this.toolTip.SetToolTip(this.cbSimplifiedInputs, resources.GetString("cbSimplifiedInputs.ToolTip"));
@@ -944,7 +960,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(124, 619);
+            this.button3.Location = new System.Drawing.Point(463, 619);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(139, 21);
             this.button3.TabIndex = 27;
@@ -957,9 +973,9 @@
             // 
             this.cbSingleHitGears.AutoSize = true;
             this.cbSingleHitGears.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSingleHitGears.Location = new System.Drawing.Point(162, 93);
+            this.cbSingleHitGears.Location = new System.Drawing.Point(188, 53);
             this.cbSingleHitGears.Name = "cbSingleHitGears";
-            this.cbSingleHitGears.Size = new System.Drawing.Size(127, 21);
+            this.cbSingleHitGears.Size = new System.Drawing.Size(127, 19);
             this.cbSingleHitGears.TabIndex = 33;
             this.cbSingleHitGears.Text = "Single-Hit Gears";
             this.toolTip.SetToolTip(this.cbSingleHitGears, "Makes all gear puzzles only require one hit to open the respective door.");
@@ -969,7 +985,7 @@
             // 
             this.cbRandomStats.AutoSize = true;
             this.cbRandomStats.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbRandomStats.Location = new System.Drawing.Point(10, 141);
+            this.cbRandomStats.Location = new System.Drawing.Point(3, 96);
             this.cbRandomStats.Name = "cbRandomStats";
             this.cbRandomStats.Size = new System.Drawing.Size(165, 21);
             this.cbRandomStats.TabIndex = 32;
@@ -982,9 +998,9 @@
             // 
             this.cbOpenClockStatue.AutoSize = true;
             this.cbOpenClockStatue.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbOpenClockStatue.Location = new System.Drawing.Point(10, 120);
+            this.cbOpenClockStatue.Location = new System.Drawing.Point(3, 103);
             this.cbOpenClockStatue.Name = "cbOpenClockStatue";
-            this.cbOpenClockStatue.Size = new System.Drawing.Size(140, 21);
+            this.cbOpenClockStatue.Size = new System.Drawing.Size(140, 19);
             this.cbOpenClockStatue.TabIndex = 34;
             this.cbOpenClockStatue.Text = "Open Clock Statue";
             this.toolTip.SetToolTip(this.cbOpenClockStatue, "Statue in Clock Room is always open");
@@ -994,9 +1010,9 @@
             // 
             this.cbZeroDollarRelic.AutoSize = true;
             this.cbZeroDollarRelic.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbZeroDollarRelic.Location = new System.Drawing.Point(162, 120);
+            this.cbZeroDollarRelic.Location = new System.Drawing.Point(373, 78);
             this.cbZeroDollarRelic.Name = "cbZeroDollarRelic";
-            this.cbZeroDollarRelic.Size = new System.Drawing.Size(131, 21);
+            this.cbZeroDollarRelic.Size = new System.Drawing.Size(131, 19);
             this.cbZeroDollarRelic.TabIndex = 35;
             this.cbZeroDollarRelic.Text = "Zero-Dollar Relic";
             this.toolTip.SetToolTip(this.cbZeroDollarRelic, "Changes the price of the Shop Relic to 0.");
@@ -1006,7 +1022,7 @@
             // 
             this.cbSpikeRoomRando.AutoSize = true;
             this.cbSpikeRoomRando.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSpikeRoomRando.Location = new System.Drawing.Point(187, 86);
+            this.cbSpikeRoomRando.Location = new System.Drawing.Point(188, 65);
             this.cbSpikeRoomRando.Name = "cbSpikeRoomRando";
             this.cbSpikeRoomRando.Size = new System.Drawing.Size(100, 21);
             this.cbSpikeRoomRando.TabIndex = 34;
@@ -1018,9 +1034,9 @@
             // 
             this.cbLycanMode.AutoSize = true;
             this.cbLycanMode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLycanMode.Location = new System.Drawing.Point(183, 120);
+            this.cbLycanMode.Location = new System.Drawing.Point(3, 103);
             this.cbLycanMode.Name = "cbLycanMode";
-            this.cbLycanMode.Size = new System.Drawing.Size(142, 21);
+            this.cbLycanMode.Size = new System.Drawing.Size(142, 19);
             this.cbLycanMode.TabIndex = 35;
             this.cbLycanMode.Text = "Lycanthrope Mode";
             this.toolTip.SetToolTip(this.cbLycanMode, "Allows the player to use full wolf at reduced cost.\r\n");
@@ -1030,9 +1046,9 @@
             // 
             this.cbReverseTeleporter.AutoSize = true;
             this.cbReverseTeleporter.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbReverseTeleporter.Location = new System.Drawing.Point(10, 146);
+            this.cbReverseTeleporter.Location = new System.Drawing.Point(373, 78);
             this.cbReverseTeleporter.Name = "cbReverseTeleporter";
-            this.cbReverseTeleporter.Size = new System.Drawing.Size(141, 21);
+            this.cbReverseTeleporter.Size = new System.Drawing.Size(141, 19);
             this.cbReverseTeleporter.TabIndex = 36;
             this.cbReverseTeleporter.Text = "Reverse Teleporter";
             this.toolTip.SetToolTip(this.cbReverseTeleporter, "Randomizes where the teleporter pad in Second Castle is located.\r\n");
@@ -1041,9 +1057,9 @@
             // btnCopySeed
             // 
             this.btnCopySeed.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCopySeed.Location = new System.Drawing.Point(250, 512);
+            this.btnCopySeed.Location = new System.Drawing.Point(412, 477);
             this.btnCopySeed.Name = "btnCopySeed";
-            this.btnCopySeed.Size = new System.Drawing.Size(156, 29);
+            this.btnCopySeed.Size = new System.Drawing.Size(194, 29);
             this.btnCopySeed.TabIndex = 22;
             this.btnCopySeed.Text = "Copy Seed and Equipment";
             this.btnCopySeed.UseVisualStyleBackColor = true;
@@ -1058,7 +1074,7 @@
             this.rtbBingoInformation.Location = new System.Drawing.Point(11, 552);
             this.rtbBingoInformation.Name = "rtbBingoInformation";
             this.rtbBingoInformation.ReadOnly = true;
-            this.rtbBingoInformation.Size = new System.Drawing.Size(395, 45);
+            this.rtbBingoInformation.Size = new System.Drawing.Size(591, 45);
             this.rtbBingoInformation.TabIndex = 23;
             this.rtbBingoInformation.Text = "Join at: https://bingosync.com/room/wzsisvi7RZygAYPR8Nhm7w\nPassword: 123456";
             this.rtbBingoInformation.Visible = false;
@@ -1072,40 +1088,30 @@
             this.tabOptions.Controls.Add(this.Additions);
             this.tabOptions.Controls.Add(this.Misc);
             this.tabOptions.Controls.Add(this.Cosmetics);
+            this.tabOptions.Controls.Add(this.tabPage1);
             this.tabOptions.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabOptions.Location = new System.Drawing.Point(14, 268);
             this.tabOptions.Name = "tabOptions";
             this.tabOptions.SelectedIndex = 0;
-            this.tabOptions.Size = new System.Drawing.Size(392, 203);
+            this.tabOptions.Size = new System.Drawing.Size(592, 203);
             this.tabOptions.TabIndex = 24;
             // 
             // Randomizations
             // 
             this.Randomizations.BackgroundImage = global::SotNRandomizerLauncher.Properties.Resources.gradient;
-            this.Randomizations.Controls.Add(this.cbSpikeRoomRando);
-            this.Randomizations.Controls.Add(this.numRandomStats);
-            this.Randomizations.Controls.Add(this.cbRandomStats);
-            this.Randomizations.Controls.Add(this.cbElementalChaos);
-            this.Randomizations.Controls.Add(this.cbItemNames);
-            this.Randomizations.Controls.Add(this.cbStartingZoneRando2);
-            this.Randomizations.Controls.Add(this.cbStartingZoneRando);
-            this.Randomizations.Controls.Add(this.cbRandoShop);
-            this.Randomizations.Controls.Add(this.cbEnemyStatRando);
-            this.Randomizations.Controls.Add(this.cbVanillaMusic);
-            this.Randomizations.Controls.Add(this.btnAROptions);
-            this.Randomizations.Controls.Add(this.cbAreaRandomizer);
+            this.Randomizations.Controls.Add(this.tableLayoutPanel2);
             this.Randomizations.ForeColor = System.Drawing.Color.Transparent;
             this.Randomizations.Location = new System.Drawing.Point(4, 24);
             this.Randomizations.Name = "Randomizations";
             this.Randomizations.Padding = new System.Windows.Forms.Padding(3);
-            this.Randomizations.Size = new System.Drawing.Size(384, 175);
+            this.Randomizations.Size = new System.Drawing.Size(584, 175);
             this.Randomizations.TabIndex = 1;
             this.Randomizations.Text = "Randomization";
             this.Randomizations.UseVisualStyleBackColor = true;
             // 
             // numRandomStats
             // 
-            this.numRandomStats.Location = new System.Drawing.Point(189, 142);
+            this.numRandomStats.Location = new System.Drawing.Point(188, 96);
             this.numRandomStats.Maximum = new decimal(new int[] {
             99,
             0,
@@ -1128,18 +1134,12 @@
             // Basics
             // 
             this.Basics.BackgroundImage = global::SotNRandomizerLauncher.Properties.Resources.gradient;
-            this.Basics.Controls.Add(this.cbRelicLocations);
-            this.Basics.Controls.Add(this.cbItemStats);
-            this.Basics.Controls.Add(this.cbPrologueRewards);
+            this.Basics.Controls.Add(this.tableLayoutPanel1);
             this.Basics.Controls.Add(this.label2);
-            this.Basics.Controls.Add(this.cbStartingEquipment);
-            this.Basics.Controls.Add(this.cbItemLocations);
-            this.Basics.Controls.Add(this.cbTurkeyMode);
-            this.Basics.Controls.Add(this.cbEnemyDrops);
             this.Basics.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Basics.Location = new System.Drawing.Point(4, 24);
             this.Basics.Name = "Basics";
-            this.Basics.Size = new System.Drawing.Size(384, 175);
+            this.Basics.Size = new System.Drawing.Size(584, 175);
             this.Basics.TabIndex = 3;
             this.Basics.Text = "Basics";
             this.Basics.UseVisualStyleBackColor = true;
@@ -1147,7 +1147,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 6);
+            this.label2.Location = new System.Drawing.Point(145, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(312, 30);
             this.label2.TabIndex = 29;
@@ -1158,20 +1158,11 @@
             // QoL
             // 
             this.QoL.BackgroundImage = global::SotNRandomizerLauncher.Properties.Resources.gradient;
-            this.QoL.Controls.Add(this.cbZeroDollarRelic);
-            this.QoL.Controls.Add(this.cbOpenClockStatue);
-            this.QoL.Controls.Add(this.cbSingleHitGears);
-            this.QoL.Controls.Add(this.cbSimplifiedInputs);
-            this.QoL.Controls.Add(this.cbMagicMax);
-            this.QoL.Controls.Add(this.cbAntiFreeze);
-            this.QoL.Controls.Add(this.cbFastWarp);
-            this.QoL.Controls.Add(this.cbGuaranteedDrops);
-            this.QoL.Controls.Add(this.cbTournamentMode);
-            this.QoL.Controls.Add(this.cbNoPrologue);
+            this.QoL.Controls.Add(this.tableLayoutPanel3);
             this.QoL.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.QoL.Location = new System.Drawing.Point(4, 24);
             this.QoL.Name = "QoL";
-            this.QoL.Size = new System.Drawing.Size(384, 175);
+            this.QoL.Size = new System.Drawing.Size(584, 175);
             this.QoL.TabIndex = 5;
             this.QoL.Text = "QoL";
             this.QoL.UseVisualStyleBackColor = true;
@@ -1179,22 +1170,12 @@
             // Additions
             // 
             this.Additions.BackgroundImage = global::SotNRandomizerLauncher.Properties.Resources.gradient;
-            this.Additions.Controls.Add(this.cbReverseTeleporter);
-            this.Additions.Controls.Add(this.cbLycanMode);
-            this.Additions.Controls.Add(this.cbDevStash);
-            this.Additions.Controls.Add(this.cbLibShortcut);
-            this.Additions.Controls.Add(this.cbGodspeed);
-            this.Additions.Controls.Add(this.cbPotions);
-            this.Additions.Controls.Add(this.cbReverseLibraryCard);
-            this.Additions.Controls.Add(this.cbMisteryMode);
-            this.Additions.Controls.Add(this.cbWingSmashMode);
-            this.Additions.Controls.Add(this.cbUnlockedMode);
-            this.Additions.Controls.Add(this.cbMyPurse);
+            this.Additions.Controls.Add(this.tableLayoutPanel4);
             this.Additions.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Additions.Location = new System.Drawing.Point(4, 24);
             this.Additions.Name = "Additions";
             this.Additions.Padding = new System.Windows.Forms.Padding(3);
-            this.Additions.Size = new System.Drawing.Size(384, 175);
+            this.Additions.Size = new System.Drawing.Size(584, 175);
             this.Additions.TabIndex = 0;
             this.Additions.Text = "Additions";
             this.Additions.UseVisualStyleBackColor = true;
@@ -1203,20 +1184,11 @@
             // Misc
             // 
             this.Misc.BackgroundImage = global::SotNRandomizerLauncher.Properties.Resources.gradient;
-            this.Misc.Controls.Add(this.cbSeasonalPhrases);
-            this.Misc.Controls.Add(this.cbCustomGoals);
-            this.Misc.Controls.Add(this.cbGoalsList);
-            this.Misc.Controls.Add(this.numBatchSeeds);
-            this.Misc.Controls.Add(this.cbBatchGenerate);
-            this.Misc.Controls.Add(this.cbShowEquipment);
-            this.Misc.Controls.Add(this.cbCustomComplexity);
-            this.Misc.Controls.Add(this.cbComplexity);
-            this.Misc.Controls.Add(this.cbRelicExtension);
-            this.Misc.Controls.Add(this.cbExtension);
+            this.Misc.Controls.Add(this.tableLayoutPanel5);
             this.Misc.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Misc.Location = new System.Drawing.Point(4, 24);
             this.Misc.Name = "Misc";
-            this.Misc.Size = new System.Drawing.Size(384, 175);
+            this.Misc.Size = new System.Drawing.Size(584, 175);
             this.Misc.TabIndex = 2;
             this.Misc.Text = "Misc.";
             this.Misc.UseVisualStyleBackColor = true;
@@ -1237,8 +1209,9 @@
             "Bounty Hunter",
             "Target Confirmed",
             "Hitman",
-            "All Bosses & Bounties"});
-            this.cbGoalsList.Location = new System.Drawing.Point(188, 128);
+            "All Bosses & Bounties",
+            "All Bosses, Relics & Bounties"});
+            this.cbGoalsList.Location = new System.Drawing.Point(194, 123);
             this.cbGoalsList.Name = "cbGoalsList";
             this.cbGoalsList.Size = new System.Drawing.Size(160, 23);
             this.cbGoalsList.TabIndex = 29;
@@ -1246,7 +1219,7 @@
             // numBatchSeeds
             // 
             this.numBatchSeeds.Enabled = false;
-            this.numBatchSeeds.Location = new System.Drawing.Point(188, 102);
+            this.numBatchSeeds.Location = new System.Drawing.Point(194, 93);
             this.numBatchSeeds.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -1284,7 +1257,7 @@
             "8",
             "9",
             "10"});
-            this.cbComplexity.Location = new System.Drawing.Point(188, 49);
+            this.cbComplexity.Location = new System.Drawing.Point(194, 33);
             this.cbComplexity.Name = "cbComplexity";
             this.cbComplexity.Size = new System.Drawing.Size(160, 23);
             this.cbComplexity.TabIndex = 18;
@@ -1294,17 +1267,12 @@
             // Cosmetics
             // 
             this.Cosmetics.BackgroundImage = global::SotNRandomizerLauncher.Properties.Resources.gradient;
-            this.Cosmetics.Controls.Add(this.cbBossMusic);
             this.Cosmetics.Controls.Add(this.pbMapColor);
-            this.Cosmetics.Controls.Add(this.cbColorRando);
-            this.Cosmetics.Controls.Add(this.cbColor);
-            this.Cosmetics.Controls.Add(this.cbMapColor);
-            this.Cosmetics.Controls.Add(this.cbExcludeSongs);
-            this.Cosmetics.Controls.Add(this.button1);
+            this.Cosmetics.Controls.Add(this.tableLayoutPanel6);
             this.Cosmetics.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Cosmetics.Location = new System.Drawing.Point(4, 24);
             this.Cosmetics.Name = "Cosmetics";
-            this.Cosmetics.Size = new System.Drawing.Size(384, 175);
+            this.Cosmetics.Size = new System.Drawing.Size(584, 175);
             this.Cosmetics.TabIndex = 4;
             this.Cosmetics.Text = "Cosmetics";
             this.Cosmetics.UseVisualStyleBackColor = true;
@@ -1313,7 +1281,7 @@
             // pbMapColor
             // 
             this.pbMapColor.Image = global::SotNRandomizerLauncher.Properties.Resources.map_pa10;
-            this.pbMapColor.Location = new System.Drawing.Point(216, 3);
+            this.pbMapColor.Location = new System.Drawing.Point(381, 2);
             this.pbMapColor.Name = "pbMapColor";
             this.pbMapColor.Size = new System.Drawing.Size(96, 64);
             this.pbMapColor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1330,7 +1298,7 @@
             this.tabInformation.Location = new System.Drawing.Point(12, 98);
             this.tabInformation.Name = "tabInformation";
             this.tabInformation.SelectedIndex = 0;
-            this.tabInformation.Size = new System.Drawing.Size(394, 164);
+            this.tabInformation.Size = new System.Drawing.Size(594, 164);
             this.tabInformation.TabIndex = 25;
             // 
             // BasicInfo
@@ -1343,7 +1311,7 @@
             this.BasicInfo.Location = new System.Drawing.Point(4, 24);
             this.BasicInfo.Name = "BasicInfo";
             this.BasicInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.BasicInfo.Size = new System.Drawing.Size(386, 136);
+            this.BasicInfo.Size = new System.Drawing.Size(586, 136);
             this.BasicInfo.TabIndex = 0;
             this.BasicInfo.Text = "Preset Details";
             this.BasicInfo.UseVisualStyleBackColor = true;
@@ -1370,11 +1338,11 @@
             // lblPresetDescription
             // 
             this.lblPresetDescription.BackColor = System.Drawing.Color.Transparent;
-            this.lblPresetDescription.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPresetDescription.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPresetDescription.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblPresetDescription.Location = new System.Drawing.Point(9, 3);
             this.lblPresetDescription.Name = "lblPresetDescription";
-            this.lblPresetDescription.Size = new System.Drawing.Size(371, 91);
+            this.lblPresetDescription.Size = new System.Drawing.Size(571, 91);
             this.lblPresetDescription.TabIndex = 26;
             this.lblPresetDescription.Text = "Preset Description";
             // 
@@ -1388,7 +1356,7 @@
             this.RandomizationDetails.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.RandomizationDetails.Location = new System.Drawing.Point(4, 24);
             this.RandomizationDetails.Name = "RandomizationDetails";
-            this.RandomizationDetails.Size = new System.Drawing.Size(386, 136);
+            this.RandomizationDetails.Size = new System.Drawing.Size(586, 136);
             this.RandomizationDetails.TabIndex = 2;
             this.RandomizationDetails.Text = "Randomization Details";
             this.RandomizationDetails.UseVisualStyleBackColor = true;
@@ -1397,7 +1365,7 @@
             // 
             this.lnkLocations.AutoSize = true;
             this.lnkLocations.LinkColor = System.Drawing.Color.IndianRed;
-            this.lnkLocations.Location = new System.Drawing.Point(231, 32);
+            this.lnkLocations.Location = new System.Drawing.Point(325, 32);
             this.lnkLocations.Name = "lnkLocations";
             this.lnkLocations.Size = new System.Drawing.Size(134, 15);
             this.lnkLocations.TabIndex = 32;
@@ -1408,7 +1376,7 @@
             // lblItemStats
             // 
             this.lblItemStats.AutoSize = true;
-            this.lblItemStats.Location = new System.Drawing.Point(9, 83);
+            this.lblItemStats.Location = new System.Drawing.Point(103, 83);
             this.lblItemStats.Name = "lblItemStats";
             this.lblItemStats.Size = new System.Drawing.Size(140, 15);
             this.lblItemStats.TabIndex = 31;
@@ -1417,7 +1385,7 @@
             // lblComplexity
             // 
             this.lblComplexity.AutoSize = true;
-            this.lblComplexity.Location = new System.Drawing.Point(9, 57);
+            this.lblComplexity.Location = new System.Drawing.Point(103, 57);
             this.lblComplexity.Name = "lblComplexity";
             this.lblComplexity.Size = new System.Drawing.Size(129, 15);
             this.lblComplexity.TabIndex = 30;
@@ -1426,7 +1394,7 @@
             // lblExtension
             // 
             this.lblExtension.AutoSize = true;
-            this.lblExtension.Location = new System.Drawing.Point(9, 32);
+            this.lblExtension.Location = new System.Drawing.Point(103, 32);
             this.lblExtension.Name = "lblExtension";
             this.lblExtension.Size = new System.Drawing.Size(97, 15);
             this.lblExtension.TabIndex = 29;
@@ -1445,7 +1413,7 @@
             this.AdditionalRules.Location = new System.Drawing.Point(4, 24);
             this.AdditionalRules.Name = "AdditionalRules";
             this.AdditionalRules.Padding = new System.Windows.Forms.Padding(3);
-            this.AdditionalRules.Size = new System.Drawing.Size(386, 136);
+            this.AdditionalRules.Size = new System.Drawing.Size(586, 136);
             this.AdditionalRules.TabIndex = 1;
             this.AdditionalRules.Text = "Additional Rules";
             this.AdditionalRules.UseVisualStyleBackColor = true;
@@ -1453,7 +1421,7 @@
             // lblModLevel
             // 
             this.lblModLevel.AutoSize = true;
-            this.lblModLevel.Location = new System.Drawing.Point(204, 82);
+            this.lblModLevel.Location = new System.Drawing.Point(298, 82);
             this.lblModLevel.Name = "lblModLevel";
             this.lblModLevel.Size = new System.Drawing.Size(113, 15);
             this.lblModLevel.TabIndex = 33;
@@ -1462,7 +1430,7 @@
             // lblTransformationFocus
             // 
             this.lblTransformationFocus.AutoSize = true;
-            this.lblTransformationFocus.Location = new System.Drawing.Point(204, 58);
+            this.lblTransformationFocus.Location = new System.Drawing.Point(298, 58);
             this.lblTransformationFocus.Name = "lblTransformationFocus";
             this.lblTransformationFocus.Size = new System.Drawing.Size(129, 15);
             this.lblTransformationFocus.TabIndex = 32;
@@ -1471,7 +1439,7 @@
             // lblEarlyTransformation
             // 
             this.lblEarlyTransformation.AutoSize = true;
-            this.lblEarlyTransformation.Location = new System.Drawing.Point(204, 33);
+            this.lblEarlyTransformation.Location = new System.Drawing.Point(298, 33);
             this.lblEarlyTransformation.Name = "lblEarlyTransformation";
             this.lblEarlyTransformation.Size = new System.Drawing.Size(129, 15);
             this.lblEarlyTransformation.TabIndex = 31;
@@ -1480,7 +1448,7 @@
             // lblWinCondition
             // 
             this.lblWinCondition.AutoSize = true;
-            this.lblWinCondition.Location = new System.Drawing.Point(9, 82);
+            this.lblWinCondition.Location = new System.Drawing.Point(103, 82);
             this.lblWinCondition.Name = "lblWinCondition";
             this.lblWinCondition.Size = new System.Drawing.Size(88, 15);
             this.lblWinCondition.TabIndex = 30;
@@ -1489,7 +1457,7 @@
             // lblCompletionPace
             // 
             this.lblCompletionPace.AutoSize = true;
-            this.lblCompletionPace.Location = new System.Drawing.Point(9, 58);
+            this.lblCompletionPace.Location = new System.Drawing.Point(103, 58);
             this.lblCompletionPace.Name = "lblCompletionPace";
             this.lblCompletionPace.Size = new System.Drawing.Size(103, 15);
             this.lblCompletionPace.TabIndex = 29;
@@ -1498,7 +1466,7 @@
             // lblCastleType
             // 
             this.lblCastleType.AutoSize = true;
-            this.lblCastleType.Location = new System.Drawing.Point(9, 33);
+            this.lblCastleType.Location = new System.Drawing.Point(103, 33);
             this.lblCastleType.Name = "lblCastleType";
             this.lblCastleType.Size = new System.Drawing.Size(72, 15);
             this.lblCastleType.TabIndex = 28;
@@ -1509,7 +1477,7 @@
             this.lblBatchSeeds.BackColor = System.Drawing.Color.Transparent;
             this.lblBatchSeeds.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBatchSeeds.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBatchSeeds.Location = new System.Drawing.Point(246, 544);
+            this.lblBatchSeeds.Location = new System.Drawing.Point(297, 619);
             this.lblBatchSeeds.Name = "lblBatchSeeds";
             this.lblBatchSeeds.Size = new System.Drawing.Size(160, 21);
             this.lblBatchSeeds.TabIndex = 26;
@@ -1529,12 +1497,377 @@
             this.btnChaosMode.Visible = false;
             this.btnChaosMode.Click += new System.EventHandler(this.btnChaosMode_Click);
             // 
+            // cbChaosDrops
+            // 
+            this.cbChaosDrops.AutoSize = true;
+            this.cbChaosDrops.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbChaosDrops.Location = new System.Drawing.Point(373, 34);
+            this.cbChaosDrops.Name = "cbChaosDrops";
+            this.cbChaosDrops.Size = new System.Drawing.Size(105, 21);
+            this.cbChaosDrops.TabIndex = 35;
+            this.cbChaosDrops.Text = "Chaos Drops";
+            this.toolTip.SetToolTip(this.cbChaosDrops, "Enemies can drop any item in the game. Full chaos!");
+            this.cbChaosDrops.UseVisualStyleBackColor = true;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackgroundImage = global::SotNRandomizerLauncher.Properties.Resources.gradient;
+            this.tabPage1.Controls.Add(this.tableLayoutPanel8);
+            this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(584, 175);
+            this.tabPage1.TabIndex = 7;
+            this.tabPage1.Text = "Challenges & Dev\'s Stash";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.Controls.Add(this.cbItemStats, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.cbTurkeyMode, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.cbEnemyDrops, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.cbItemLocations, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.cbRelicLocations, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.cbStartingEquipment, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.cbPrologueRewards, 2, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(41, 56);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(502, 100);
+            this.tableLayoutPanel1.TabIndex = 36;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.Controls.Add(this.cbSpikeRoomRando, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.cbEnemyStatRando, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.cbChaosDrops, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btnAROptions, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.cbStartingZoneRando, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.cbRandoShop, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.cbItemNames, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.cbElementalChaos, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.cbStartingZoneRando2, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.cbAreaRandomizer, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.cbRandomStats, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.numRandomStats, 1, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(14, 10);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 5;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(555, 155);
+            this.tableLayoutPanel2.TabIndex = 29;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.Controls.Add(this.cbOpenClockStatue, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.cbNoPrologue, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.cbAntiFreeze, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.cbMagicMax, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.cbSimplifiedInputs, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.cbSingleHitGears, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.cbTournamentMode, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.cbZeroDollarRelic, 2, 3);
+            this.tableLayoutPanel3.Controls.Add(this.cbGuaranteedDrops, 2, 2);
+            this.tableLayoutPanel3.Controls.Add(this.cbFastWarp, 2, 1);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(14, 10);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 6;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(555, 155);
+            this.tableLayoutPanel3.TabIndex = 30;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 3;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.Controls.Add(this.cbLycanMode, 0, 4);
+            this.tableLayoutPanel4.Controls.Add(this.cbWingSmashMode, 0, 3);
+            this.tableLayoutPanel4.Controls.Add(this.cbPotions, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.cbUnlockedMode, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.cbLibShortcut, 1, 3);
+            this.tableLayoutPanel4.Controls.Add(this.cbReverseLibraryCard, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.cbMisteryMode, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.cbReverseTeleporter, 2, 3);
+            this.tableLayoutPanel4.Controls.Add(this.cbGodspeed, 2, 2);
+            this.tableLayoutPanel4.Controls.Add(this.cbMyPurse, 2, 1);
+            this.tableLayoutPanel4.Controls.Add(this.cbWarlockMode, 1, 4);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(14, 10);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 6;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(555, 155);
+            this.tableLayoutPanel4.TabIndex = 31;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.42623F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.78689F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.78689F));
+            this.tableLayoutPanel5.Controls.Add(this.cbCustomGoals, 0, 4);
+            this.tableLayoutPanel5.Controls.Add(this.cbSeasonalPhrases, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.cbGoalsList, 1, 4);
+            this.tableLayoutPanel5.Controls.Add(this.cbShowEquipment, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.numBatchSeeds, 1, 3);
+            this.tableLayoutPanel5.Controls.Add(this.cbCustomComplexity, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.cbBatchGenerate, 0, 3);
+            this.tableLayoutPanel5.Controls.Add(this.cbComplexity, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.cbExtension, 1, 2);
+            this.tableLayoutPanel5.Controls.Add(this.cbRelicExtension, 0, 2);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(14, 10);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 5;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(555, 155);
+            this.tableLayoutPanel5.TabIndex = 31;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 3;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel6.Controls.Add(this.cbBossMusic, 0, 3);
+            this.tableLayoutPanel6.Controls.Add(this.cbVanillaMusic, 0, 4);
+            this.tableLayoutPanel6.Controls.Add(this.cbMapColor, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.cbColor, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.cbExcludeSongs, 0, 2);
+            this.tableLayoutPanel6.Controls.Add(this.cbColorRando, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.button1, 1, 2);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(14, 10);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 5;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(555, 155);
+            this.tableLayoutPanel6.TabIndex = 32;
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 3;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel8.Controls.Add(this.cbListOfNames, 0, 4);
+            this.tableLayoutPanel8.Controls.Add(this.cbEntranceTrap, 0, 3);
+            this.tableLayoutPanel8.Controls.Add(this.cbForbiddenShortcut, 0, 2);
+            this.tableLayoutPanel8.Controls.Add(this.cbLevelOne, 0, 1);
+            this.tableLayoutPanel8.Controls.Add(this.cbEnhancedCross, 1, 3);
+            this.tableLayoutPanel8.Controls.Add(this.cbMaxMuramasa, 1, 2);
+            this.tableLayoutPanel8.Controls.Add(this.cbInstantDeath, 1, 1);
+            this.tableLayoutPanel8.Controls.Add(this.cbEnhancedDark, 2, 3);
+            this.tableLayoutPanel8.Controls.Add(this.cbSwordBrawn, 2, 2);
+            this.tableLayoutPanel8.Controls.Add(this.cbFourBeasts, 2, 1);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(14, 10);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 6;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(555, 155);
+            this.tableLayoutPanel8.TabIndex = 33;
+            // 
+            // cbLevelOne
+            // 
+            this.cbLevelOne.AutoSize = true;
+            this.cbLevelOne.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLevelOne.Location = new System.Drawing.Point(3, 28);
+            this.cbLevelOne.Name = "cbLevelOne";
+            this.cbLevelOne.Size = new System.Drawing.Size(109, 19);
+            this.cbLevelOne.TabIndex = 27;
+            this.cbLevelOne.Text = "Level 1 Mode";
+            this.toolTip.SetToolTip(this.cbLevelOne, "Forces Alucard to remain at level 1 the entire seed.");
+            this.cbLevelOne.UseVisualStyleBackColor = true;
+            // 
+            // cbInstantDeath
+            // 
+            this.cbInstantDeath.AutoSize = true;
+            this.cbInstantDeath.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbInstantDeath.Location = new System.Drawing.Point(188, 28);
+            this.cbInstantDeath.Name = "cbInstantDeath";
+            this.cbInstantDeath.Size = new System.Drawing.Size(111, 19);
+            this.cbInstantDeath.TabIndex = 28;
+            this.cbInstantDeath.Text = "Instant Death";
+            this.toolTip.SetToolTip(this.cbInstantDeath, "Alucard will die if he takes any damage.");
+            this.cbInstantDeath.UseVisualStyleBackColor = true;
+            // 
+            // cbFourBeasts
+            // 
+            this.cbFourBeasts.AutoSize = true;
+            this.cbFourBeasts.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFourBeasts.Location = new System.Drawing.Point(373, 28);
+            this.cbFourBeasts.Name = "cbFourBeasts";
+            this.cbFourBeasts.Size = new System.Drawing.Size(132, 19);
+            this.cbFourBeasts.TabIndex = 29;
+            this.cbFourBeasts.Text = "Four Beasts Spell";
+            this.toolTip.SetToolTip(this.cbFourBeasts, "Enables the use of Four Beasts spell from the Sega Saturn version.");
+            this.cbFourBeasts.UseVisualStyleBackColor = true;
+            // 
+            // cbForbiddenShortcut
+            // 
+            this.cbForbiddenShortcut.AutoSize = true;
+            this.cbForbiddenShortcut.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbForbiddenShortcut.Location = new System.Drawing.Point(3, 53);
+            this.cbForbiddenShortcut.Name = "cbForbiddenShortcut";
+            this.cbForbiddenShortcut.Size = new System.Drawing.Size(146, 19);
+            this.cbForbiddenShortcut.TabIndex = 30;
+            this.cbForbiddenShortcut.Text = "Forbidden Shortcut";
+            this.toolTip.SetToolTip(this.cbForbiddenShortcut, "Opens a shortcut in Marble Gallery \'Forbidden Route\', \r\nthe red area with Plate L" +
+        "ord and Ctulhu.");
+            this.cbForbiddenShortcut.UseVisualStyleBackColor = true;
+            // 
+            // cbMaxMuramasa
+            // 
+            this.cbMaxMuramasa.AutoSize = true;
+            this.cbMaxMuramasa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMaxMuramasa.Location = new System.Drawing.Point(188, 53);
+            this.cbMaxMuramasa.Name = "cbMaxMuramasa";
+            this.cbMaxMuramasa.Size = new System.Drawing.Size(157, 19);
+            this.cbMaxMuramasa.TabIndex = 31;
+            this.cbMaxMuramasa.Text = "Maximum Muramasa";
+            this.toolTip.SetToolTip(this.cbMaxMuramasa, "\"Maximizes the attack on the Muramasa.");
+            this.cbMaxMuramasa.UseVisualStyleBackColor = true;
+            // 
+            // cbSwordBrawn
+            // 
+            this.cbSwordBrawn.AutoSize = true;
+            this.cbSwordBrawn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSwordBrawn.Location = new System.Drawing.Point(373, 53);
+            this.cbSwordBrawn.Name = "cbSwordBrawn";
+            this.cbSwordBrawn.Size = new System.Drawing.Size(124, 19);
+            this.cbSwordBrawn.TabIndex = 32;
+            this.cbSwordBrawn.Text = "Sword of Brawn";
+            this.toolTip.SetToolTip(this.cbSwordBrawn, "Allows the Dawn Warriors summoned by Sword of Dawn\r\nto have their strength scaled" +
+        " with Alucard\'s STR stat.");
+            this.cbSwordBrawn.UseVisualStyleBackColor = true;
+            // 
+            // cbEntranceTrap
+            // 
+            this.cbEntranceTrap.AutoSize = true;
+            this.cbEntranceTrap.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEntranceTrap.Location = new System.Drawing.Point(3, 78);
+            this.cbEntranceTrap.Name = "cbEntranceTrap";
+            this.cbEntranceTrap.Size = new System.Drawing.Size(146, 19);
+            this.cbEntranceTrap.TabIndex = 33;
+            this.cbEntranceTrap.Text = "Entrance Trap Door";
+            this.toolTip.SetToolTip(this.cbEntranceTrap, "Allows Jewel of Open to open the trap door in the entrance of the castle.");
+            this.cbEntranceTrap.UseVisualStyleBackColor = true;
+            // 
+            // cbEnhancedCross
+            // 
+            this.cbEnhancedCross.AutoSize = true;
+            this.cbEnhancedCross.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEnhancedCross.Location = new System.Drawing.Point(188, 78);
+            this.cbEnhancedCross.Name = "cbEnhancedCross";
+            this.cbEnhancedCross.Size = new System.Drawing.Size(179, 19);
+            this.cbEnhancedCross.TabIndex = 34;
+            this.cbEnhancedCross.Text = "Enhanced Cross Subweapon";
+            this.toolTip.SetToolTip(this.cbEnhancedCross, "Reduces the cost of the Cross subweapon for Alucard\r\nto 50 hearts and lets it ret" +
+        "urn health.");
+            this.cbEnhancedCross.UseVisualStyleBackColor = true;
+            // 
+            // cbEnhancedDark
+            // 
+            this.cbEnhancedDark.AutoSize = true;
+            this.cbEnhancedDark.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEnhancedDark.Location = new System.Drawing.Point(373, 78);
+            this.cbEnhancedDark.Name = "cbEnhancedDark";
+            this.cbEnhancedDark.Size = new System.Drawing.Size(179, 19);
+            this.cbEnhancedDark.TabIndex = 35;
+            this.cbEnhancedDark.Text = "Enhanced Dark Shield Spell";
+            this.toolTip.SetToolTip(this.cbEnhancedDark, "Reduces the enemy invincibility frames granted by the\r\nShield Rod spell with the " +
+        "Dark Shield from 80 to 10.");
+            this.cbEnhancedDark.UseVisualStyleBackColor = true;
+            // 
+            // cbListOfNames
+            // 
+            this.cbListOfNames.AutoSize = true;
+            this.cbListOfNames.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbListOfNames.Location = new System.Drawing.Point(3, 103);
+            this.cbListOfNames.Name = "cbListOfNames";
+            this.cbListOfNames.Size = new System.Drawing.Size(125, 19);
+            this.cbListOfNames.TabIndex = 36;
+            this.cbListOfNames.Text = "A List of Names";
+            this.toolTip.SetToolTip(this.cbListOfNames, "Updates the names of the enemies in the game to\r\nmatch earlier and later entries " +
+        "as well as translations.");
+            this.cbListOfNames.UseVisualStyleBackColor = true;
+            // 
+            // cbWarlockMode
+            // 
+            this.cbWarlockMode.AutoSize = true;
+            this.cbWarlockMode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbWarlockMode.Location = new System.Drawing.Point(188, 103);
+            this.cbWarlockMode.Name = "cbWarlockMode";
+            this.cbWarlockMode.Size = new System.Drawing.Size(115, 19);
+            this.cbWarlockMode.TabIndex = 37;
+            this.cbWarlockMode.Text = "Warlock Mode";
+            this.toolTip.SetToolTip(this.cbWarlockMode, "Enables Warlock Mode allowing the player to use Mist from the\r\nbeginning for free" +
+        " and increasing INT to 99 while lower spell costs.");
+            this.cbWarlockMode.UseVisualStyleBackColor = true;
+            // 
+            // cbOptionOverride
+            // 
+            this.cbOptionOverride.AutoSize = true;
+            this.cbOptionOverride.BackColor = System.Drawing.Color.Transparent;
+            this.cbOptionOverride.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbOptionOverride.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbOptionOverride.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.cbOptionOverride.Location = new System.Drawing.Point(289, 509);
+            this.cbOptionOverride.Name = "cbOptionOverride";
+            this.cbOptionOverride.Size = new System.Drawing.Size(117, 19);
+            this.cbOptionOverride.TabIndex = 29;
+            this.cbOptionOverride.Text = "Option Override";
+            this.toolTip.SetToolTip(this.cbOptionOverride, resources.GetString("cbOptionOverride.ToolTip"));
+            this.cbOptionOverride.UseVisualStyleBackColor = false;
+            // 
             // frmRandomizer
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::SotNRandomizerLauncher.Properties.Resources.gradient;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(418, 681);
+            this.ClientSize = new System.Drawing.Size(618, 681);
+            this.Controls.Add(this.cbOptionOverride);
             this.Controls.Add(this.btnChaosMode);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.lblBatchSeeds);
@@ -1562,19 +1895,14 @@
             this.grpRandomizations.PerformLayout();
             this.tabOptions.ResumeLayout(false);
             this.Randomizations.ResumeLayout(false);
-            this.Randomizations.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numRandomStats)).EndInit();
             this.Basics.ResumeLayout(false);
             this.Basics.PerformLayout();
             this.QoL.ResumeLayout(false);
-            this.QoL.PerformLayout();
             this.Additions.ResumeLayout(false);
-            this.Additions.PerformLayout();
             this.Misc.ResumeLayout(false);
-            this.Misc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numBatchSeeds)).EndInit();
             this.Cosmetics.ResumeLayout(false);
-            this.Cosmetics.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMapColor)).EndInit();
             this.tabInformation.ResumeLayout(false);
             this.BasicInfo.ResumeLayout(false);
@@ -1583,6 +1911,21 @@
             this.RandomizationDetails.PerformLayout();
             this.AdditionalRules.ResumeLayout(false);
             this.AdditionalRules.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1677,7 +2020,6 @@
         private System.Windows.Forms.CheckBox cbGodspeed;
         private System.Windows.Forms.CheckBox cbLibShortcut;
         private System.Windows.Forms.TabPage QoL;
-        private System.Windows.Forms.CheckBox cbDevStash;
         private System.Windows.Forms.CheckBox cbBossMusic;
         private System.Windows.Forms.CheckBox cbSeasonalPhrases;
         private System.Windows.Forms.CheckBox cbElementalChaos;
@@ -1692,5 +2034,26 @@
         private System.Windows.Forms.CheckBox cbSpikeRoomRando;
         private System.Windows.Forms.CheckBox cbLycanMode;
         private System.Windows.Forms.CheckBox cbReverseTeleporter;
+        private System.Windows.Forms.CheckBox cbChaosDrops;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.CheckBox cbListOfNames;
+        private System.Windows.Forms.CheckBox cbEnhancedDark;
+        private System.Windows.Forms.CheckBox cbEnhancedCross;
+        private System.Windows.Forms.CheckBox cbEntranceTrap;
+        private System.Windows.Forms.CheckBox cbSwordBrawn;
+        private System.Windows.Forms.CheckBox cbMaxMuramasa;
+        private System.Windows.Forms.CheckBox cbForbiddenShortcut;
+        private System.Windows.Forms.CheckBox cbFourBeasts;
+        private System.Windows.Forms.CheckBox cbInstantDeath;
+        private System.Windows.Forms.CheckBox cbLevelOne;
+        private System.Windows.Forms.CheckBox cbWarlockMode;
+        private System.Windows.Forms.CheckBox cbOptionOverride;
     }
 }

@@ -120,11 +120,11 @@
   <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>161, 17</value>
   </metadata>
-  <metadata name="randomizerTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>161, 17</value>
+  </metadata>
+  <metadata name="randomizerTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
   <data name="cbSimplifiedInputs.ToolTip" xml:space="preserve">
     <value>Simplifies inputs so spells no longer need complex sequences to execute. 
@@ -406,6 +406,17 @@ R3 and any of the following: Left / Right for Hellfire, Up for Soul Steal, and 2
         A13Xdb1/ruu6rvfP9cvrXuYREREREYOyvsz/PR+0cc4555xzzsf31H4gIiIiImIs5pd5MzMzMzOLt/oy
         /3/1hr9g/qBzruu6rvfPdV3X9f65fraeDj/Kzf7ANs4555xzzvnoXv+ZzXzDnz9cU++f67qu6/1zXdd1
         vX9+yl5f5s3MzMzMLNr+H4eB+GHJBhx9AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="cbOptionOverride.ToolTip" xml:space="preserve">
+    <value>Usually unchecked options will result in the randomizer
+using the preset definition for that option. Checking
+this setting will completely override the preset options
+with the options you have selected, allowing you to 
+disable options that are defined in the preset. When
+enabling this setting, make sure to double-check every
+option you have selected, as it may prevent certain presets
+from being completable if you disable their expected settings.
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

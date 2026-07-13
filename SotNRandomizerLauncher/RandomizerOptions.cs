@@ -34,7 +34,8 @@ namespace SotNRandomizerLauncher
         BountyHunter,
         TargetConfirmed,
         Hitman,
-        AllBossesBounties
+        AllBossesBounties,
+        AllBossesRelicsBounties
     }
     internal class RandomizerOptions
     {
@@ -72,7 +73,6 @@ namespace SotNRandomizerLauncher
         public bool ImmunityPotions { get; set; }
         public bool GodspeedShoes { get; set; }
         public bool LibraryShortcut { get; set; }
-        public bool DevStash { get; set; }
         public bool BossMusic { get; set; }
         public bool SeasonalPhrases {  get; set; }
         public bool SimplifiedInputs { get; set; }
@@ -84,6 +84,18 @@ namespace SotNRandomizerLauncher
         public bool ReverseTeleporter { get; set; }
         public bool ZeroDollarRelic { get; set; }
         public bool LycanthropeMode { get; set; }
+        public bool WarlockMode { get; set; }
+        public bool ChaosDrops { get; set; }
+        public bool LevelOneMode { get; set; }
+        public bool InstantDeath { get; set; }
+        public bool FourBeasts { get; set; }
+        public bool EntranceTrap { get; set; }
+        public bool ForbiddenShortcut { get; set; }
+        public bool EnhancedCross { get; set; }
+        public bool MaximumMuramasa { get; set; }
+        public bool EnhancedDarkShield { get; set; }
+        public bool SwordOfBrawn { get; set; }
+        public bool AListOfNames { get; set; }
         public int StartingStatsAmount { get; set; }
         public Goal CustomGoal { get; set; }
         public CheckState ItemStats { get; set; }
@@ -93,6 +105,7 @@ namespace SotNRandomizerLauncher
         public CheckState PrologueRewards { get; set; }
         public CheckState TurkeyMode { get; set; }
         public CheckState RelicLocations { get; set; }
+        public bool OverrideSettings { get; set; }
 
         private string GetArgument(CheckState state, string checkedValue)
         {
@@ -100,106 +113,143 @@ namespace SotNRandomizerLauncher
             return state == CheckState.Checked ? checkedValue : $"~{checkedValue}";
         }
 
+        private void AppendFlag(StringBuilder arguments, bool enabled, string flag, bool canOverride = false)
+        {
+            if (enabled)
+            {
+                arguments.Append(flag).Append(' ');
+            }
+            else if (canOverride && this.OverrideSettings)
+            {
+                arguments.Append(ToNegatedFlag(flag)).Append(' ');
+            }
+        }
+
+        private static string ToNegatedFlag(string flag)
+        {
+            if (flag.StartsWith("--"))
+                return "--no-" + flag.Substring(2);
+            if (flag.StartsWith("-"))
+                return "--no-" + flag.Substring(1);
+            return "--no-" + flag;
+        }
 
         public string GenerateArguments()
         {
-            string arguments = "";
-            if (this.TournamentMode) arguments += "-t ";            
-            if (this.MagicMaxMode) arguments += "-x ";            
-            if (this.AntiFreezeMode) arguments += "-z ";
-            if (this.ColorRando) arguments += "-l ";
-            if (this.MyPurseMode) arguments += "-y ";
-            if (this.IWBMode) arguments += "-b ";
-            if (this.FastWarpMode) arguments += "-9 ";
-            if (this.UnlockedMode) arguments += "-U ";
-            if (this.MisteryMode) arguments += "-S ";
-            if (this.EnemyStatRando) arguments += "-E ";
-            if (this.ShopPrices) arguments += "--sh ";
-            if (this.StartingZone) arguments += "--ori ";
-            if (this.StartingZone2) arguments += "--ori2 ";
-            if (this.NoPrologue) arguments += "-R ";
-            if (this.AlucardPalette) arguments += "--ap ";
-            if (this.ReverseLibraryCard) arguments += "--rl ";
-            if (this.GuaranteedDrops) arguments += "--gd ";
-            if (this.ItemNameRando) arguments += "--in ";
-            if (this.ImmunityPotions) arguments += "--ip ";
-            if (this.GodspeedShoes) arguments += "--gss ";
-            if (this.LibraryShortcut) arguments += "--ls ";
-            if (this.DevStash) arguments += "--dev ";
-            if (this.BossMusic) arguments += "--bm ";
-            if (this.SimplifiedInputs) arguments += "--ez ";
-            if (this.ElementalChaos) arguments += "--ec ";
-            if (this.SingleHitGears) arguments += "--gp ";
-            if (this.ReverseTeleporter) arguments += "--c2r ";
-            if (this.ZeroDollarRelic) arguments += "--zr ";
-            if (this.OpenClockStatue) arguments += "--os ";
-            if (this.SpikeRoomRando) arguments += "--srr ";
-            if (this.LycanthropeMode) arguments += "--lyc ";
-            if (this.RandomStartingStats) arguments += $"--ss {this.StartingStatsAmount} ";
-            if (!this.SeasonalPhrases) arguments += "--sp ";
-            
+            var arguments = new StringBuilder();
+
+            AppendFlag(arguments, this.TournamentMode, "-t");
+            AppendFlag(arguments, this.MagicMaxMode, "--magicmax", true);
+            AppendFlag(arguments, this.AntiFreezeMode, "--antifreeze", true);
+            AppendFlag(arguments, this.ColorRando, "-l");
+            AppendFlag(arguments, this.MyPurseMode, "--mypurse", true);
+            AppendFlag(arguments, this.IWBMode, "--iws", true);
+            AppendFlag(arguments, this.FastWarpMode, "--fastwarp", true);
+            AppendFlag(arguments, this.UnlockedMode, "--unlocked", true);
+            AppendFlag(arguments, this.MisteryMode, "--surprise", true);
+            AppendFlag(arguments, this.EnemyStatRando, "--enemyStatRando", true);
+            AppendFlag(arguments, this.ShopPrices, "--shopPriceRando", true);
+            AppendFlag(arguments, this.StartingZone, "--startRoomRando", true);
+            AppendFlag(arguments, this.StartingZone2, "--startRoomRando2nd", true);
+            AppendFlag(arguments, this.NoPrologue, "--noprologue");
+            AppendFlag(arguments, this.AlucardPalette, "--ap");
+            AppendFlag(arguments, this.ReverseLibraryCard, "--rlbc", true);
+            AppendFlag(arguments, this.GuaranteedDrops, "--domino", true);
+            AppendFlag(arguments, this.ItemNameRando, "--in");
+            AppendFlag(arguments, this.ImmunityPotions, "--immunityPotion", true);
+            AppendFlag(arguments, this.GodspeedShoes, "--godspeed", true);
+            AppendFlag(arguments, this.LibraryShortcut, "--libShort", true);
+            AppendFlag(arguments, this.BossMusic, "--bm");
+            AppendFlag(arguments, this.SimplifiedInputs, "--easy");
+            AppendFlag(arguments, this.ElementalChaos, "--elemChaos", true);
+            AppendFlag(arguments, this.SingleHitGears, "--singleHitGear", true);
+            AppendFlag(arguments, this.ReverseTeleporter, "--revCastleTeleport", true);
+            AppendFlag(arguments, this.ZeroDollarRelic, "--zeroDollarRelic", true);
+            AppendFlag(arguments, this.OpenClockStatue, "--openClockStatue", true);
+            AppendFlag(arguments, this.SpikeRoomRando, "--spikeRoom", true);
+            AppendFlag(arguments, this.LycanthropeMode, "--lycan", true);
+            AppendFlag(arguments, this.WarlockMode, "--warlock", true);
+            AppendFlag(arguments, this.LevelOneMode, "--levelOne", true);
+            AppendFlag(arguments, this.InstantDeath, "--instantDeath", true);
+            AppendFlag(arguments, this.ChaosDrops, "--cornucopia", true);
+            AppendFlag(arguments, this.FourBeasts, "--fourBeast", true);
+            AppendFlag(arguments, this.MaximumMuramasa, "--maxMasa", true);
+            AppendFlag(arguments, this.SwordOfBrawn, "--brawnySword", true);
+            AppendFlag(arguments, this.EntranceTrap, "--trapDoor", true);
+            AppendFlag(arguments, this.EnhancedCross, "--betterCross", true);
+            AppendFlag(arguments, this.EnhancedDarkShield, "--darkEIF", true);
+            AppendFlag(arguments, this.AListOfNames, "--nameList", true);
+
+            if (this.RandomStartingStats)
+                arguments.Append($"--ss {this.StartingStatsAmount} ");
+            else if (this.OverrideSettings)
+                arguments.Append("--no-ss ");
+
+            // --sp desactiva frases estacionales (lógica invertida; sin --no-).
+            AppendFlag(arguments, !this.SeasonalPhrases, "--sp");
+
             if (this.ExcludeSongs)
             {
                 string excludeSongList = LauncherClient.GetConfigValue("ExcludedSongs");
-                arguments += $"--eds {excludeSongList} ";
+                arguments.Append($"--eds {excludeSongList} ");
             }
-            if (this.Complexity > 0) arguments += $"-c {this.Complexity} ";
+            if (this.Complexity > 0) arguments.Append($"-c {this.Complexity} ");
             char mapColor = MapColorToSetting(this.MapColor);
-            if (mapColor != ' ') arguments += $"-m {mapColor} ";
+            if (mapColor != ' ') arguments.Append($"-m {mapColor} ");
             char customGoal = GoalToSetting(this.CustomGoal);
-            if (customGoal != ' ') arguments += $"-g {customGoal} ";
+            if (customGoal != ' ') arguments.Append($"-g {customGoal} ");
 
             if (this.IsCustom)
             {
                 string currentAppDirectory = AppDomain.CurrentDomain.BaseDirectory;
                 string customPresetsPath = Path.Combine(currentAppDirectory, "files", "customPresets");
                 string presetPath = Path.Combine(customPresetsPath, $"{this.Preset}.json");
-                arguments += $"-f \"{presetPath}\" ";
+                arguments.Append($"-f \"{presetPath}\" ");
             }
             else
             {
-                arguments += $"-p {this.Preset.ToLower()} ";
+                arguments.Append($"-p {this.Preset.ToLower()} ");
             }
-            arguments += $"-s {this.Seed} ";
+            arguments.Append($"-s {this.Seed} ");
             var states = new[] { this.EnemyDrops, this.ItemLocations, this.ItemStats, this.StartingEquipment, this.PrologueRewards, this.TurkeyMode, this.RelicLocations };
             if (this.VanillaMusic || this.RelicExtension != "" || states.Any(state => state != CheckState.Indeterminate))
             {
-                arguments += "--opt ";
+                arguments.Append("--opt ");
                 if (this.Preset == "bingo")
                 {
-                    arguments += "~r";                    
+                    arguments.Append("~r");
                 }
                 else
                 {
                     if (this.VanillaMusic)
                     {
-                        arguments += "~m";
+                        arguments.Append("~m");
                     }
                     else
                     {
-                        arguments += "m";
+                        arguments.Append("m");
                     }
                 }
-                arguments += GetArgument(this.EnemyDrops, "d");
-                arguments += GetArgument(this.ItemLocations, "i");
-                arguments += GetArgument(this.ItemStats, "s");
-                arguments += GetArgument(this.StartingEquipment, "e");
-                arguments += GetArgument(this.PrologueRewards, "b");
-                arguments += GetArgument(this.TurkeyMode, "k");
+                arguments.Append(GetArgument(this.EnemyDrops, "d"));
+                arguments.Append(GetArgument(this.ItemLocations, "i"));
+                arguments.Append(GetArgument(this.ItemStats, "s"));
+                arguments.Append(GetArgument(this.StartingEquipment, "e"));
+                arguments.Append(GetArgument(this.PrologueRewards, "b"));
+                arguments.Append(GetArgument(this.TurkeyMode, "k"));
                 if (this.RelicExtension != "")
                 {
-                    arguments += $"r:x:{RelicExtension.ToLower()}";
+                    arguments.Append($"r:x:{RelicExtension.ToLower()}");
                 }
                 else if (this.RelicLocations == CheckState.Unchecked)
                 {
-                    arguments += "~r";
+                    arguments.Append("~r");
                 }
             }
-            arguments += $" -o \"{this.PpfFilePath}\"";            
-            
-            if (this.ShowEquipment) arguments += " -vv ";
-            
-            return arguments;
+            arguments.Append($" -o \"{this.PpfFilePath}\"");
+
+            if (this.ShowEquipment) arguments.Append(" -vv ");
+
+            return arguments.ToString();
         }
 
         public char MapColorToSetting(MapColor color)
@@ -232,6 +282,7 @@ namespace SotNRandomizerLauncher
                 case Goal.TargetConfirmed: return 't';
                 case Goal.Hitman: return 'w';
                 case Goal.AllBossesBounties: return 'x';
+                case Goal.AllBossesRelicsBounties: return 'y';
             }
             return ' ';
         }
