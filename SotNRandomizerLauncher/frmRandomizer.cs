@@ -474,6 +474,8 @@ namespace SotNRandomizerLauncher
                 OverrideSettings = cbOptionOverride.Checked,
                 AListOfNames = cbListOfNames.Checked,
                 WarlockMode = cbWarlockMode.Checked,
+                NimbleLiteMode = cbNimbleLiteMode.Checked,
+                RainbowMantle = cbRainbowMantle.Checked,
                 ChaosDrops = cbChaosDrops.Checked,
                 LevelOneMode = cbLevelOne.Checked,
                 InstantDeath = cbInstantDeath.Checked,

@@ -97,21 +97,44 @@
             this.cbSpikeRoomRando = new System.Windows.Forms.CheckBox();
             this.cbLycanMode = new System.Windows.Forms.CheckBox();
             this.cbReverseTeleporter = new System.Windows.Forms.CheckBox();
+            this.cbChaosDrops = new System.Windows.Forms.CheckBox();
+            this.cbLevelOne = new System.Windows.Forms.CheckBox();
+            this.cbInstantDeath = new System.Windows.Forms.CheckBox();
+            this.cbFourBeasts = new System.Windows.Forms.CheckBox();
+            this.cbForbiddenShortcut = new System.Windows.Forms.CheckBox();
+            this.cbMaxMuramasa = new System.Windows.Forms.CheckBox();
+            this.cbSwordBrawn = new System.Windows.Forms.CheckBox();
+            this.cbEntranceTrap = new System.Windows.Forms.CheckBox();
+            this.cbEnhancedCross = new System.Windows.Forms.CheckBox();
+            this.cbEnhancedDark = new System.Windows.Forms.CheckBox();
+            this.cbListOfNames = new System.Windows.Forms.CheckBox();
+            this.cbWarlockMode = new System.Windows.Forms.CheckBox();
+            this.cbOptionOverride = new System.Windows.Forms.CheckBox();
             this.btnCopySeed = new System.Windows.Forms.Button();
             this.rtbBingoInformation = new System.Windows.Forms.RichTextBox();
             this.tabOptions = new System.Windows.Forms.TabControl();
             this.Randomizations = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.numRandomStats = new System.Windows.Forms.NumericUpDown();
             this.Basics = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.QoL = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.Additions = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbNimbleLiteMode = new System.Windows.Forms.CheckBox();
             this.Misc = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.cbGoalsList = new System.Windows.Forms.ComboBox();
             this.numBatchSeeds = new System.Windows.Forms.NumericUpDown();
             this.cbComplexity = new System.Windows.Forms.ComboBox();
             this.Cosmetics = new System.Windows.Forms.TabPage();
             this.pbMapColor = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbRainbowMantle = new System.Windows.Forms.CheckBox();
             this.tabInformation = new System.Windows.Forms.TabControl();
             this.BasicInfo = new System.Windows.Forms.TabPage();
             this.lblAuthors = new System.Windows.Forms.Label();
@@ -131,50 +154,29 @@
             this.lblCastleType = new System.Windows.Forms.Label();
             this.lblBatchSeeds = new System.Windows.Forms.Label();
             this.btnChaosMode = new System.Windows.Forms.Button();
-            this.cbChaosDrops = new System.Windows.Forms.CheckBox();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.cbLevelOne = new System.Windows.Forms.CheckBox();
-            this.cbInstantDeath = new System.Windows.Forms.CheckBox();
-            this.cbFourBeasts = new System.Windows.Forms.CheckBox();
-            this.cbForbiddenShortcut = new System.Windows.Forms.CheckBox();
-            this.cbMaxMuramasa = new System.Windows.Forms.CheckBox();
-            this.cbSwordBrawn = new System.Windows.Forms.CheckBox();
-            this.cbEntranceTrap = new System.Windows.Forms.CheckBox();
-            this.cbEnhancedCross = new System.Windows.Forms.CheckBox();
-            this.cbEnhancedDark = new System.Windows.Forms.CheckBox();
-            this.cbListOfNames = new System.Windows.Forms.CheckBox();
-            this.cbWarlockMode = new System.Windows.Forms.CheckBox();
-            this.cbOptionOverride = new System.Windows.Forms.CheckBox();
             this.grpRandomizations.SuspendLayout();
             this.tabOptions.SuspendLayout();
             this.Randomizations.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numRandomStats)).BeginInit();
             this.Basics.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.QoL.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.Additions.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.Misc.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numBatchSeeds)).BeginInit();
             this.Cosmetics.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMapColor)).BeginInit();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
             this.tabInformation.SuspendLayout();
             this.BasicInfo.SuspendLayout();
             this.RandomizationDetails.SuspendLayout();
             this.AdditionalRules.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
-            this.tableLayoutPanel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpRandomizations
@@ -288,7 +290,7 @@
             this.button1.Enabled = false;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(188, 65);
+            this.button1.Location = new System.Drawing.Point(188, 63);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(162, 23);
             this.button1.TabIndex = 25;
@@ -300,7 +302,7 @@
             // 
             this.cbExcludeSongs.AutoSize = true;
             this.cbExcludeSongs.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbExcludeSongs.Location = new System.Drawing.Point(3, 65);
+            this.cbExcludeSongs.Location = new System.Drawing.Point(3, 63);
             this.cbExcludeSongs.Name = "cbExcludeSongs";
             this.cbExcludeSongs.Size = new System.Drawing.Size(119, 21);
             this.cbExcludeSongs.TabIndex = 24;
@@ -351,7 +353,7 @@
             this.btnAROptions.Enabled = false;
             this.btnAROptions.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAROptions.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAROptions.Location = new System.Drawing.Point(188, 127);
+            this.btnAROptions.Location = new System.Drawing.Point(188, 123);
             this.btnAROptions.Name = "btnAROptions";
             this.btnAROptions.Size = new System.Drawing.Size(162, 23);
             this.btnAROptions.TabIndex = 20;
@@ -363,7 +365,7 @@
             // 
             this.cbAreaRandomizer.AutoSize = true;
             this.cbAreaRandomizer.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAreaRandomizer.Location = new System.Drawing.Point(3, 127);
+            this.cbAreaRandomizer.Location = new System.Drawing.Point(3, 123);
             this.cbAreaRandomizer.Name = "cbAreaRandomizer";
             this.cbAreaRandomizer.Size = new System.Drawing.Size(163, 21);
             this.cbAreaRandomizer.TabIndex = 19;
@@ -427,7 +429,7 @@
             // 
             this.cbColorRando.AutoSize = true;
             this.cbColorRando.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbColorRando.Location = new System.Drawing.Point(3, 34);
+            this.cbColorRando.Location = new System.Drawing.Point(3, 33);
             this.cbColorRando.Name = "cbColorRando";
             this.cbColorRando.Size = new System.Drawing.Size(137, 21);
             this.cbColorRando.TabIndex = 13;
@@ -507,7 +509,7 @@
             // 
             this.cbVanillaMusic.AutoSize = true;
             this.cbVanillaMusic.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbVanillaMusic.Location = new System.Drawing.Point(3, 127);
+            this.cbVanillaMusic.Location = new System.Drawing.Point(3, 123);
             this.cbVanillaMusic.Name = "cbVanillaMusic";
             this.cbVanillaMusic.Size = new System.Drawing.Size(109, 21);
             this.cbVanillaMusic.TabIndex = 8;
@@ -626,7 +628,7 @@
             // 
             this.cbRandoShop.AutoSize = true;
             this.cbRandoShop.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbRandoShop.Location = new System.Drawing.Point(3, 65);
+            this.cbRandoShop.Location = new System.Drawing.Point(3, 63);
             this.cbRandoShop.Name = "cbRandoShop";
             this.cbRandoShop.Size = new System.Drawing.Size(98, 21);
             this.cbRandoShop.TabIndex = 27;
@@ -788,7 +790,7 @@
             // 
             this.cbStartingZoneRando2.AutoSize = true;
             this.cbStartingZoneRando2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbStartingZoneRando2.Location = new System.Drawing.Point(188, 34);
+            this.cbStartingZoneRando2.Location = new System.Drawing.Point(188, 33);
             this.cbStartingZoneRando2.Name = "cbStartingZoneRando2";
             this.cbStartingZoneRando2.Size = new System.Drawing.Size(179, 21);
             this.cbStartingZoneRando2.TabIndex = 29;
@@ -816,7 +818,7 @@
             // 
             this.cbItemNames.AutoSize = true;
             this.cbItemNames.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbItemNames.Location = new System.Drawing.Point(3, 34);
+            this.cbItemNames.Location = new System.Drawing.Point(3, 33);
             this.cbItemNames.Name = "cbItemNames";
             this.cbItemNames.Size = new System.Drawing.Size(101, 21);
             this.cbItemNames.TabIndex = 30;
@@ -908,7 +910,7 @@
             // 
             this.cbBossMusic.AutoSize = true;
             this.cbBossMusic.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbBossMusic.Location = new System.Drawing.Point(3, 96);
+            this.cbBossMusic.Location = new System.Drawing.Point(3, 93);
             this.cbBossMusic.Name = "cbBossMusic";
             this.cbBossMusic.Size = new System.Drawing.Size(152, 21);
             this.cbBossMusic.TabIndex = 26;
@@ -985,7 +987,7 @@
             // 
             this.cbRandomStats.AutoSize = true;
             this.cbRandomStats.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbRandomStats.Location = new System.Drawing.Point(3, 96);
+            this.cbRandomStats.Location = new System.Drawing.Point(3, 93);
             this.cbRandomStats.Name = "cbRandomStats";
             this.cbRandomStats.Size = new System.Drawing.Size(165, 21);
             this.cbRandomStats.TabIndex = 32;
@@ -1022,7 +1024,7 @@
             // 
             this.cbSpikeRoomRando.AutoSize = true;
             this.cbSpikeRoomRando.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSpikeRoomRando.Location = new System.Drawing.Point(188, 65);
+            this.cbSpikeRoomRando.Location = new System.Drawing.Point(188, 63);
             this.cbSpikeRoomRando.Name = "cbSpikeRoomRando";
             this.cbSpikeRoomRando.Size = new System.Drawing.Size(100, 21);
             this.cbSpikeRoomRando.TabIndex = 34;
@@ -1053,6 +1055,171 @@
             this.cbReverseTeleporter.Text = "Reverse Teleporter";
             this.toolTip.SetToolTip(this.cbReverseTeleporter, "Randomizes where the teleporter pad in Second Castle is located.\r\n");
             this.cbReverseTeleporter.UseVisualStyleBackColor = true;
+            // 
+            // cbChaosDrops
+            // 
+            this.cbChaosDrops.AutoSize = true;
+            this.cbChaosDrops.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbChaosDrops.Location = new System.Drawing.Point(373, 33);
+            this.cbChaosDrops.Name = "cbChaosDrops";
+            this.cbChaosDrops.Size = new System.Drawing.Size(105, 21);
+            this.cbChaosDrops.TabIndex = 35;
+            this.cbChaosDrops.Text = "Chaos Drops";
+            this.toolTip.SetToolTip(this.cbChaosDrops, "Enemies can drop any item in the game. Full chaos!");
+            this.cbChaosDrops.UseVisualStyleBackColor = true;
+            // 
+            // cbLevelOne
+            // 
+            this.cbLevelOne.AutoSize = true;
+            this.cbLevelOne.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLevelOne.Location = new System.Drawing.Point(3, 28);
+            this.cbLevelOne.Name = "cbLevelOne";
+            this.cbLevelOne.Size = new System.Drawing.Size(109, 19);
+            this.cbLevelOne.TabIndex = 27;
+            this.cbLevelOne.Text = "Level 1 Mode";
+            this.toolTip.SetToolTip(this.cbLevelOne, "Forces Alucard to remain at level 1 the entire seed.");
+            this.cbLevelOne.UseVisualStyleBackColor = true;
+            // 
+            // cbInstantDeath
+            // 
+            this.cbInstantDeath.AutoSize = true;
+            this.cbInstantDeath.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbInstantDeath.Location = new System.Drawing.Point(188, 28);
+            this.cbInstantDeath.Name = "cbInstantDeath";
+            this.cbInstantDeath.Size = new System.Drawing.Size(111, 19);
+            this.cbInstantDeath.TabIndex = 28;
+            this.cbInstantDeath.Text = "Instant Death";
+            this.toolTip.SetToolTip(this.cbInstantDeath, "Alucard will die if he takes any damage.");
+            this.cbInstantDeath.UseVisualStyleBackColor = true;
+            // 
+            // cbFourBeasts
+            // 
+            this.cbFourBeasts.AutoSize = true;
+            this.cbFourBeasts.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFourBeasts.Location = new System.Drawing.Point(373, 28);
+            this.cbFourBeasts.Name = "cbFourBeasts";
+            this.cbFourBeasts.Size = new System.Drawing.Size(132, 19);
+            this.cbFourBeasts.TabIndex = 29;
+            this.cbFourBeasts.Text = "Four Beasts Spell";
+            this.toolTip.SetToolTip(this.cbFourBeasts, "Enables the use of Four Beasts spell from the Sega Saturn version.");
+            this.cbFourBeasts.UseVisualStyleBackColor = true;
+            // 
+            // cbForbiddenShortcut
+            // 
+            this.cbForbiddenShortcut.AutoSize = true;
+            this.cbForbiddenShortcut.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbForbiddenShortcut.Location = new System.Drawing.Point(3, 53);
+            this.cbForbiddenShortcut.Name = "cbForbiddenShortcut";
+            this.cbForbiddenShortcut.Size = new System.Drawing.Size(146, 19);
+            this.cbForbiddenShortcut.TabIndex = 30;
+            this.cbForbiddenShortcut.Text = "Forbidden Shortcut";
+            this.toolTip.SetToolTip(this.cbForbiddenShortcut, "Opens a shortcut in Marble Gallery \'Forbidden Route\', \r\nthe red area with Plate L" +
+        "ord and Ctulhu.");
+            this.cbForbiddenShortcut.UseVisualStyleBackColor = true;
+            // 
+            // cbMaxMuramasa
+            // 
+            this.cbMaxMuramasa.AutoSize = true;
+            this.cbMaxMuramasa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMaxMuramasa.Location = new System.Drawing.Point(188, 53);
+            this.cbMaxMuramasa.Name = "cbMaxMuramasa";
+            this.cbMaxMuramasa.Size = new System.Drawing.Size(157, 19);
+            this.cbMaxMuramasa.TabIndex = 31;
+            this.cbMaxMuramasa.Text = "Maximum Muramasa";
+            this.toolTip.SetToolTip(this.cbMaxMuramasa, "\"Maximizes the attack on the Muramasa.");
+            this.cbMaxMuramasa.UseVisualStyleBackColor = true;
+            // 
+            // cbSwordBrawn
+            // 
+            this.cbSwordBrawn.AutoSize = true;
+            this.cbSwordBrawn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSwordBrawn.Location = new System.Drawing.Point(373, 53);
+            this.cbSwordBrawn.Name = "cbSwordBrawn";
+            this.cbSwordBrawn.Size = new System.Drawing.Size(124, 19);
+            this.cbSwordBrawn.TabIndex = 32;
+            this.cbSwordBrawn.Text = "Sword of Brawn";
+            this.toolTip.SetToolTip(this.cbSwordBrawn, "Allows the Dawn Warriors summoned by Sword of Dawn\r\nto have their strength scaled" +
+        " with Alucard\'s STR stat.");
+            this.cbSwordBrawn.UseVisualStyleBackColor = true;
+            // 
+            // cbEntranceTrap
+            // 
+            this.cbEntranceTrap.AutoSize = true;
+            this.cbEntranceTrap.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEntranceTrap.Location = new System.Drawing.Point(3, 78);
+            this.cbEntranceTrap.Name = "cbEntranceTrap";
+            this.cbEntranceTrap.Size = new System.Drawing.Size(146, 19);
+            this.cbEntranceTrap.TabIndex = 33;
+            this.cbEntranceTrap.Text = "Entrance Trap Door";
+            this.toolTip.SetToolTip(this.cbEntranceTrap, "Allows Jewel of Open to open the trap door in the entrance of the castle.");
+            this.cbEntranceTrap.UseVisualStyleBackColor = true;
+            // 
+            // cbEnhancedCross
+            // 
+            this.cbEnhancedCross.AutoSize = true;
+            this.cbEnhancedCross.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEnhancedCross.Location = new System.Drawing.Point(188, 78);
+            this.cbEnhancedCross.Name = "cbEnhancedCross";
+            this.cbEnhancedCross.Size = new System.Drawing.Size(179, 19);
+            this.cbEnhancedCross.TabIndex = 34;
+            this.cbEnhancedCross.Text = "Enhanced Cross Subweapon";
+            this.toolTip.SetToolTip(this.cbEnhancedCross, "Reduces the cost of the Cross subweapon for Alucard\r\nto 50 hearts and lets it ret" +
+        "urn health.");
+            this.cbEnhancedCross.UseVisualStyleBackColor = true;
+            // 
+            // cbEnhancedDark
+            // 
+            this.cbEnhancedDark.AutoSize = true;
+            this.cbEnhancedDark.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEnhancedDark.Location = new System.Drawing.Point(373, 78);
+            this.cbEnhancedDark.Name = "cbEnhancedDark";
+            this.cbEnhancedDark.Size = new System.Drawing.Size(179, 19);
+            this.cbEnhancedDark.TabIndex = 35;
+            this.cbEnhancedDark.Text = "Enhanced Dark Shield Spell";
+            this.toolTip.SetToolTip(this.cbEnhancedDark, "Reduces the enemy invincibility frames granted by the\r\nShield Rod spell with the " +
+        "Dark Shield from 80 to 10.");
+            this.cbEnhancedDark.UseVisualStyleBackColor = true;
+            // 
+            // cbListOfNames
+            // 
+            this.cbListOfNames.AutoSize = true;
+            this.cbListOfNames.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbListOfNames.Location = new System.Drawing.Point(3, 103);
+            this.cbListOfNames.Name = "cbListOfNames";
+            this.cbListOfNames.Size = new System.Drawing.Size(125, 19);
+            this.cbListOfNames.TabIndex = 36;
+            this.cbListOfNames.Text = "A List of Names";
+            this.toolTip.SetToolTip(this.cbListOfNames, "Updates the names of the enemies in the game to\r\nmatch earlier and later entries " +
+        "as well as translations.");
+            this.cbListOfNames.UseVisualStyleBackColor = true;
+            // 
+            // cbWarlockMode
+            // 
+            this.cbWarlockMode.AutoSize = true;
+            this.cbWarlockMode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbWarlockMode.Location = new System.Drawing.Point(188, 103);
+            this.cbWarlockMode.Name = "cbWarlockMode";
+            this.cbWarlockMode.Size = new System.Drawing.Size(115, 19);
+            this.cbWarlockMode.TabIndex = 37;
+            this.cbWarlockMode.Text = "Warlock Mode";
+            this.toolTip.SetToolTip(this.cbWarlockMode, "Enables Warlock Mode allowing the player to use Mist from the\r\nbeginning for free" +
+        " and increasing INT to 99 while lower spell costs.");
+            this.cbWarlockMode.UseVisualStyleBackColor = true;
+            // 
+            // cbOptionOverride
+            // 
+            this.cbOptionOverride.AutoSize = true;
+            this.cbOptionOverride.BackColor = System.Drawing.Color.Transparent;
+            this.cbOptionOverride.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbOptionOverride.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbOptionOverride.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.cbOptionOverride.Location = new System.Drawing.Point(289, 509);
+            this.cbOptionOverride.Name = "cbOptionOverride";
+            this.cbOptionOverride.Size = new System.Drawing.Size(117, 19);
+            this.cbOptionOverride.TabIndex = 29;
+            this.cbOptionOverride.Text = "Option Override";
+            this.toolTip.SetToolTip(this.cbOptionOverride, resources.GetString("cbOptionOverride.ToolTip"));
+            this.cbOptionOverride.UseVisualStyleBackColor = false;
             // 
             // btnCopySeed
             // 
@@ -1109,9 +1276,38 @@
             this.Randomizations.Text = "Randomization";
             this.Randomizations.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.Controls.Add(this.cbSpikeRoomRando, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.cbEnemyStatRando, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.cbChaosDrops, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btnAROptions, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.cbStartingZoneRando, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.cbRandoShop, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.cbItemNames, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.cbElementalChaos, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.cbStartingZoneRando2, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.cbAreaRandomizer, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.cbRandomStats, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.numRandomStats, 1, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(14, 10);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 5;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(555, 155);
+            this.tableLayoutPanel2.TabIndex = 29;
+            // 
             // numRandomStats
             // 
-            this.numRandomStats.Location = new System.Drawing.Point(188, 96);
+            this.numRandomStats.Location = new System.Drawing.Point(188, 93);
             this.numRandomStats.Maximum = new decimal(new int[] {
             99,
             0,
@@ -1144,6 +1340,28 @@
             this.Basics.Text = "Basics";
             this.Basics.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.Controls.Add(this.cbItemStats, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.cbTurkeyMode, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.cbEnemyDrops, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.cbItemLocations, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.cbRelicLocations, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.cbStartingEquipment, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.cbPrologueRewards, 2, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(41, 56);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(502, 100);
+            this.tableLayoutPanel1.TabIndex = 36;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -1167,6 +1385,34 @@
             this.QoL.Text = "QoL";
             this.QoL.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.Controls.Add(this.cbOpenClockStatue, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.cbNoPrologue, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.cbAntiFreeze, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.cbMagicMax, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.cbSimplifiedInputs, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.cbSingleHitGears, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.cbTournamentMode, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.cbZeroDollarRelic, 2, 3);
+            this.tableLayoutPanel3.Controls.Add(this.cbGuaranteedDrops, 2, 2);
+            this.tableLayoutPanel3.Controls.Add(this.cbFastWarp, 2, 1);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(14, 10);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 6;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(555, 155);
+            this.tableLayoutPanel3.TabIndex = 30;
+            // 
             // Additions
             // 
             this.Additions.BackgroundImage = global::SotNRandomizerLauncher.Properties.Resources.gradient;
@@ -1181,6 +1427,47 @@
             this.Additions.UseVisualStyleBackColor = true;
             this.Additions.Click += new System.EventHandler(this.Enhancements_Click);
             // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 3;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.Controls.Add(this.cbLycanMode, 0, 4);
+            this.tableLayoutPanel4.Controls.Add(this.cbWingSmashMode, 0, 3);
+            this.tableLayoutPanel4.Controls.Add(this.cbPotions, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.cbUnlockedMode, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.cbLibShortcut, 1, 3);
+            this.tableLayoutPanel4.Controls.Add(this.cbReverseLibraryCard, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.cbMisteryMode, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.cbReverseTeleporter, 2, 3);
+            this.tableLayoutPanel4.Controls.Add(this.cbGodspeed, 2, 2);
+            this.tableLayoutPanel4.Controls.Add(this.cbMyPurse, 2, 1);
+            this.tableLayoutPanel4.Controls.Add(this.cbWarlockMode, 1, 4);
+            this.tableLayoutPanel4.Controls.Add(this.cbNimbleLiteMode, 2, 4);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(14, 10);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 6;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(555, 155);
+            this.tableLayoutPanel4.TabIndex = 31;
+            // 
+            // cbNimbleLiteMode
+            // 
+            this.cbNimbleLiteMode.AutoSize = true;
+            this.cbNimbleLiteMode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cbNimbleLiteMode.Location = new System.Drawing.Point(373, 103);
+            this.cbNimbleLiteMode.Name = "cbNimbleLiteMode";
+            this.cbNimbleLiteMode.Size = new System.Drawing.Size(138, 19);
+            this.cbNimbleLiteMode.TabIndex = 38;
+            this.cbNimbleLiteMode.Text = "Nimble Lite Mode";
+            this.cbNimbleLiteMode.UseVisualStyleBackColor = true;
+            // 
             // Misc
             // 
             this.Misc.BackgroundImage = global::SotNRandomizerLauncher.Properties.Resources.gradient;
@@ -1192,6 +1479,33 @@
             this.Misc.TabIndex = 2;
             this.Misc.Text = "Misc.";
             this.Misc.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.42623F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.78689F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.78689F));
+            this.tableLayoutPanel5.Controls.Add(this.cbCustomGoals, 0, 4);
+            this.tableLayoutPanel5.Controls.Add(this.cbSeasonalPhrases, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.cbGoalsList, 1, 4);
+            this.tableLayoutPanel5.Controls.Add(this.cbShowEquipment, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.numBatchSeeds, 1, 3);
+            this.tableLayoutPanel5.Controls.Add(this.cbCustomComplexity, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.cbBatchGenerate, 0, 3);
+            this.tableLayoutPanel5.Controls.Add(this.cbComplexity, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.cbExtension, 1, 2);
+            this.tableLayoutPanel5.Controls.Add(this.cbRelicExtension, 0, 2);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(14, 10);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 5;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(555, 155);
+            this.tableLayoutPanel5.TabIndex = 31;
             // 
             // cbGoalsList
             // 
@@ -1288,6 +1602,82 @@
             this.pbMapColor.TabIndex = 17;
             this.pbMapColor.TabStop = false;
             this.pbMapColor.Visible = false;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 3;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel6.Controls.Add(this.cbBossMusic, 0, 3);
+            this.tableLayoutPanel6.Controls.Add(this.cbVanillaMusic, 0, 4);
+            this.tableLayoutPanel6.Controls.Add(this.cbMapColor, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.cbColor, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.cbExcludeSongs, 0, 2);
+            this.tableLayoutPanel6.Controls.Add(this.cbColorRando, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.button1, 1, 2);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(14, 10);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 5;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(555, 155);
+            this.tableLayoutPanel6.TabIndex = 32;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackgroundImage = global::SotNRandomizerLauncher.Properties.Resources.gradient;
+            this.tabPage1.Controls.Add(this.tableLayoutPanel8);
+            this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(584, 175);
+            this.tabPage1.TabIndex = 7;
+            this.tabPage1.Text = "Challenges & Dev\'s Stash";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 3;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel8.Controls.Add(this.cbListOfNames, 0, 4);
+            this.tableLayoutPanel8.Controls.Add(this.cbEntranceTrap, 0, 3);
+            this.tableLayoutPanel8.Controls.Add(this.cbForbiddenShortcut, 0, 2);
+            this.tableLayoutPanel8.Controls.Add(this.cbLevelOne, 0, 1);
+            this.tableLayoutPanel8.Controls.Add(this.cbEnhancedCross, 1, 3);
+            this.tableLayoutPanel8.Controls.Add(this.cbMaxMuramasa, 1, 2);
+            this.tableLayoutPanel8.Controls.Add(this.cbInstantDeath, 1, 1);
+            this.tableLayoutPanel8.Controls.Add(this.cbEnhancedDark, 2, 3);
+            this.tableLayoutPanel8.Controls.Add(this.cbSwordBrawn, 2, 2);
+            this.tableLayoutPanel8.Controls.Add(this.cbFourBeasts, 2, 1);
+            this.tableLayoutPanel8.Controls.Add(this.cbRainbowMantle, 1, 4);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(14, 10);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 6;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(555, 155);
+            this.tableLayoutPanel8.TabIndex = 33;
+            // 
+            // cbRainbowMantle
+            // 
+            this.cbRainbowMantle.AutoSize = true;
+            this.cbRainbowMantle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cbRainbowMantle.Location = new System.Drawing.Point(188, 103);
+            this.cbRainbowMantle.Name = "cbRainbowMantle";
+            this.cbRainbowMantle.Size = new System.Drawing.Size(127, 19);
+            this.cbRainbowMantle.TabIndex = 37;
+            this.cbRainbowMantle.Text = "Rainbow Mantle";
+            this.cbRainbowMantle.UseVisualStyleBackColor = true;
             // 
             // tabInformation
             // 
@@ -1497,370 +1887,6 @@
             this.btnChaosMode.Visible = false;
             this.btnChaosMode.Click += new System.EventHandler(this.btnChaosMode_Click);
             // 
-            // cbChaosDrops
-            // 
-            this.cbChaosDrops.AutoSize = true;
-            this.cbChaosDrops.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbChaosDrops.Location = new System.Drawing.Point(373, 34);
-            this.cbChaosDrops.Name = "cbChaosDrops";
-            this.cbChaosDrops.Size = new System.Drawing.Size(105, 21);
-            this.cbChaosDrops.TabIndex = 35;
-            this.cbChaosDrops.Text = "Chaos Drops";
-            this.toolTip.SetToolTip(this.cbChaosDrops, "Enemies can drop any item in the game. Full chaos!");
-            this.cbChaosDrops.UseVisualStyleBackColor = true;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackgroundImage = global::SotNRandomizerLauncher.Properties.Resources.gradient;
-            this.tabPage1.Controls.Add(this.tableLayoutPanel8);
-            this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(584, 175);
-            this.tabPage1.TabIndex = 7;
-            this.tabPage1.Text = "Challenges & Dev\'s Stash";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel1.Controls.Add(this.cbItemStats, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.cbTurkeyMode, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.cbEnemyDrops, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.cbItemLocations, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.cbRelicLocations, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.cbStartingEquipment, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.cbPrologueRewards, 2, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(41, 56);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(502, 100);
-            this.tableLayoutPanel1.TabIndex = 36;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Controls.Add(this.cbSpikeRoomRando, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.cbEnemyStatRando, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.cbChaosDrops, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.btnAROptions, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.cbStartingZoneRando, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.cbRandoShop, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.cbItemNames, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.cbElementalChaos, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.cbStartingZoneRando2, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.cbAreaRandomizer, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.cbRandomStats, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.numRandomStats, 1, 3);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(14, 10);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 5;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(555, 155);
-            this.tableLayoutPanel2.TabIndex = 29;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.Controls.Add(this.cbOpenClockStatue, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.cbNoPrologue, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.cbAntiFreeze, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.cbMagicMax, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.cbSimplifiedInputs, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.cbSingleHitGears, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.cbTournamentMode, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.cbZeroDollarRelic, 2, 3);
-            this.tableLayoutPanel3.Controls.Add(this.cbGuaranteedDrops, 2, 2);
-            this.tableLayoutPanel3.Controls.Add(this.cbFastWarp, 2, 1);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(14, 10);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 6;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(555, 155);
-            this.tableLayoutPanel3.TabIndex = 30;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 3;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.Controls.Add(this.cbLycanMode, 0, 4);
-            this.tableLayoutPanel4.Controls.Add(this.cbWingSmashMode, 0, 3);
-            this.tableLayoutPanel4.Controls.Add(this.cbPotions, 0, 2);
-            this.tableLayoutPanel4.Controls.Add(this.cbUnlockedMode, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.cbLibShortcut, 1, 3);
-            this.tableLayoutPanel4.Controls.Add(this.cbReverseLibraryCard, 1, 2);
-            this.tableLayoutPanel4.Controls.Add(this.cbMisteryMode, 1, 1);
-            this.tableLayoutPanel4.Controls.Add(this.cbReverseTeleporter, 2, 3);
-            this.tableLayoutPanel4.Controls.Add(this.cbGodspeed, 2, 2);
-            this.tableLayoutPanel4.Controls.Add(this.cbMyPurse, 2, 1);
-            this.tableLayoutPanel4.Controls.Add(this.cbWarlockMode, 1, 4);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(14, 10);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 6;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(555, 155);
-            this.tableLayoutPanel4.TabIndex = 31;
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 3;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.42623F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.78689F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.78689F));
-            this.tableLayoutPanel5.Controls.Add(this.cbCustomGoals, 0, 4);
-            this.tableLayoutPanel5.Controls.Add(this.cbSeasonalPhrases, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.cbGoalsList, 1, 4);
-            this.tableLayoutPanel5.Controls.Add(this.cbShowEquipment, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.numBatchSeeds, 1, 3);
-            this.tableLayoutPanel5.Controls.Add(this.cbCustomComplexity, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.cbBatchGenerate, 0, 3);
-            this.tableLayoutPanel5.Controls.Add(this.cbComplexity, 1, 1);
-            this.tableLayoutPanel5.Controls.Add(this.cbExtension, 1, 2);
-            this.tableLayoutPanel5.Controls.Add(this.cbRelicExtension, 0, 2);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(14, 10);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 5;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(555, 155);
-            this.tableLayoutPanel5.TabIndex = 31;
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 3;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel6.Controls.Add(this.cbBossMusic, 0, 3);
-            this.tableLayoutPanel6.Controls.Add(this.cbVanillaMusic, 0, 4);
-            this.tableLayoutPanel6.Controls.Add(this.cbMapColor, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.cbColor, 1, 0);
-            this.tableLayoutPanel6.Controls.Add(this.cbExcludeSongs, 0, 2);
-            this.tableLayoutPanel6.Controls.Add(this.cbColorRando, 0, 1);
-            this.tableLayoutPanel6.Controls.Add(this.button1, 1, 2);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(14, 10);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 5;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(555, 155);
-            this.tableLayoutPanel6.TabIndex = 32;
-            // 
-            // tableLayoutPanel8
-            // 
-            this.tableLayoutPanel8.ColumnCount = 3;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel8.Controls.Add(this.cbListOfNames, 0, 4);
-            this.tableLayoutPanel8.Controls.Add(this.cbEntranceTrap, 0, 3);
-            this.tableLayoutPanel8.Controls.Add(this.cbForbiddenShortcut, 0, 2);
-            this.tableLayoutPanel8.Controls.Add(this.cbLevelOne, 0, 1);
-            this.tableLayoutPanel8.Controls.Add(this.cbEnhancedCross, 1, 3);
-            this.tableLayoutPanel8.Controls.Add(this.cbMaxMuramasa, 1, 2);
-            this.tableLayoutPanel8.Controls.Add(this.cbInstantDeath, 1, 1);
-            this.tableLayoutPanel8.Controls.Add(this.cbEnhancedDark, 2, 3);
-            this.tableLayoutPanel8.Controls.Add(this.cbSwordBrawn, 2, 2);
-            this.tableLayoutPanel8.Controls.Add(this.cbFourBeasts, 2, 1);
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(14, 10);
-            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 6;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(555, 155);
-            this.tableLayoutPanel8.TabIndex = 33;
-            // 
-            // cbLevelOne
-            // 
-            this.cbLevelOne.AutoSize = true;
-            this.cbLevelOne.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLevelOne.Location = new System.Drawing.Point(3, 28);
-            this.cbLevelOne.Name = "cbLevelOne";
-            this.cbLevelOne.Size = new System.Drawing.Size(109, 19);
-            this.cbLevelOne.TabIndex = 27;
-            this.cbLevelOne.Text = "Level 1 Mode";
-            this.toolTip.SetToolTip(this.cbLevelOne, "Forces Alucard to remain at level 1 the entire seed.");
-            this.cbLevelOne.UseVisualStyleBackColor = true;
-            // 
-            // cbInstantDeath
-            // 
-            this.cbInstantDeath.AutoSize = true;
-            this.cbInstantDeath.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbInstantDeath.Location = new System.Drawing.Point(188, 28);
-            this.cbInstantDeath.Name = "cbInstantDeath";
-            this.cbInstantDeath.Size = new System.Drawing.Size(111, 19);
-            this.cbInstantDeath.TabIndex = 28;
-            this.cbInstantDeath.Text = "Instant Death";
-            this.toolTip.SetToolTip(this.cbInstantDeath, "Alucard will die if he takes any damage.");
-            this.cbInstantDeath.UseVisualStyleBackColor = true;
-            // 
-            // cbFourBeasts
-            // 
-            this.cbFourBeasts.AutoSize = true;
-            this.cbFourBeasts.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbFourBeasts.Location = new System.Drawing.Point(373, 28);
-            this.cbFourBeasts.Name = "cbFourBeasts";
-            this.cbFourBeasts.Size = new System.Drawing.Size(132, 19);
-            this.cbFourBeasts.TabIndex = 29;
-            this.cbFourBeasts.Text = "Four Beasts Spell";
-            this.toolTip.SetToolTip(this.cbFourBeasts, "Enables the use of Four Beasts spell from the Sega Saturn version.");
-            this.cbFourBeasts.UseVisualStyleBackColor = true;
-            // 
-            // cbForbiddenShortcut
-            // 
-            this.cbForbiddenShortcut.AutoSize = true;
-            this.cbForbiddenShortcut.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbForbiddenShortcut.Location = new System.Drawing.Point(3, 53);
-            this.cbForbiddenShortcut.Name = "cbForbiddenShortcut";
-            this.cbForbiddenShortcut.Size = new System.Drawing.Size(146, 19);
-            this.cbForbiddenShortcut.TabIndex = 30;
-            this.cbForbiddenShortcut.Text = "Forbidden Shortcut";
-            this.toolTip.SetToolTip(this.cbForbiddenShortcut, "Opens a shortcut in Marble Gallery \'Forbidden Route\', \r\nthe red area with Plate L" +
-        "ord and Ctulhu.");
-            this.cbForbiddenShortcut.UseVisualStyleBackColor = true;
-            // 
-            // cbMaxMuramasa
-            // 
-            this.cbMaxMuramasa.AutoSize = true;
-            this.cbMaxMuramasa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMaxMuramasa.Location = new System.Drawing.Point(188, 53);
-            this.cbMaxMuramasa.Name = "cbMaxMuramasa";
-            this.cbMaxMuramasa.Size = new System.Drawing.Size(157, 19);
-            this.cbMaxMuramasa.TabIndex = 31;
-            this.cbMaxMuramasa.Text = "Maximum Muramasa";
-            this.toolTip.SetToolTip(this.cbMaxMuramasa, "\"Maximizes the attack on the Muramasa.");
-            this.cbMaxMuramasa.UseVisualStyleBackColor = true;
-            // 
-            // cbSwordBrawn
-            // 
-            this.cbSwordBrawn.AutoSize = true;
-            this.cbSwordBrawn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSwordBrawn.Location = new System.Drawing.Point(373, 53);
-            this.cbSwordBrawn.Name = "cbSwordBrawn";
-            this.cbSwordBrawn.Size = new System.Drawing.Size(124, 19);
-            this.cbSwordBrawn.TabIndex = 32;
-            this.cbSwordBrawn.Text = "Sword of Brawn";
-            this.toolTip.SetToolTip(this.cbSwordBrawn, "Allows the Dawn Warriors summoned by Sword of Dawn\r\nto have their strength scaled" +
-        " with Alucard\'s STR stat.");
-            this.cbSwordBrawn.UseVisualStyleBackColor = true;
-            // 
-            // cbEntranceTrap
-            // 
-            this.cbEntranceTrap.AutoSize = true;
-            this.cbEntranceTrap.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEntranceTrap.Location = new System.Drawing.Point(3, 78);
-            this.cbEntranceTrap.Name = "cbEntranceTrap";
-            this.cbEntranceTrap.Size = new System.Drawing.Size(146, 19);
-            this.cbEntranceTrap.TabIndex = 33;
-            this.cbEntranceTrap.Text = "Entrance Trap Door";
-            this.toolTip.SetToolTip(this.cbEntranceTrap, "Allows Jewel of Open to open the trap door in the entrance of the castle.");
-            this.cbEntranceTrap.UseVisualStyleBackColor = true;
-            // 
-            // cbEnhancedCross
-            // 
-            this.cbEnhancedCross.AutoSize = true;
-            this.cbEnhancedCross.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEnhancedCross.Location = new System.Drawing.Point(188, 78);
-            this.cbEnhancedCross.Name = "cbEnhancedCross";
-            this.cbEnhancedCross.Size = new System.Drawing.Size(179, 19);
-            this.cbEnhancedCross.TabIndex = 34;
-            this.cbEnhancedCross.Text = "Enhanced Cross Subweapon";
-            this.toolTip.SetToolTip(this.cbEnhancedCross, "Reduces the cost of the Cross subweapon for Alucard\r\nto 50 hearts and lets it ret" +
-        "urn health.");
-            this.cbEnhancedCross.UseVisualStyleBackColor = true;
-            // 
-            // cbEnhancedDark
-            // 
-            this.cbEnhancedDark.AutoSize = true;
-            this.cbEnhancedDark.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEnhancedDark.Location = new System.Drawing.Point(373, 78);
-            this.cbEnhancedDark.Name = "cbEnhancedDark";
-            this.cbEnhancedDark.Size = new System.Drawing.Size(179, 19);
-            this.cbEnhancedDark.TabIndex = 35;
-            this.cbEnhancedDark.Text = "Enhanced Dark Shield Spell";
-            this.toolTip.SetToolTip(this.cbEnhancedDark, "Reduces the enemy invincibility frames granted by the\r\nShield Rod spell with the " +
-        "Dark Shield from 80 to 10.");
-            this.cbEnhancedDark.UseVisualStyleBackColor = true;
-            // 
-            // cbListOfNames
-            // 
-            this.cbListOfNames.AutoSize = true;
-            this.cbListOfNames.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbListOfNames.Location = new System.Drawing.Point(3, 103);
-            this.cbListOfNames.Name = "cbListOfNames";
-            this.cbListOfNames.Size = new System.Drawing.Size(125, 19);
-            this.cbListOfNames.TabIndex = 36;
-            this.cbListOfNames.Text = "A List of Names";
-            this.toolTip.SetToolTip(this.cbListOfNames, "Updates the names of the enemies in the game to\r\nmatch earlier and later entries " +
-        "as well as translations.");
-            this.cbListOfNames.UseVisualStyleBackColor = true;
-            // 
-            // cbWarlockMode
-            // 
-            this.cbWarlockMode.AutoSize = true;
-            this.cbWarlockMode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbWarlockMode.Location = new System.Drawing.Point(188, 103);
-            this.cbWarlockMode.Name = "cbWarlockMode";
-            this.cbWarlockMode.Size = new System.Drawing.Size(115, 19);
-            this.cbWarlockMode.TabIndex = 37;
-            this.cbWarlockMode.Text = "Warlock Mode";
-            this.toolTip.SetToolTip(this.cbWarlockMode, "Enables Warlock Mode allowing the player to use Mist from the\r\nbeginning for free" +
-        " and increasing INT to 99 while lower spell costs.");
-            this.cbWarlockMode.UseVisualStyleBackColor = true;
-            // 
-            // cbOptionOverride
-            // 
-            this.cbOptionOverride.AutoSize = true;
-            this.cbOptionOverride.BackColor = System.Drawing.Color.Transparent;
-            this.cbOptionOverride.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbOptionOverride.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbOptionOverride.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cbOptionOverride.Location = new System.Drawing.Point(289, 509);
-            this.cbOptionOverride.Name = "cbOptionOverride";
-            this.cbOptionOverride.Size = new System.Drawing.Size(117, 19);
-            this.cbOptionOverride.TabIndex = 29;
-            this.cbOptionOverride.Text = "Option Override";
-            this.toolTip.SetToolTip(this.cbOptionOverride, resources.GetString("cbOptionOverride.ToolTip"));
-            this.cbOptionOverride.UseVisualStyleBackColor = false;
-            // 
             // frmRandomizer
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1895,15 +1921,30 @@
             this.grpRandomizations.PerformLayout();
             this.tabOptions.ResumeLayout(false);
             this.Randomizations.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numRandomStats)).EndInit();
             this.Basics.ResumeLayout(false);
             this.Basics.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.QoL.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.Additions.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.Misc.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numBatchSeeds)).EndInit();
             this.Cosmetics.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbMapColor)).EndInit();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel8.PerformLayout();
             this.tabInformation.ResumeLayout(false);
             this.BasicInfo.ResumeLayout(false);
             this.BasicInfo.PerformLayout();
@@ -1911,21 +1952,6 @@
             this.RandomizationDetails.PerformLayout();
             this.AdditionalRules.ResumeLayout(false);
             this.AdditionalRules.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel5.PerformLayout();
-            this.tableLayoutPanel6.ResumeLayout(false);
-            this.tableLayoutPanel6.PerformLayout();
-            this.tableLayoutPanel8.ResumeLayout(false);
-            this.tableLayoutPanel8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2055,5 +2081,7 @@
         private System.Windows.Forms.CheckBox cbLevelOne;
         private System.Windows.Forms.CheckBox cbWarlockMode;
         private System.Windows.Forms.CheckBox cbOptionOverride;
+        private System.Windows.Forms.CheckBox cbNimbleLiteMode;
+        private System.Windows.Forms.CheckBox cbRainbowMantle;
     }
 }

@@ -85,6 +85,7 @@ namespace SotNRandomizerLauncher
         public bool ZeroDollarRelic { get; set; }
         public bool LycanthropeMode { get; set; }
         public bool WarlockMode { get; set; }
+        public bool NimbleLiteMode { get; set; }
         public bool ChaosDrops { get; set; }
         public bool LevelOneMode { get; set; }
         public bool InstantDeath { get; set; }
@@ -96,6 +97,7 @@ namespace SotNRandomizerLauncher
         public bool EnhancedDarkShield { get; set; }
         public bool SwordOfBrawn { get; set; }
         public bool AListOfNames { get; set; }
+        public bool RainbowMantle { get; set; }
         public int StartingStatsAmount { get; set; }
         public Goal CustomGoal { get; set; }
         public CheckState ItemStats { get; set; }
@@ -169,6 +171,7 @@ namespace SotNRandomizerLauncher
             AppendFlag(arguments, this.SpikeRoomRando, "--spikeRoom", true);
             AppendFlag(arguments, this.LycanthropeMode, "--lycan", true);
             AppendFlag(arguments, this.WarlockMode, "--warlock", true);
+            AppendFlag(arguments, this.NimbleLiteMode, "--nimbleLite", true);
             AppendFlag(arguments, this.LevelOneMode, "--levelOne", true);
             AppendFlag(arguments, this.InstantDeath, "--instantDeath", true);
             AppendFlag(arguments, this.ChaosDrops, "--cornucopia", true);
@@ -179,6 +182,7 @@ namespace SotNRandomizerLauncher
             AppendFlag(arguments, this.EnhancedCross, "--betterCross", true);
             AppendFlag(arguments, this.EnhancedDarkShield, "--darkEIF", true);
             AppendFlag(arguments, this.AListOfNames, "--nameList", true);
+            AppendFlag(arguments, this.RainbowMantle, "--rainbowMantle", true);
 
             if (this.RandomStartingStats)
                 arguments.Append($"--ss {this.StartingStatsAmount} ");
